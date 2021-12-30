@@ -6,7 +6,7 @@ Pod::Spec.new do |s|
                       QAPM for iOS
                       DESC
   s.homepage     = "https://github.com/TencentCloud"
-  s.source       = { :git => "https://github.com/TencentCloud/qapm-sdk-ios.git",:tag => "#{s.version}" }
+  s.source       = { :git => "https://github.com/TencentCloud/qapm-sdk-ios",:tag => "#{s.version}" }
   s.license      = { :type => "MIT", :file => "LICENSE" }
   s.author       = "qapm_ios"
   s.ios.deployment_target = "8.0"
