@@ -4,7 +4,7 @@ Pod::Spec.new do |s|
   s.version      = "5.1.1"
   s.summary      = "QAPM Summary"
   s.description  = <<-DESC
-                      QAPM for iOS
+                      QAPM for iOS 
                       DESC
   s.homepage     = "https://git.code.oa.com/v_wxyawang/qapm_ios_framework"
   s.source       = { :git => "http://git.woa.com/v_wxyawang/qapm_ios_framework.git", :tag => "#{s.version}" }
