@@ -10,10 +10,10 @@ Pod::Spec.new do |s|
   s.license      = { :type => "MIT", :file => "LICENSE" }
   s.author       = "qapm_ios"
   s.ios.deployment_target = "8.0"
-  s.source_files = "QAPM.framework/Headers/*.h"
-  s.public_header_files  = "QAPM.framework/Headers/*.h"
+  #s.source_files = "QAPM.framework/Headers/*.h"
+  #s.public_header_files  = "QAPM.framework/Headers/*.h"
   s.requires_arc = true
-  s.resources    = "QAPM.framework/*.js"
+  s.resources    = "QAPM.framework/js_sdk.js"
   s.pod_target_xcconfig  = { 
     'ENABLE_BITCODE' => 'NO' ,
     'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64',
