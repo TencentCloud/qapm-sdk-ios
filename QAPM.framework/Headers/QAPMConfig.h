@@ -223,7 +223,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, copy) NSString *dysmUuid;
 
 /**
- 设置设备ID，不设置则取值QAPMOpenUDID
+ 设置设备ID，不设置则取值QAPMQAPMOpenUDID的值
  */
 @property (nonatomic, copy) NSString *deviceID;
 
@@ -237,7 +237,7 @@ NS_ASSUME_NONNULL_BEGIN
  如果是在腾讯内部蓝盾流水线使用蓝盾插件自动上传符号表、或者本地使用shell自动上传符号表脚本，请设置为NO,
  
  本地和蓝盾打包方式设置如下，[QAPMConfig getInstance].dysmUuid的值为第一个shell脚本传参而来
- [QAPMConfig getInstance].sigkillConfig.uuidFromDsym = NO;
+ [QAPMConfig getInstance].sigkillConfig.mallocMemoryDetectorEnable = NO;
  NSString *uuid = [[[NSBundle mainBundle] infoDictionary] objectForKey:@"com.tencent.qapm.uuid"];
  if(!uuid){
      uuid = @"uuid设置错误，请检查路径";
@@ -252,6 +252,12 @@ NS_ASSUME_NONNULL_BEGIN
  Appkey
  */
 @property (nonatomic, copy) NSString *appKey;
+
+
+/**
+ 是否进行数据对齐上报，默认关闭
+ */
+@property (nonatomic, assign) BOOL enableDataaligned;
 
 /**
  如果没有接QAPMMonitorTypeCrash功能，请在发生normal_crash发生后调用，否则将影响整体crash指标的计算。
