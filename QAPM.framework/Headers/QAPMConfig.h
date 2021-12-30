@@ -157,7 +157,7 @@ NS_ASSUME_NONNULL_BEGIN
 @interface QAPMHTTPMonitorConfig : NSObject
 
 /**
- 是否允许移动网络进行上报，默认移动网络允许上报。
+ 是否允许移动网络进行上报
  */
 @property (nonatomic) BOOL allowsCellularAccess;
 
