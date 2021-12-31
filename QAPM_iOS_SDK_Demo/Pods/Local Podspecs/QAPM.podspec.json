@@ -1,0 +1,32 @@
+{
+  "name": "QAPM",
+  "version": "5.1.3",
+  "summary": "QAPM Summary",
+  "description": "QAPM for iOS",
+  "homepage": "https://git.code.oa.com/v_wxyawang/qapm_ios_framework",
+  "source": {
+    "git": "http://git.woa.com/v_wxyawang/qapm_ios_framework.git",
+    "tag": "5.1.3"
+  },
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": "v_wxyawang",
+  "platforms": {
+    "ios": "8.0"
+  },
+  "source_files": "Headers/*.h",
+  "public_header_files": "Headers/*.h",
+  "requires_arc": true,
+  "resources": "QAPM.framework/*.js",
+  "pod_target_xcconfig": {
+    "ENABLE_BITCODE": "NO"
+  },
+  "frameworks": "CoreLocation",
+  "libraries": [
+    "c",
+    "c++"
+  ],
+  "vendored_frameworks": "QAPM.framework"
+}
