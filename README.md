@@ -6,14 +6,14 @@
 ## 接入文档
 
 #### iOS SDK接入
-* 添加产品请进入qapm.qq.com。
+* 添加产品请进入[qapm.qq.com](https://qapm.qq.com/web2/4116/lm-drop-frame-case/); 。
 
 #### SDK集成方式
 
 * **cocoaPods集成**
   1. 先安装 [CocoaPods](https://guides.cocoapods.org/using/getting-started.html)；
   2. 通过 pod repo update 更新 qapm 的 Cocoapods 版本；
-  3. 在 Podfile 对应的 target 中，添加 pod 'QAPM', :source =>"https://github.com/TencentCloud/qapm-sdk-ios.git",并执行 pod install；
+  3. 在 Podfile 对应的 target 中，添加 pod 'QAPM', :source =>'https://github.com/TencentCloud/qapm-sdk-ios.git' ,并执行 pod install；
   4. 将工程的bitcode参数设置为NO;
   5. 在项目中使用 Cocoapods 生成的 .xcworkspace运行工程；
   
