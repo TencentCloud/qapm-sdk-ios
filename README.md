@@ -66,11 +66,9 @@ void loggerFunc(QAPMLoggerLevel level, const char* log) {
     }
 #endif
 }
- ```
- 
+
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
 
- ```
      /// 设置QAPM 日志输出
      NSLog(@"qapm sdk version : %@", [QAPM sdkVersion]);    
      [QAPM registerLogCallback:loggerFunc];
@@ -102,12 +100,13 @@ void loggerFunc(QAPMLoggerLevel level, const char* log) {
     [QAPM startWithAppKey:@"产品唯一的appKey"];
     return YES;
     
-     ```
+    
 }
 
-
+```
+     
 #### 更多高级功能配置请参考demo工程
-
+[demo工程](https://github.com/TencentCloud/qapm-sdk-ios.git); 
 
 ## License
 
