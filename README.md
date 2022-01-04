@@ -6,8 +6,8 @@
 ## 接入文档
 
 #### iOS SDK接入
-* 添加产品请进入[qapm.qq.com](https://qapm.qq.com/web2/4116/lm-drop-frame-case/)，进入web控制台后请选用QQ登录；
-* 添加产品请进入[sngapm.qq.com](https://qapm.qq.com/web2/4116/lm-drop-frame-case/)，进入web控制台后请选用IOA登录；
+* 非腾讯系添加产品请进入[qapm.qq.com](https://qapm.qq.com)，进入web控制台后请选用QQ登录；
+* 腾讯系APP添加产品请进入[sngapm.qq.com](https://sngapm.qq.com)，进入web控制台后请选用IOA登录；
 
 #### SDK集成方式
 
