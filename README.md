@@ -9,7 +9,7 @@
 #### iOS SDK接入
 * SDK接入需要使用APPKEY，您可通过如下方式获取：
 * 腾讯系产品：请在企业微信联系专项体验小助手获取；
-* 非腾讯系产品：请在内测申请通过后根据相应指引进行获取(https://cloud.tencent.com/product/qapm/)；
+* 非腾讯系产品：请在内测申请通过后根据相应指引进行获取[https://cloud.tencent.com/product/qapm/](https://cloud.tencent.com/product/qapm/)；
 
 #### SDK集成方式
 
