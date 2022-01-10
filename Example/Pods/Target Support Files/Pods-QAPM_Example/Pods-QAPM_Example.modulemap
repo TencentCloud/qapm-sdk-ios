@@ -1,0 +1,6 @@
+framework module Pods_QAPM_Example {
+  umbrella header "Pods-QAPM_Example-umbrella.h"
+
+  export *
+  module * { export * }
+}

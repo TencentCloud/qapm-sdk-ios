@@ -1,0 +1,36 @@
+{
+  "name": "QAPM",
+  "version": "5.1.3",
+  "summary": "腾讯性能监控组件(iOS)",
+  "description": "QAPM 是一款监控线上APP的性能组件",
+  "homepage": "https://cloud.tencent.com/product/qapm/",
+  "source": {
+    "git": "https://github.com/TencentCloud/qapm-sdk-ios.git",
+    "tag": "5.1.3"
+  },
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": "qapm_ios",
+  "platforms": {
+    "ios": "8.0"
+  },
+  "requires_arc": true,
+  "resources": "QAPM.framework/js_sdk.js",
+  "pod_target_xcconfig": {
+    "ENABLE_BITCODE": "NO",
+    "EXCLUDED_ARCHS[sdk=iphonesimulator*]": "arm64",
+    "VALID_ARCHS": "arm64 x86_64 arm64e i386 armv7"
+  },
+  "frameworks": "CoreLocation",
+  "libraries": [
+    "c",
+    "c++"
+  ],
+  "vendored_frameworks": "QAPM.framework",
+  "user_target_xcconfig": {
+    "EXCLUDED_ARCHS[sdk=iphonesimulator*]": "arm64",
+    "VALID_ARCHS": "arm64 x86_64 arm64e i386 armv7"
+  }
+}

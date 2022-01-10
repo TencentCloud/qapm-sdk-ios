@@ -1,0 +1,13 @@
+use_frameworks!
+
+platform :ios, '9.0'
+
+target 'QAPM_Example' do
+  pod 'QAPM', :path => '../'
+
+  target 'QAPM_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end

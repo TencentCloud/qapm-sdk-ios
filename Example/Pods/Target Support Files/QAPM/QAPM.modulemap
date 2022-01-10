@@ -1,0 +1,6 @@
+framework module QAPM {
+  umbrella header "QAPM-umbrella.h"
+
+  export *
+  module * { export * }
+}

@@ -1,0 +1,787 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0567A2A49E474653ABCB149F /* Pods_QAPM_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 042E305A301D229AA5090696 /* Pods_QAPM_Example.framework */; };
+		6003F58E195388D20070C39A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58D195388D20070C39A /* Foundation.framework */; };
+		6003F590195388D20070C39A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58F195388D20070C39A /* CoreGraphics.framework */; };
+		6003F592195388D20070C39A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F591195388D20070C39A /* UIKit.framework */; };
+		6003F598195388D20070C39A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6003F596195388D20070C39A /* InfoPlist.strings */; };
+		6003F59A195388D20070C39A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6003F599195388D20070C39A /* main.m */; };
+		6003F59E195388D20070C39A /* QAPMAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6003F59D195388D20070C39A /* QAPMAppDelegate.m */; };
+		6003F5A7195388D20070C39A /* QAPMViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6003F5A6195388D20070C39A /* QAPMViewController.m */; };
+		6003F5A9195388D20070C39A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6003F5A8195388D20070C39A /* Images.xcassets */; };
+		6003F5B0195388D20070C39A /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F5AF195388D20070C39A /* XCTest.framework */; };
+		6003F5B1195388D20070C39A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58D195388D20070C39A /* Foundation.framework */; };
+		6003F5B2195388D20070C39A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F591195388D20070C39A /* UIKit.framework */; };
+		6003F5BA195388D20070C39A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6003F5B8195388D20070C39A /* InfoPlist.strings */; };
+		6003F5BC195388D20070C39A /* Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6003F5BB195388D20070C39A /* Tests.m */; };
+		6223AD33466990CE107D868E /* Pods_QAPM_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 003FA856199C631813605776 /* Pods_QAPM_Tests.framework */; };
+		71719F9F1E33DC2100824A3D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 71719F9D1E33DC2100824A3D /* LaunchScreen.storyboard */; };
+		873B8AEB1B1F5CCA007FD442 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 873B8AEA1B1F5CCA007FD442 /* Main.storyboard */; };
+		944D8B15278C5C0C00210EF4 /* APMYellowNextViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 944D8AF4278C5C0C00210EF4 /* APMYellowNextViewController.m */; };
+		944D8B16278C5C0C00210EF4 /* QAPMWKWebViewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 944D8AF6278C5C0C00210EF4 /* QAPMWKWebViewViewController.m */; };
+		944D8B17278C5C0C00210EF4 /* QAPMTimeStatictisViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 944D8AF7278C5C0C00210EF4 /* QAPMTimeStatictisViewController.m */; };
+		944D8B18278C5C0C00210EF4 /* APMBlueViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 944D8AFA278C5C0C00210EF4 /* APMBlueViewController.m */; };
+		944D8B19278C5C0C00210EF4 /* APMYellowViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 944D8AFB278C5C0C00210EF4 /* APMYellowViewController.m */; };
+		944D8B1A278C5C0C00210EF4 /* APMMainListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 944D8AFC278C5C0C00210EF4 /* APMMainListViewController.m */; };
+		944D8B1B278C5C0C00210EF4 /* QAPMHTTPViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 944D8AFE278C5C0C00210EF4 /* QAPMHTTPViewController.m */; };
+		944D8B1C278C5C0C00210EF4 /* QAPMSigkillViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 944D8AFF278C5C0C00210EF4 /* QAPMSigkillViewController.m */; };
+		944D8B1D278C5C0C00210EF4 /* QAPMBigChunkMemoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 944D8B00278C5C0C00210EF4 /* QAPMBigChunkMemoryViewController.m */; };
+		944D8B1E278C5C0C00210EF4 /* APMQQLeakViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 944D8B01278C5C0C00210EF4 /* APMQQLeakViewController.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		944D8B1F278C5C0C00210EF4 /* QAPMResourceMonitorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 944D8B02278C5C0C00210EF4 /* QAPMResourceMonitorViewController.m */; };
+		944D8B20278C5C0C00210EF4 /* QAPMCrashViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 944D8B05278C5C0C00210EF4 /* QAPMCrashViewController.m */; };
+		944D8B21278C5C0C00210EF4 /* Crasher.mm in Sources */ = {isa = PBXBuildFile; fileRef = 944D8B09278C5C0C00210EF4 /* Crasher.mm */; };
+		944D8B22278C5C0C00210EF4 /* vConsole.js in Resources */ = {isa = PBXBuildFile; fileRef = 944D8B0B278C5C0C00210EF4 /* vConsole.js */; };
+		944D8B23278C5C0C00210EF4 /* YYWeakProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = 944D8B0E278C5C0C00210EF4 /* YYWeakProxy.m */; };
+		944D8B24278C5C0C00210EF4 /* UIButton+Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = 944D8B12278C5C0C00210EF4 /* UIButton+Utils.m */; };
+		944D8B25278C5C0C00210EF4 /* NSObject+QAPMPerformSelector.m in Sources */ = {isa = PBXBuildFile; fileRef = 944D8B13278C5C0C00210EF4 /* NSObject+QAPMPerformSelector.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		6003F5B3195388D20070C39A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6003F582195388D10070C39A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6003F589195388D20070C39A;
+			remoteInfo = QAPM;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		003FA856199C631813605776 /* Pods_QAPM_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_QAPM_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		042E305A301D229AA5090696 /* Pods_QAPM_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_QAPM_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		043BF9557319C4A7ED6DC1F7 /* Pods-QAPM_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QAPM_Tests.release.xcconfig"; path = "Target Support Files/Pods-QAPM_Tests/Pods-QAPM_Tests.release.xcconfig"; sourceTree = "<group>"; };
+		28F5D67128B544813446AEFD /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		37E0D75E780461BA7C5E5DA2 /* QAPM.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = QAPM.podspec; path = ../QAPM.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		6003F58A195388D20070C39A /* QAPM_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QAPM_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		6003F58D195388D20070C39A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		6003F58F195388D20070C39A /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		6003F591195388D20070C39A /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		6003F595195388D20070C39A /* QAPM-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "QAPM-Info.plist"; sourceTree = "<group>"; };
+		6003F597195388D20070C39A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		6003F599195388D20070C39A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		6003F59B195388D20070C39A /* QAPM-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "QAPM-Prefix.pch"; sourceTree = "<group>"; };
+		6003F59C195388D20070C39A /* QAPMAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QAPMAppDelegate.h; sourceTree = "<group>"; };
+		6003F59D195388D20070C39A /* QAPMAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QAPMAppDelegate.m; sourceTree = "<group>"; };
+		6003F5A5195388D20070C39A /* QAPMViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QAPMViewController.h; sourceTree = "<group>"; };
+		6003F5A6195388D20070C39A /* QAPMViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QAPMViewController.m; sourceTree = "<group>"; };
+		6003F5A8195388D20070C39A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		6003F5AE195388D20070C39A /* QAPM_Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = QAPM_Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		6003F5AF195388D20070C39A /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		6003F5B7195388D20070C39A /* Tests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Tests-Info.plist"; sourceTree = "<group>"; };
+		6003F5B9195388D20070C39A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		6003F5BB195388D20070C39A /* Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Tests.m; sourceTree = "<group>"; };
+		606FC2411953D9B200FFA9A0 /* Tests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Tests-Prefix.pch"; sourceTree = "<group>"; };
+		71719F9E1E33DC2100824A3D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		873B8AEA1B1F5CCA007FD442 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Main.storyboard; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		944D8AEF278C5C0C00210EF4 /* APMMainListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APMMainListViewController.h; sourceTree = "<group>"; };
+		944D8AF0278C5C0C00210EF4 /* APMYellowViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APMYellowViewController.h; sourceTree = "<group>"; };
+		944D8AF1278C5C0C00210EF4 /* QAPMSigkillViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QAPMSigkillViewController.h; sourceTree = "<group>"; };
+		944D8AF2278C5C0C00210EF4 /* QAPMBigChunkMemoryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QAPMBigChunkMemoryViewController.h; sourceTree = "<group>"; };
+		944D8AF3278C5C0C00210EF4 /* QAPMHTTPViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QAPMHTTPViewController.h; sourceTree = "<group>"; };
+		944D8AF4278C5C0C00210EF4 /* APMYellowNextViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APMYellowNextViewController.m; sourceTree = "<group>"; };
+		944D8AF5278C5C0C00210EF4 /* QAPMCrashViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QAPMCrashViewController.h; sourceTree = "<group>"; };
+		944D8AF6278C5C0C00210EF4 /* QAPMWKWebViewViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QAPMWKWebViewViewController.m; sourceTree = "<group>"; };
+		944D8AF7278C5C0C00210EF4 /* QAPMTimeStatictisViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QAPMTimeStatictisViewController.m; sourceTree = "<group>"; };
+		944D8AF8278C5C0C00210EF4 /* QAPMResourceMonitorViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QAPMResourceMonitorViewController.h; sourceTree = "<group>"; };
+		944D8AF9278C5C0C00210EF4 /* APMQQLeakViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APMQQLeakViewController.h; sourceTree = "<group>"; };
+		944D8AFA278C5C0C00210EF4 /* APMBlueViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APMBlueViewController.m; sourceTree = "<group>"; };
+		944D8AFB278C5C0C00210EF4 /* APMYellowViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APMYellowViewController.m; sourceTree = "<group>"; };
+		944D8AFC278C5C0C00210EF4 /* APMMainListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APMMainListViewController.m; sourceTree = "<group>"; };
+		944D8AFD278C5C0C00210EF4 /* APMYellowNextViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APMYellowNextViewController.h; sourceTree = "<group>"; };
+		944D8AFE278C5C0C00210EF4 /* QAPMHTTPViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QAPMHTTPViewController.m; sourceTree = "<group>"; };
+		944D8AFF278C5C0C00210EF4 /* QAPMSigkillViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QAPMSigkillViewController.m; sourceTree = "<group>"; };
+		944D8B00278C5C0C00210EF4 /* QAPMBigChunkMemoryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QAPMBigChunkMemoryViewController.m; sourceTree = "<group>"; };
+		944D8B01278C5C0C00210EF4 /* APMQQLeakViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APMQQLeakViewController.m; sourceTree = "<group>"; };
+		944D8B02278C5C0C00210EF4 /* QAPMResourceMonitorViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QAPMResourceMonitorViewController.m; sourceTree = "<group>"; };
+		944D8B03278C5C0C00210EF4 /* QAPMTimeStatictisViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QAPMTimeStatictisViewController.h; sourceTree = "<group>"; };
+		944D8B04278C5C0C00210EF4 /* QAPMWKWebViewViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QAPMWKWebViewViewController.h; sourceTree = "<group>"; };
+		944D8B05278C5C0C00210EF4 /* QAPMCrashViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QAPMCrashViewController.m; sourceTree = "<group>"; };
+		944D8B06278C5C0C00210EF4 /* APMBlueViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APMBlueViewController.h; sourceTree = "<group>"; };
+		944D8B08278C5C0C00210EF4 /* Crasher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Crasher.h; sourceTree = "<group>"; };
+		944D8B09278C5C0C00210EF4 /* Crasher.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = Crasher.mm; sourceTree = "<group>"; };
+		944D8B0B278C5C0C00210EF4 /* vConsole.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = vConsole.js; sourceTree = "<group>"; };
+		944D8B0E278C5C0C00210EF4 /* YYWeakProxy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YYWeakProxy.m; sourceTree = "<group>"; };
+		944D8B0F278C5C0C00210EF4 /* YYWeakProxy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YYWeakProxy.h; sourceTree = "<group>"; };
+		944D8B11278C5C0C00210EF4 /* UIButton+Utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+Utils.h"; sourceTree = "<group>"; };
+		944D8B12278C5C0C00210EF4 /* UIButton+Utils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+Utils.m"; sourceTree = "<group>"; };
+		944D8B13278C5C0C00210EF4 /* NSObject+QAPMPerformSelector.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+QAPMPerformSelector.m"; sourceTree = "<group>"; };
+		944D8B14278C5C0C00210EF4 /* NSObject+QAPMPerformSelector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+QAPMPerformSelector.h"; sourceTree = "<group>"; };
+		ACB873D028E29CEDA462BAC3 /* Pods-QAPM_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QAPM_Tests.debug.xcconfig"; path = "Target Support Files/Pods-QAPM_Tests/Pods-QAPM_Tests.debug.xcconfig"; sourceTree = "<group>"; };
+		E63CF8E6DD5A3CE0CAAAFFA5 /* Pods-QAPM_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QAPM_Example.debug.xcconfig"; path = "Target Support Files/Pods-QAPM_Example/Pods-QAPM_Example.debug.xcconfig"; sourceTree = "<group>"; };
+		F2BC3158EF7CA0AACD9180CD /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
+		F6EA6656CFBCACD1D96FBC9F /* Pods-QAPM_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QAPM_Example.release.xcconfig"; path = "Target Support Files/Pods-QAPM_Example/Pods-QAPM_Example.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		6003F587195388D20070C39A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6003F590195388D20070C39A /* CoreGraphics.framework in Frameworks */,
+				6003F592195388D20070C39A /* UIKit.framework in Frameworks */,
+				6003F58E195388D20070C39A /* Foundation.framework in Frameworks */,
+				0567A2A49E474653ABCB149F /* Pods_QAPM_Example.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6003F5AB195388D20070C39A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6003F5B0195388D20070C39A /* XCTest.framework in Frameworks */,
+				6003F5B2195388D20070C39A /* UIKit.framework in Frameworks */,
+				6003F5B1195388D20070C39A /* Foundation.framework in Frameworks */,
+				6223AD33466990CE107D868E /* Pods_QAPM_Tests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		6003F581195388D10070C39A = {
+			isa = PBXGroup;
+			children = (
+				60FF7A9C1954A5C5007DD14C /* Podspec Metadata */,
+				6003F593195388D20070C39A /* Example for QAPM */,
+				6003F5B5195388D20070C39A /* Tests */,
+				6003F58C195388D20070C39A /* Frameworks */,
+				6003F58B195388D20070C39A /* Products */,
+				B5167DF715562987CA57043B /* Pods */,
+			);
+			sourceTree = "<group>";
+		};
+		6003F58B195388D20070C39A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				6003F58A195388D20070C39A /* QAPM_Example.app */,
+				6003F5AE195388D20070C39A /* QAPM_Tests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		6003F58C195388D20070C39A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6003F58D195388D20070C39A /* Foundation.framework */,
+				6003F58F195388D20070C39A /* CoreGraphics.framework */,
+				6003F591195388D20070C39A /* UIKit.framework */,
+				6003F5AF195388D20070C39A /* XCTest.framework */,
+				042E305A301D229AA5090696 /* Pods_QAPM_Example.framework */,
+				003FA856199C631813605776 /* Pods_QAPM_Tests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		6003F593195388D20070C39A /* Example for QAPM */ = {
+			isa = PBXGroup;
+			children = (
+				944D8AEE278C5C0C00210EF4 /* controllers */,
+				944D8B0A278C5C0C00210EF4 /* resource */,
+				944D8B0C278C5C0C00210EF4 /* Utils */,
+				6003F59C195388D20070C39A /* QAPMAppDelegate.h */,
+				6003F59D195388D20070C39A /* QAPMAppDelegate.m */,
+				873B8AEA1B1F5CCA007FD442 /* Main.storyboard */,
+				6003F5A5195388D20070C39A /* QAPMViewController.h */,
+				6003F5A6195388D20070C39A /* QAPMViewController.m */,
+				71719F9D1E33DC2100824A3D /* LaunchScreen.storyboard */,
+				6003F5A8195388D20070C39A /* Images.xcassets */,
+				6003F594195388D20070C39A /* Supporting Files */,
+			);
+			name = "Example for QAPM";
+			path = QAPM;
+			sourceTree = "<group>";
+		};
+		6003F594195388D20070C39A /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				6003F595195388D20070C39A /* QAPM-Info.plist */,
+				6003F596195388D20070C39A /* InfoPlist.strings */,
+				6003F599195388D20070C39A /* main.m */,
+				6003F59B195388D20070C39A /* QAPM-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		6003F5B5195388D20070C39A /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				6003F5BB195388D20070C39A /* Tests.m */,
+				6003F5B6195388D20070C39A /* Supporting Files */,
+			);
+			path = Tests;
+			sourceTree = "<group>";
+		};
+		6003F5B6195388D20070C39A /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				6003F5B7195388D20070C39A /* Tests-Info.plist */,
+				6003F5B8195388D20070C39A /* InfoPlist.strings */,
+				606FC2411953D9B200FFA9A0 /* Tests-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		60FF7A9C1954A5C5007DD14C /* Podspec Metadata */ = {
+			isa = PBXGroup;
+			children = (
+				37E0D75E780461BA7C5E5DA2 /* QAPM.podspec */,
+				28F5D67128B544813446AEFD /* README.md */,
+				F2BC3158EF7CA0AACD9180CD /* LICENSE */,
+			);
+			name = "Podspec Metadata";
+			sourceTree = "<group>";
+		};
+		944D8AEE278C5C0C00210EF4 /* controllers */ = {
+			isa = PBXGroup;
+			children = (
+				944D8AEF278C5C0C00210EF4 /* APMMainListViewController.h */,
+				944D8AF0278C5C0C00210EF4 /* APMYellowViewController.h */,
+				944D8AF1278C5C0C00210EF4 /* QAPMSigkillViewController.h */,
+				944D8AF2278C5C0C00210EF4 /* QAPMBigChunkMemoryViewController.h */,
+				944D8AF3278C5C0C00210EF4 /* QAPMHTTPViewController.h */,
+				944D8AF4278C5C0C00210EF4 /* APMYellowNextViewController.m */,
+				944D8AF5278C5C0C00210EF4 /* QAPMCrashViewController.h */,
+				944D8AF6278C5C0C00210EF4 /* QAPMWKWebViewViewController.m */,
+				944D8AF7278C5C0C00210EF4 /* QAPMTimeStatictisViewController.m */,
+				944D8AF8278C5C0C00210EF4 /* QAPMResourceMonitorViewController.h */,
+				944D8AF9278C5C0C00210EF4 /* APMQQLeakViewController.h */,
+				944D8AFA278C5C0C00210EF4 /* APMBlueViewController.m */,
+				944D8AFB278C5C0C00210EF4 /* APMYellowViewController.m */,
+				944D8AFC278C5C0C00210EF4 /* APMMainListViewController.m */,
+				944D8AFD278C5C0C00210EF4 /* APMYellowNextViewController.h */,
+				944D8AFE278C5C0C00210EF4 /* QAPMHTTPViewController.m */,
+				944D8AFF278C5C0C00210EF4 /* QAPMSigkillViewController.m */,
+				944D8B00278C5C0C00210EF4 /* QAPMBigChunkMemoryViewController.m */,
+				944D8B01278C5C0C00210EF4 /* APMQQLeakViewController.m */,
+				944D8B02278C5C0C00210EF4 /* QAPMResourceMonitorViewController.m */,
+				944D8B03278C5C0C00210EF4 /* QAPMTimeStatictisViewController.h */,
+				944D8B04278C5C0C00210EF4 /* QAPMWKWebViewViewController.h */,
+				944D8B05278C5C0C00210EF4 /* QAPMCrashViewController.m */,
+				944D8B06278C5C0C00210EF4 /* APMBlueViewController.h */,
+				944D8B07278C5C0C00210EF4 /* Crash-Tester */,
+			);
+			path = controllers;
+			sourceTree = "<group>";
+		};
+		944D8B07278C5C0C00210EF4 /* Crash-Tester */ = {
+			isa = PBXGroup;
+			children = (
+				944D8B08278C5C0C00210EF4 /* Crasher.h */,
+				944D8B09278C5C0C00210EF4 /* Crasher.mm */,
+			);
+			path = "Crash-Tester";
+			sourceTree = "<group>";
+		};
+		944D8B0A278C5C0C00210EF4 /* resource */ = {
+			isa = PBXGroup;
+			children = (
+				944D8B0B278C5C0C00210EF4 /* vConsole.js */,
+			);
+			path = resource;
+			sourceTree = "<group>";
+		};
+		944D8B0C278C5C0C00210EF4 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				944D8B0D278C5C0C00210EF4 /* YYWeakProxy */,
+				944D8B10278C5C0C00210EF4 /* Category */,
+				944D8B13278C5C0C00210EF4 /* NSObject+QAPMPerformSelector.m */,
+				944D8B14278C5C0C00210EF4 /* NSObject+QAPMPerformSelector.h */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		944D8B0D278C5C0C00210EF4 /* YYWeakProxy */ = {
+			isa = PBXGroup;
+			children = (
+				944D8B0E278C5C0C00210EF4 /* YYWeakProxy.m */,
+				944D8B0F278C5C0C00210EF4 /* YYWeakProxy.h */,
+			);
+			path = YYWeakProxy;
+			sourceTree = "<group>";
+		};
+		944D8B10278C5C0C00210EF4 /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				944D8B11278C5C0C00210EF4 /* UIButton+Utils.h */,
+				944D8B12278C5C0C00210EF4 /* UIButton+Utils.m */,
+			);
+			path = Category;
+			sourceTree = "<group>";
+		};
+		B5167DF715562987CA57043B /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				E63CF8E6DD5A3CE0CAAAFFA5 /* Pods-QAPM_Example.debug.xcconfig */,
+				F6EA6656CFBCACD1D96FBC9F /* Pods-QAPM_Example.release.xcconfig */,
+				ACB873D028E29CEDA462BAC3 /* Pods-QAPM_Tests.debug.xcconfig */,
+				043BF9557319C4A7ED6DC1F7 /* Pods-QAPM_Tests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		6003F589195388D20070C39A /* QAPM_Example */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6003F5BF195388D20070C39A /* Build configuration list for PBXNativeTarget "QAPM_Example" */;
+			buildPhases = (
+				944D8B27278C5D8800210EF4 /* ShellScript */,
+				A901052176624B8A457DC32D /* [CP] Check Pods Manifest.lock */,
+				6003F586195388D20070C39A /* Sources */,
+				6003F587195388D20070C39A /* Frameworks */,
+				6003F588195388D20070C39A /* Resources */,
+				C67B4B9A6FD80891FDA04459 /* [CP] Copy Pods Resources */,
+				944D8B28278C5E0E00210EF4 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = QAPM_Example;
+			productName = QAPM;
+			productReference = 6003F58A195388D20070C39A /* QAPM_Example.app */;
+			productType = "com.apple.product-type.application";
+		};
+		6003F5AD195388D20070C39A /* QAPM_Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6003F5C2195388D20070C39A /* Build configuration list for PBXNativeTarget "QAPM_Tests" */;
+			buildPhases = (
+				B273D5C418F595B1FFB35381 /* [CP] Check Pods Manifest.lock */,
+				6003F5AA195388D20070C39A /* Sources */,
+				6003F5AB195388D20070C39A /* Frameworks */,
+				6003F5AC195388D20070C39A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				6003F5B4195388D20070C39A /* PBXTargetDependency */,
+			);
+			name = QAPM_Tests;
+			productName = QAPMTests;
+			productReference = 6003F5AE195388D20070C39A /* QAPM_Tests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		6003F582195388D10070C39A /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = QAPM;
+				LastUpgradeCheck = 0720;
+				ORGANIZATIONNAME = wxyawang;
+				TargetAttributes = {
+					6003F5AD195388D20070C39A = {
+						TestTargetID = 6003F589195388D20070C39A;
+					};
+				};
+			};
+			buildConfigurationList = 6003F585195388D10070C39A /* Build configuration list for PBXProject "QAPM" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				English,
+				en,
+				Base,
+			);
+			mainGroup = 6003F581195388D10070C39A;
+			productRefGroup = 6003F58B195388D20070C39A /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				6003F589195388D20070C39A /* QAPM_Example */,
+				6003F5AD195388D20070C39A /* QAPM_Tests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		6003F588195388D20070C39A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				873B8AEB1B1F5CCA007FD442 /* Main.storyboard in Resources */,
+				944D8B22278C5C0C00210EF4 /* vConsole.js in Resources */,
+				71719F9F1E33DC2100824A3D /* LaunchScreen.storyboard in Resources */,
+				6003F5A9195388D20070C39A /* Images.xcassets in Resources */,
+				6003F598195388D20070C39A /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6003F5AC195388D20070C39A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6003F5BA195388D20070C39A /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		944D8B27278C5D8800210EF4 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "#!/bin/sh\n#\n# Copyright 2018 QAPM, Tencent. All rights reserved.\n#\n# V1.0\n#\n# 2020.05.18\n#\n# create by QAPM\n#\n#\n############################################################\n# 1. 脚本集成到Xcode工程的Target\n############################################################\n\n############################################################\n#########                脚本说明                       #########    \n#\n# 该脚本作用是往主工程的plist文件中插入com.tencent.qapm.uuid，\n# 目的是为了上传符号表以及后续堆栈翻译可以共用同一个uuid\n# 先执行Delete是因为如果存在该字段的话直接Add会失败\n# 如无该字段，删除也会失败，无需担心\n\n#########                脚本说明                       #########\n############################################################\n\n\n############################################################\n########                需要修改的区域                ######## \n#                                                          \n# 主工程的plist文件绝对路径,PROJECT_DIR为工程目录\n# 请修改成自己对应的plist文件\nINFO_PLIST_FILE=\"${PROJECT_DIR}/Example/QAPM/QAPM-Info.plist\"\n#\n########                需要修改的区域                ######## \n############################################################\n\nfunction injection() {\n    randomUUID=$(uuidgen)\n    randomUUID=$(echo $randomUUID | tr 'A-Z' 'a-z')\n    /usr/libexec/PlistBuddy -c \"Delete com.tencent.qapm.uuid\" $1\n    /usr/libexec/PlistBuddy -c \"Add com.tencent.qapm.uuid string ${randomUUID}\" $1\n}\n\ninjection $INFO_PLIST_FILE\n\n\n\n";
+		};
+		944D8B28278C5E0E00210EF4 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "#!/bin/sh\n#\n# Copyright 2018 QAPM, Tencent. All rights reserved.\n#\n# V1.0.3\n#\n# 2020.05.18\n#\n# modify by QAPM\n#\n#\n######################################################\n# 1. 脚本集成到Xcode工程的Target\n######################################################\n#\n# --- Copy the SCRIPT to the Run Script of Build Phases in the Xcode project ---\n#\n#\n############################################################\n#########               脚本说明                    #########    \n#\n# 该脚本的作用是自动上传符号表，使用上个脚本生成的uuid，以及自动\n# 搜寻生成目录下的符号表上传,需要修改的区域请根据自身情况修改\n# 建议debug、模拟器编译的情况不要上传符号表\n#\n#\n#########               脚本说明                    #########  \n############################################################\n\n\n############################################################\n########                需要修改的区域                ######## \n#                         \n# # Debug模式编译是否上传，1＝上传 0＝不上传，默认不上传\nUPLOAD_DEBUG_SYMBOLS=0\n\n# # 模拟器编译是否上传，1=上传 0=不上传，默认不上传\nUPLOAD_SIMULATOR_SYMBOLS=0\n\n# #只有Archive操作时上传, 1=支持Archive上传 0=所有Release模式编译都上传\nUPLOAD_ARCHIVE_ONLY=0\n\n# QAPM服务域名,内网同学改成https://sngapm.qq.com，外网同学改成https://qapm.qq.com\n#QAPM_DSYM_UPLOAD_DOMAIN=\"https://sngapm.qq.com\"\nQAPM_DSYM_UPLOAD_DOMAIN=\"https://sngapm.qq.com\"\n\n#QAPM AppKey\n#QAPM_APP_KEY=\"a58c4c34-2571\"\n\nQAPM_APP_KEY=\"91e80d20-1025\"\n\n\n# 主工程的plist文件绝对路径,PROJECT_DIR为工程目录\n# 请修改成自己对应的plist文件\nINFO_PLIST_FILE=\"${PROJECT_DIR}/Example/QAPM/QAPM-Info.plist\"\n#\n########                需要修改的区域                ######## \n############################################################\n\nP_QAPM_APPKEY=${QAPM_APP_KEY%-*}\nP_QAPM_PID=${QAPM_APP_KEY#*-}\n\n# 获取token\nfunction getToken() {\n\n    TOKEN_STATUS=$(/usr/bin/curl \"${QAPM_DSYM_UPLOAD_DOMAIN}/web/${P_QAPM_PID}/api/getToken?app_key=${QAPM_APP_KEY}\")\n\n    echo \"tokenurl is ${QAPM_DSYM_UPLOAD_DOMAIN}/web/${P_QAPM_PID}/api/getToken?app_key=${QAPM_APP_KEY}\"\n\n    echo \"QAPM server get token response: ${TOKEN_STATUS}\"\n    if [ ! \"${TOKEN_STATUS}\" ]; then\n        echo \"Error: Failed to get the token.\"\n    elif [[ \"${TOKEN_STATUS}\" == *\"{\\\"status\\\": \\\"ok\\\"\"* ]]; then\n        echo \"Success to get token\"\n        P_QAPM_TOKEN=`expr \"$TOKEN_STATUS\" : '.*\\\"\\(.*\\)\\\"'`\n        echo \"The token is : $P_QAPM_TOKEN\"\n    else\n        echo \"Error: Failed to get token\"\n    fi\n}\n\n# 上传bSYMBOL文件\nfunction dSYMUpload() {\n\n    getToken\n\n    if [ ! \"$P_QAPM_TOKEN\" ]; then\n        echo \"Get token failed\"\n        #deleteUUID\n        exit 0\n    else\n        echo \"Get token Success\"\n    fi\n\n    P_PID=\"$1\"\n    P_BSYMBOL_ZIP_FILE=\"$2\"\n\n    echo \"zip file path : ${P_BSYMBOL_ZIP_FILE}\"\n\n    #\n    P_BSYMBOL_ZIP_FILE_NAME=${P_BSYMBOL_ZIP_FILE##*/}\n    P_BSYMBOL_ZIP_FILE_NAME=${P_BSYMBOL_ZIP_FILE_NAME//&/_}\n    P_BSYMBOL_ZIP_FILE_NAME=\"${P_BSYMBOL_ZIP_FILE_NAME// /_}\"\n\n    DSYM_UPLOAD_URL=\"${QAPM_DSYM_UPLOAD_DOMAIN}/web/${P_PID}/common/symbolManagerUploadSubmit/\"\n    \n    echo \"dSYM upload url: ${DSYM_UPLOAD_URL}\"\n\n    uuid=$(/usr/libexec/PlistBuddy -c \"Print com.tencent.qapm.uuid\" ${INFO_PLIST_FILE})\n\n    echo \"dSYM upload uuid: ${uuid}\"\n\n    echo \"-----------------------------\"\n    STATUS=$(/usr/bin/curl --location -H \"token: ${P_QAPM_TOKEN}=\" -k \"${DSYM_UPLOAD_URL}\" --form \"p_id=${P_PID}\" --form \"fileName=${P_BSYMBOL_ZIP_FILE_NAME}\" --form \"file=@${P_BSYMBOL_ZIP_FILE}\" --form \"uuid_from_dsym=0\" --form \"rdmuuid=${uuid}\" --form \"need_load=True\" --form \"async_mode=1\" --verbose)\n\n    echo \"curl is ${STATUS}\"\n    echo \"curl pid ${P_PID}\"\n    echo \"curl fileName: ${P_BSYMBOL_ZIP_FILE_NAME}\"\n    echo \"curl zip file: ${P_BSYMBOL_ZIP_FILE}\"\n    echo \"-----------------------------\"\n\n    UPLOAD_RESULT=\"FAILTURE\"\n    echo \"QAPM server response: ${STATUS}\"\n    if [ ! \"${STATUS}\" ]; then\n        echo \"Error: Failed to upload the zip archive file.\"\n    elif [[ \"${STATUS}\" == *\"{\\\"status\\\": \\\"ok\\\"\"* ]]; then\n        echo \"Success to upload the dSYM for the app\"\n        UPLOAD_RESULT=\"SUCCESS\"\n    else\n        echo \"Error: Failed to upload the zip archive file to QAPM.\"\n    fi\n\n    if [ \"$?\" -ne 0 ]; then\n        echo \"Error: Failed to remove temporary zip archive.\"\n        #deleteUUID\n        exit 0\n    fi\n\n    echo \"--------------------------------\"\n    echo \"${UPLOAD_RESULT} - dSYM upload complete.\"\n\n    if [[ \"${UPLOAD_RESULT}\" == \"FAILTURE\" ]]; then\n        echo \"--------------------------------\"\n        echo \"Failed to upload the dSYM\"\n        echo \"Please check the script and try it again.\"\n    fi\n\n    #deleteUUID\n    echo \"delete source zip : $P_BSYMBOL_ZIP_FILE\"\n    rm $P_BSYMBOL_ZIP_FILE\n}\n\n# 执行\nfunction run() {\n    CONFIG_QAPM_PID=\"$1\"\n    CONFIG_DSYM_SOURCE_DIR=\"$2\"\n    CONFIG_DSYM_DEST_DIR=\"$3\"\n\n    # 检查必须参数是否设置\n    if [ ! \"${CONFIG_QAPM_PID}\" ]; then\n        echo \"Error: QAPM PID not defined.\"\n        #deleteUUID\n        exit 0\n    fi\n\n    if [ ! -e \"${CONFIG_DSYM_SOURCE_DIR}\" ]; then\n        echo \"Error: Invalid dir1 ${CONFIG_DSYM_SOURCE_DIR}\"\n        #deleteUUID\n        exit 0\n    fi\n\n    if [ ! \"${CONFIG_DSYM_DEST_DIR}\" ]; then\n        echo \"Error: Invalid dir2 ${CONFIG_DSYM_DEST_DIR}\"\n        #deleteUUID\n        exit\n    fi\n\n    if [ ! -e \"${CONFIG_DSYM_DEST_DIR}\" ]; then\n        mkdir ${CONFIG_DSYM_DEST_DIR}\n    fi\n\n    DSYM_FOLDER=\"${CONFIG_DSYM_SOURCE_DIR}\" #/Users/jiangyunsheng/Desktop/dsym/TMF-Poc-Demo.app.dSYM\n    IFS=$'\\n'\n\n    echo \"Scaning dSYM FOLDER: ${DSYM_FOLDER} ...\"\n    RET=\"F\"\n    #用于存储多个符号表\n    DSYM_MAP=()\n    #\n    for dsymFile in $(find \"$DSYM_FOLDER\" -name '*.dSYM'); do\n\n        FILE_NAME=${dsymFile##*/}\n\n        if [ ${#UPLOAD_SYMBOLS_LIST_ONLY[@]} -gt 0 ]; then\n            for chooseFile in ${UPLOAD_SYMBOLS_LIST_ONLY[@]}; do\n                if [ $chooseFile = $FILE_NAME ]; then\n                    RET=\"T\"\n                    echo \"Found dSYM file: $dsymFile\"\n                    DSYM_MAP[${#DSYM_MAP[@]}]=$dsymFile\n                    \n                fi\n            done\n        else\n            RET=\"T\"\n            echo \"Found dSYM file: $dsymFile\"\n            DSYM_MAP[${#DSYM_MAP[@]}]=$dsymFile\n        fi\n    done\n\n    if [ $RET = \"F\" ]; then\n        echo \"No .dSYM found in ${DSYM_FOLDER}\"\n        #deleteUUID\n        exit 0\n    fi\n\n    zipAndUpload \"${DSYM_MAP[*]}\"\n}\n\nfunction zipAndUpload(){\n\n    DSYM_FILE=$1\n\n    echo \"found ${DSYM_FILE[@]} dsym, prepare zip\"\n\n    echo \"zipAndUpload\"\n\n    DSYM_SYMBOL_ZIP_FILE=\"\"\n    NOTE_DSYM=()\n\n    # 每个符号表都要进行md5检查，这个可能会有3.5s左右的损耗，因为3.5一次循环，刚好判断生成就退出，如md5在判断后符号表就生成结束，则损耗3.5s\n    for DSYM in ${DSYM_FILE[*]}; do\n        DSYM_FILE_NAME=${DSYM##*/}\n        REAL_DSYM_NAME=${DSYM_FILE_NAME%%.*}\n\n        if [[ -z \"$DSYM_SYMBOL_ZIP_FILE\" ]]; then\n            #statements\n            DSYM_SYMBOL_ZIP_FILE=\"${CONFIG_DSYM_DEST_DIR}/QAPM_UPLOAD_DSYM.zip\"\n            echo \"zip path = $DSYM_SYMBOL_ZIP_FILE\"\n        fi\n\n        if [ -e $DSYM_SYMBOL_ZIP_FILE ]; then\n            rm -f $DSYM_SYMBOL_ZIP_FILE\n        fi\n\n        # 如果只上传dSYM，直接压缩dSYM目录\n        cd ${DSYM}\n\n        DSYM_MD5=\"${DSYM}/Contents/Resources/DWARF/*\" #这个路径不确定是否固定，*/Contents/Resources/DWARF/*\n\n        echo \"need md5 file = $DSYM_MD5\"\n\n        MD5_IS_SAME=\"false\"\n\n        while [ \"$MD5_IS_SAME\" == \"false\" ]\n        do\n            sleep 0.5 #睡3.5s，再次获取，时间太短，怕还没改变就又获取了一次\n            getNewDsymSize\n            echo \"current dsym is $DSYM_FILE_NAME, old size = $OLDSIZE, new size = $NEWSIZE\"\n            # 对象对比判断\n            if [ \"${NEWSIZE}\" == \"$OLDSIZE\" ];then\n                #避免空符号表存在的情况，遇到过进来了这里，符号表还是空的情况,毕竟太大了\n                if [ \"$OLDSIZE\" == \"0B\" ] || [ \"$NEWSIZE\" == \"0B\" ]; then\n                    #statements\n                    continue\n                fi\n                # 双保险，如果文件大小匹配了，再检查md5是否匹配，两者匹配则开始压缩上传\n                generateNewMd5\n                if [ -z \"$OLDMD5\" ] || [ -z \"$NEWMD5\" ] || [ \"$OLDMD5\" != \"$NEWMD5\" ]; then\n                    #statements\n                    continue\n                fi\n                echo \"current dsym is $DSYM_FILE_NAME, old md5 = $OLDMD5, new md5 = $NEWMD5\"\n                echo \"$DSYM_FILE_NAME is compelete\"\n                MD5_IS_SAME=\"true\"\n                break\n            else\n                echo \"$DSYM_FILE_NAME is generating\"\n                OLDSIZE=$NEWSIZE\n            fi    \n        done\n        #生成结束后，记录文件名\n        NOTE_DSYM[${#NOTE_DSYM[@]}]=\"../$DSYM_FILE_NAME\"\n    done\n    echo \"is all done,zip and upload\"\n\n    zip -r $DSYM_SYMBOL_ZIP_FILE ${NOTE_DSYM[*]} -x *.plist\n\n    echo \"zip success, upload now\"\n\n    dSYMUpload $CONFIG_QAPM_PID $DSYM_SYMBOL_ZIP_FILE\n}\n\n\n#符号表，第一次获取的MD5\nOLDMD5=\"\"\n#符号表，获取最新的MD5\nNEWMD5=\"\"\n#符号表，第一次获取大小\nOLDSIZE=\"\"\n#符号表，获取最新的大小\nNEWSIZE=\"\"\n#符号表具体的路径\nDSYM_MD5=\"\"\n\n#生成MD5\nfunction generateNewMd5() {\n    OLDMD5=$(/usr/local/bin/md5sum -b $DSYM_MD5 | awk '{print $1}'|sed 's/ //g')\n    sleep 2\n    NEWMD5=$(/usr/local/bin/md5sum -b $DSYM_MD5 | awk '{print $1}'|sed 's/ //g')\n}\n\n#获取符号表大小\nfunction getNewDsymSize() {\n    NEWSIZE=$(du -h $DSYM_MD5 | awk '{print $1}')\n}\n\n\n# 在Xcode工程中执行\nfunction runInXcode(){\n    echo \"Uploading dSYM to QAPM in Xcode ...\"\n\n    echo \"Info.Plist : ${INFO_PLIST_FILE}\"\n\n    echo \"--------------------------------\"\n    echo \"Prepare application information.\"\n    echo \"--------------------------------\"\n\n    echo \"Product Name: ${PRODUCT_NAME}\"\n\n    echo \"QAPM PID: ${P_QAPM_PID}\"\n\n    echo \"--------------------------------\"\n    \n    echo \"project dir: ${PROJECT_DIR}\"\n    echo \"--------------------------------\"\n\n    echo \"Check the arguments ...\"\n\n    randomUUID=$(/usr/libexec/PlistBuddy -c \"Print com.tencent.qapm.uuid\" ${INFO_PLIST_FILE})\n\n    if [ -z \"$randomUUID\" ]; then\n        #statements\n        echo \"get randomUUID failed, stop now\"\n        exit 0\n    fi\n\n    ##检查模拟器编译是否允许上传符号\n    if [ \"$EFFECTIVE_PLATFORM_NAME\" == \"-iphonesimulator\" ]; then\n        if [ $UPLOAD_SIMULATOR_SYMBOLS -eq 0 ]; then\n            #deleteUUID\n            echo \"Warning: Build for simulator and skipping to upload. \\nYou can modify 'UPLOAD_SIMULATOR_SYMBOLS' to 1 in the script.\"\n            exit 0\n        fi\n    fi\n\n    ##检查是否是Release模式编译\n    if [ \"${CONFIGURATION=}\" == \"Debug\" ]; then\n        if [ $UPLOAD_DEBUG_SYMBOLS -eq 0 ]; then\n           #deleteUUID\n            echo \"Warning: Build for debug mode and skipping to upload. \\nYou can modify 'UPLOAD_DEBUG_SYMBOLS' to 1 in the script.\"\n            exit 0\n        fi\n    fi\n\n    ##检查是否Archive操作\n    if [ $UPLOAD_ARCHIVE_ONLY -eq 1 ]; then\n        if [[ \"$TARGET_BUILD_DIR\" == *\"/Archive\"* ]]; then\n            echo \"Archive the package\"\n        else\n            echo \"Warning: Build for NOT Archive mode and skipping to upload. \\nYou can modify 'UPLOAD_ARCHIVE_ONLY' to 0 in the script.\"\n            #deleteUUID\n            exit 0\n        fi\n    fi\n\n    run ${P_QAPM_PID} ${DWARF_DSYM_FOLDER_PATH} ${BUILD_DIR}/QAPMSymbolTemp\n}\n\nBuildInXcode=\"F\"\nif [ -f \"${INFO_PLIST_FILE}\" ]; then\n    BuildInXcode=\"T\"\nfi\n\nif [ $BuildInXcode = \"T\" ]; then\n    runInXcode\nelse\n    echo \"需要运行在xcode环境下哦\"\n    # # 你可以在此处直接设置QAPMAppKey\n    # QAPM_APP_KEY=\"$1\"\n    # DWARF_DSYM_FOLDER_PATH=\"$2\"\n    # SYMBOL_OUTPUT_PATH=\"$3\"\n    # run ${P_QAPM_PID} ${DWARF_DSYM_FOLDER_PATH} ${SYMBOL_OUTPUT_PATH}\nfi\n\n\n\n\n\n\n\n\n\n\n";
+		};
+		A901052176624B8A457DC32D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-QAPM_Example-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B273D5C418F595B1FFB35381 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-QAPM_Tests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C67B4B9A6FD80891FDA04459 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-QAPM_Example/Pods-QAPM_Example-resources.sh",
+				"${PODS_ROOT}/../../QAPM.framework/js_sdk.js",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/js_sdk.js",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-QAPM_Example/Pods-QAPM_Example-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		6003F586195388D20070C39A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				944D8B1C278C5C0C00210EF4 /* QAPMSigkillViewController.m in Sources */,
+				944D8B15278C5C0C00210EF4 /* APMYellowNextViewController.m in Sources */,
+				6003F59E195388D20070C39A /* QAPMAppDelegate.m in Sources */,
+				944D8B1D278C5C0C00210EF4 /* QAPMBigChunkMemoryViewController.m in Sources */,
+				944D8B1F278C5C0C00210EF4 /* QAPMResourceMonitorViewController.m in Sources */,
+				944D8B18278C5C0C00210EF4 /* APMBlueViewController.m in Sources */,
+				944D8B1A278C5C0C00210EF4 /* APMMainListViewController.m in Sources */,
+				6003F5A7195388D20070C39A /* QAPMViewController.m in Sources */,
+				944D8B16278C5C0C00210EF4 /* QAPMWKWebViewViewController.m in Sources */,
+				944D8B1E278C5C0C00210EF4 /* APMQQLeakViewController.m in Sources */,
+				944D8B21278C5C0C00210EF4 /* Crasher.mm in Sources */,
+				944D8B19278C5C0C00210EF4 /* APMYellowViewController.m in Sources */,
+				944D8B1B278C5C0C00210EF4 /* QAPMHTTPViewController.m in Sources */,
+				944D8B25278C5C0C00210EF4 /* NSObject+QAPMPerformSelector.m in Sources */,
+				944D8B23278C5C0C00210EF4 /* YYWeakProxy.m in Sources */,
+				6003F59A195388D20070C39A /* main.m in Sources */,
+				944D8B24278C5C0C00210EF4 /* UIButton+Utils.m in Sources */,
+				944D8B17278C5C0C00210EF4 /* QAPMTimeStatictisViewController.m in Sources */,
+				944D8B20278C5C0C00210EF4 /* QAPMCrashViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6003F5AA195388D20070C39A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6003F5BC195388D20070C39A /* Tests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		6003F5B4195388D20070C39A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 6003F589195388D20070C39A /* QAPM_Example */;
+			targetProxy = 6003F5B3195388D20070C39A /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		6003F596195388D20070C39A /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6003F597195388D20070C39A /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		6003F5B8195388D20070C39A /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6003F5B9195388D20070C39A /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		71719F9D1E33DC2100824A3D /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				71719F9E1E33DC2100824A3D /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		6003F5BD195388D20070C39A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		6003F5BE195388D20070C39A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		6003F5C0195388D20070C39A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E63CF8E6DD5A3CE0CAAAFFA5 /* Pods-QAPM_Example.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "QAPM/QAPM-Prefix.pch";
+				INFOPLIST_FILE = "QAPM/QAPM-Info.plist";
+				MODULE_NAME = ExampleApp;
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		6003F5C1195388D20070C39A /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F6EA6656CFBCACD1D96FBC9F /* Pods-QAPM_Example.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "QAPM/QAPM-Prefix.pch";
+				INFOPLIST_FILE = "QAPM/QAPM-Info.plist";
+				MODULE_NAME = ExampleApp;
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		6003F5C3195388D20070C39A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = ACB873D028E29CEDA462BAC3 /* Pods-QAPM_Tests.debug.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Tests/Tests-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "Tests/Tests-Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/QAPM_Example.app/QAPM_Example";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		6003F5C4195388D20070C39A /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 043BF9557319C4A7ED6DC1F7 /* Pods-QAPM_Tests.release.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Tests/Tests-Prefix.pch";
+				INFOPLIST_FILE = "Tests/Tests-Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/QAPM_Example.app/QAPM_Example";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		6003F585195388D10070C39A /* Build configuration list for PBXProject "QAPM" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6003F5BD195388D20070C39A /* Debug */,
+				6003F5BE195388D20070C39A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6003F5BF195388D20070C39A /* Build configuration list for PBXNativeTarget "QAPM_Example" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6003F5C0195388D20070C39A /* Debug */,
+				6003F5C1195388D20070C39A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6003F5C2195388D20070C39A /* Build configuration list for PBXNativeTarget "QAPM_Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6003F5C3195388D20070C39A /* Debug */,
+				6003F5C4195388D20070C39A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 6003F582195388D10070C39A /* Project object */;
+}
