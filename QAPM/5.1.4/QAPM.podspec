@@ -1,19 +1,19 @@
 Pod::Spec.new do |s|
   s.name         = "QAPM"
-  s.version      = "5.1.3"
-  s.summary      = "腾讯性能监控组件(iOS)"
+  s.version      = "5.1.4"
+  s.summary      = "QAPM Summary"
   s.description  = <<-DESC
-                      QAPM 是一款监控线上APP的性能组件
+                      QAPM for iOS
                       DESC
-  s.homepage     = "https://cloud.tencent.com/product/qapm/"
-  s.source       = { :git => "https://github.com/TencentCloud/qapm-sdk-ios.git",:tag => "#{s.version}" }
+  s.homepage     = "https://qapm-ios-sdk-1259741082.cos.ap-guangzhou.myqcloud.com"
+  s.source       = { :http => "https://qapm-ios-sdk-1259741082.cos.ap-guangzhou.myqcloud.com/QAPM.framework-5.1.4.zip",:tag => "#{s.version}"}
   s.license      = { :type => "MIT", :file => "LICENSE" }
   s.author       = "qapm_ios"
   s.ios.deployment_target = "8.0"
-  #s.source_files = "QAPM.framework/Headers/*.h"
-  #s.public_header_files  = "QAPM.framework/Headers/*.h"
+  s.source_files = "QAPM.framework/Headers/*.h"
+  s.public_header_files  = "QAPM.framework/Headers/*.h"
   s.requires_arc = true
-  s.resources    = "QAPM.framework/js_sdk.js"
+  s.resources    = "QAPM.framework/*.js"
   s.pod_target_xcconfig  = { 
     'ENABLE_BITCODE' => 'NO' ,
     'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64',
