@@ -6,7 +6,7 @@ Pod::Spec.new do |s|
                       QAPM for iOS
                       DESC
   s.homepage     = "https://qapm-ios-sdk-1259741082.cos.ap-guangzhou.myqcloud.com"
-  s.source       = { :http => "https://qapm-ios-sdk-1259741082.cos.ap-guangzhou.myqcloud.com/QAPM.framework-5.1.4.zip",:tag => "#{s.version}"}
+  s.source       = { :http => "https://qapm-ios-sdk-1259741082.cos.ap-guangzhou.myqcloud.com/QAPM.framework-5.1.4.zip"}
   s.license      = { :type => "MIT", :file => "LICENSE" }
   s.author       = "qapm_ios"
   s.ios.deployment_target = "8.0"
