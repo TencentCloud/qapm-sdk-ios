@@ -207,20 +207,14 @@ NS_ASSUME_NONNULL_BEGIN
 
 
 /**
- 设置符号表uuid
+ 设置符号表uuid，默认读取的是业务app符号表的uuid
  */
 @property (nonatomic, copy) NSString *dysmUuid;
 
 /**
- 设置设备ID，不设置则取值QAPMOpenUDID
+ 设置设备ID，应隐私合规要求不再默认取值QAPMOpenUDID，默认值为10000
  */
 @property (nonatomic, copy) NSString *deviceID;
-
-/**
- 设置launch功能
- */
-@property (nonatomic, strong) QAPMLaunchConfig *launchConfig;
-
 
 /**
  如果是在腾讯内部蓝盾流水线使用蓝盾插件自动上传符号表、或者本地使用shell自动上传符号表脚本，请设置为NO,
@@ -281,6 +275,12 @@ NS_ASSUME_NONNULL_BEGIN
  设置开启的功能
  */
 @property (nonatomic, assign) QAPMMonitorType enableMonitorTypeOptions;
+
+
+/**
+ 设置launch功能
+ */
+@property (nonatomic, strong) QAPMLaunchConfig *launchConfig;
 
 
 /**
