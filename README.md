@@ -90,6 +90,14 @@ void loggerFunc(QAPMLoggerLevel level, const char* log) {
      [QAPM registerLogCallback:loggerFunc];
     ///开启线上稳定性功能，且设置本地功能开启命中的抽样率，建议开启为50%，即设置下列值为2即可
      [[QAPMModelStableConfig getInstance] getModelStable:2];
+     
+     
+    /// 设置堆栈采集抽样因子。例如设置1/10抽样，则设置fatctor = 10。默认为100。
+    [QAPMConfig getInstance].launchConfig.launchSampleFactor = 1;
+
+    /// 设置启动耗时阈值，当超过阈值会上报堆栈数据。默认为4000ms。
+    [QAPMConfig getInstance].launchConfig.launchthreshold = 3;
+ 
 
    //手动上传符号表方式
    //[QAPMConfig getInstance].uuidFromDsym = YES;
@@ -112,7 +120,10 @@ void loggerFunc(QAPMLoggerLevel level, const char* log) {
     //腾讯系内网产品无需设置下面集群host域名;
     
     [QAPMConfig getInstance].host =@"https://qapm.qq.com";
-    [QAPMConfig getInstance].customerAppVersion = @"1.0.0";
+    [QAPMConfig getInstance].userId = @"设置userId";
+    [QAPMConfig getInstance].customerAppVersion = @"设置app自定义版本号";
+    [QAPMConfig getInstance].deviceID = @"自定义deviceId";
+ 
     /// 启动QAPM,非腾讯系当前为体验产品的appkey
     [QAPM startWithAppKey:@"请正确填写申请后的APPkey"];
     return YES;
