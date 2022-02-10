@@ -48,27 +48,11 @@ void loggerFunc(QAPMLoggerLevel level, const char* log) {
     
 }
 
-void uncaughtExceptionHandler(NSException *exception)
-{
-    // 异常的堆栈信息
-    NSArray *stackArray = [exception callStackSymbols];
-    // 出现异常的原因
-    NSString *reason = [exception reason];
-    // 异常名称
-    NSString *name = [exception name];
-    NSString *exceptionInfo = [NSString stringWithFormat:@"Exception name ：%@\nException reason ：%@\nException stack：%@",name, reason, stackArray];
-    NSLog(@"exceptionInfo::::%@", exceptionInfo);
-        
-    NSString *crashlog = [NSString stringWithFormat:@"%@/Documents/error.log",NSHomeDirectory()];
-    
-    NSLog(@"crashlog::%@",crashlog);
-    
-    [exceptionInfo writeToFile:[NSString stringWithFormat:@"%@/Documents/error.log",NSHomeDirectory()]  atomically:YES encoding:NSUTF8StringEncoding error:nil];
-}
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
-    [self setpQapm];
+    //请在同意相应的隐私合规政策后进行QAPM的初始化
+    [self setupQapm];
     [self setupFlex];
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     APMMainListViewController *viewController = [[APMMainListViewController alloc] init];
@@ -78,17 +62,14 @@ void uncaughtExceptionHandler(NSException *exception)
     return YES;
 }
 
-- (void)setpQapm {
+- (void)setupQapm {
     //启动耗时监控的第一个打点
     [QAPMLaunchProfile setAppDidFinishLaunchBeginTimestamp];
     
     //启动耗时自定义打点开始
     [QAPMLaunchProfile setBeginTimestampForScene:@"finish"];
     
-    NSSetUncaughtExceptionHandler(&uncaughtExceptionHandler);
-    //上报自定义crash日志信息
-    [QAPMConfig getInstance].customCrashUploadFilePath = [NSString stringWithFormat:@"%@/Documents/error.log",NSHomeDirectory()];
-    
+     
     [QAPM registerLogCallback:loggerFunc];
 
     //设置开启QAPM所有监控功能
@@ -99,6 +80,9 @@ void uncaughtExceptionHandler(NSException *exception)
     
 #ifdef DEBUG
     [QAPMConfig getInstance].sigkillConfig.mallocSampleFactor = 1;
+    [QAPMConfig getInstance].launchConfig.debugEnable = YES;
+    [QAPMConfig getInstance].launchConfig.launchSampleFactor = 1;
+    [QAPMConfig getInstance].launchConfig.launchthreshold = 100;
 #endif
     
     //自动上传符号表步骤，请根据接入文档进行相关信息的配置
@@ -125,6 +109,9 @@ void uncaughtExceptionHandler(NSException *exception)
 
     // 设置用户标记
     [QAPMConfig getInstance].userId = @"qapmtest";
+    
+    // 设置设备唯一标识
+    [QAPMConfig getInstance].deviceID = @"qapmdevideId";
     // 设置App版本号
     [QAPMConfig getInstance].customerAppVersion = @"1.0.1";
     [QAPM startWithAppKey:@"55a11d57-4116"];
