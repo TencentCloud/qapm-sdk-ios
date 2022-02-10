@@ -84,53 +84,64 @@ void loggerFunc(QAPMLoggerLevel level, const char* log) {
 }
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    //请在同意相应的隐私合规政策后进行QAPM的初始化
+    [self setupQapm];
+}
 
-     /// 设置QAPM 日志输出
-     NSLog(@"qapm sdk version : %@", [QAPM sdkVersion]);    
-     [QAPM registerLogCallback:loggerFunc];
-    ///开启线上稳定性功能，且设置本地功能开启命中的抽样率，建议开启为50%，即设置下列值为2即可
-     [[QAPMModelStableConfig getInstance] getModelStable:2];
+- (void)setupQapm {
+    //启动耗时监控的第一个打点
+    [QAPMLaunchProfile setAppDidFinishLaunchBeginTimestamp];
+    
+    //启动耗时自定义打点开始
+    [QAPMLaunchProfile setBeginTimestampForScene:@"finish"];
+    
      
-     
-    /// 设置堆栈采集抽样因子。例如设置1/10抽样，则设置fatctor = 10。默认为100。
+    [QAPM registerLogCallback:loggerFunc];
+
+    //设置开启QAPM所有监控功能
+    [[QAPMModelStableConfig getInstance] getModelAll:1];
+    
+    //用于查看当前SDK版本号信息
+    NSLog(@"qapm sdk version : %@", [QAPM sdkVersion]);
+    
+#ifdef DEBUG
+    [QAPMConfig getInstance].sigkillConfig.mallocSampleFactor = 1;
+    [QAPMConfig getInstance].launchConfig.debugEnable = YES;
     [QAPMConfig getInstance].launchConfig.launchSampleFactor = 1;
-
-    /// 设置启动耗时阈值，当超过阈值会上报堆栈数据。默认为4000ms。
-    [QAPMConfig getInstance].launchConfig.launchthreshold = 3;
- 
-
-   //手动上传符号表方式
-   //[QAPMConfig getInstance].uuidFromDsym = YES;
-   
-   //自动上传符号表方式
-   //自动上传符号表初始化设置,此处uuid的值由自动上传符号表脚本传参而来，详见参考4.15.2.3.4自动上传符号表脚本；建议调试时实时打印uuid的值，如果uuid值为0，会影响正常翻译功能。
+    [QAPMConfig getInstance].launchConfig.launchthreshold = 100;
+#endif
+    
+    //自动上传符号表步骤，请根据接入文档进行相关信息的配置
     [QAPMConfig getInstance].uuidFromDsym = NO;
     NSString *uuid = [[[NSBundle mainBundle] infoDictionary] objectForKey:@"com.tencent.qapm.uuid"];
     if(!uuid){
-        NSLog(@”请检查从第一个shell脚本传过来的uuid路径”);
+        uuid = @"请检查run script里面上传符号表的shell路径是否正确";
     }
+    
+    NSLog(@"uuid::::%@",uuid);
     [QAPMConfig getInstance].dysmUuid = uuid;
     
-        
+    
+    //手动上传符号表设置，请二选一操作
+   // [QAPMConfig getInstance].uuidFromDsym = YES;
+    
 #ifdef USE_VM_LOGGER
-    /// ！！！Sigkill功能私有API请不要在发布APPSotre时使用。开启这个功能可以监控到VM内存的分配的堆栈。
-    [[QAPMConfig getInstance].sigkillConfig setVMLogger:(void**)&__syscall_logger];
+/// ！！！Sigkill功能私有API请不要在发布APPSotre时使用。开启这个功能可以监控到VM内存的分配的堆栈。
+[[QAPMConfig getInstance].sigkillConfig setVMLogger:(void**)&__syscall_logger];
 #endif
 
-    //腾讯系内网产品无需设置下面集群host域名;
     
-    [QAPMConfig getInstance].host =@"https://qapm.qq.com";
-    [QAPMConfig getInstance].userId = @"设置userId";
-    [QAPMConfig getInstance].customerAppVersion = @"设置app自定义版本号";
-    [QAPMConfig getInstance].deviceID = @"自定义deviceId";
- 
-    /// 启动QAPM,非腾讯系当前为体验产品的appkey
-    [QAPM startWithAppKey:@"请正确填写申请后的APPkey"];
-    return YES;
-    
-    
-}
+    [QAPMConfig getInstance].host = @"https://qapm.qq.com";
 
+    // 设置用户标记，默认值为10000
+    [QAPMConfig getInstance].userId = @"请正确填写用户唯一标识";
+    
+    // 设置设备唯一标识，默认值为10000
+    [QAPMConfig getInstance].deviceID = @"请正确填写设备的唯一标识";
+    // 设置App版本号
+    [QAPMConfig getInstance].customerAppVersion = @"请正确填写业务APP版本";
+    [QAPM startWithAppKey:@"请正确填写申请到的appkey"];
+}
 ```
      
 #### 更多高级功能配置请参考demo工程，以及shell脚本及相关文档文件夹中的文档；
