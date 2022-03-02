@@ -21,18 +21,20 @@
      pod 'QAPM', :source => 'https://github.com/TencentCloud/QAPM-iOS-CocoaPods.git'
     ```
     
-  4. 在项目中使用 Cocoapods 生成的 .xcworkspace运行工程,并将工程的bitcode参数设置为NO；
+  4. 在项目中使用 Cocoapods 生成的 .xcworkspace运行工程,并将工程的bitcode参数设置为 NO；
   
   注意:在拉取过程中如果出现以下报错
   [!] Unable to add a source with url `https://github.com/TencentCloud/QAPM-iOS-CocoaPods.git` named `tencentcloud-qapm-ios-cocoapods`.
 You can try adding it manually in `/Users/wxy/.cocoapods/repos` or via `pod repo add`.
 
   可在终端执行以下指令:
-  pod repo add tencentcloud-qapm-ios-cocoapods https://github.com/TencentCloud/QAPM-iOS-CocoaPods.git
-  
+     ```
+     pod repo add tencentcloud-qapm-ios-cocoapods https://github.com/TencentCloud/QAPM-iOS-CocoaPods.git
+    ```
   然后再执行:
-  pod install 
-  
+     ```
+     pod install 
+    ```
 * **手动集成**
   1. 在demo工程QAPM_iOS_SDK_Demo/Pods/QAPM/路径下的framework复制到业务工程；
   2. 拖拽QAPM.framework文件到Xcode工程内(请勾选Copy items if needed选项)；
