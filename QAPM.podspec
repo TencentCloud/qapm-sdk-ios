@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name         = "QAPM"
-  s.version      = "5.1.5"
+  s.version      = "5.1.6"
   s.summary      = "腾讯性能监控组件(iOS)"
   s.description  = <<-DESC
                       QAPM 是一款监控线上APP的性能组件
@@ -21,7 +21,13 @@ Pod::Spec.new do |s|
   #s.source_files = "QAPM.framework/Headers/*.h"
   #s.public_header_files  = "QAPM.framework/Headers/*.h"
   s.requires_arc = true
-  s.resources    = "QAPM.framework/js_sdk.js"
+  
+  # s.resources = ['QAPM.framework/js_sdk.js','QAPM.framework/*.cer']
+  s.resources = ['QAPM.framework/js_sdk.js']
+   
+  s.resource_bundles = {
+    'QAPM_cer' => ['QAPM.framework/QAPM.bundle/*.cer'],
+  }
   s.pod_target_xcconfig  = { 
     'ENABLE_BITCODE' => 'NO' ,
     'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64',

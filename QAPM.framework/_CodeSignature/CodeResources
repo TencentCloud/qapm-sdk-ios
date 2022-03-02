@@ -6,7 +6,7 @@
 	<dict>
 		<key>Headers/QAPM.h</key>
 		<data>
-		tYJ2CPxDNoaTyIaa0lEmg8Lve1U=
+		wiu+gJZ7Tko1gfpvOKeG0KqXvg4=
 		</data>
 		<key>Headers/QAPMConfig.h</key>
 		<data>
@@ -30,7 +30,7 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		zdJemoA2Jub9FMMG4qhP5q1q0qg=
+		80OudrdsmVFgv5YzS85C+DFpdD8=
 		</data>
 		<key>PrivateHeaders/QAPMHTTPConfiguation.h</key>
 		<data>
@@ -39,6 +39,18 @@
 		<key>PrivateHeaders/QAPMHTTPMonitor.h</key>
 		<data>
 		5KA2Mzoba1XDi3DGcCiEBF/uWb8=
+		</data>
+		<key>QAPM.bundle/athena.cer</key>
+		<data>
+		y3jTPoFS828UL/ptdlRgOpaOdI8=
+		</data>
+		<key>QAPM.bundle/qapm.cer</key>
+		<data>
+		ykJ+cY1a7uy47nRchjoUcO7jHgg=
+		</data>
+		<key>QAPM.bundle/sngapm.cer</key>
+		<data>
+		WSiA75KmF5LcVvB2zHtpB8Cczw4=
 		</data>
 		<key>js_sdk.js</key>
 		<data>
@@ -51,11 +63,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			tYJ2CPxDNoaTyIaa0lEmg8Lve1U=
+			wiu+gJZ7Tko1gfpvOKeG0KqXvg4=
 			</data>
 			<key>hash2</key>
 			<data>
-			qTQ/EisWIOlJCw3vXn59uxYB3MnbIcwSNPlIVa8Wf2o=
+			XQ/u3YLWg4ekittiPn6dCBCaTETsoCCURG0ah1wMIQc=
 			</data>
 		</dict>
 		<key>Headers/QAPMConfig.h</key>
@@ -133,6 +145,39 @@
 			<key>hash2</key>
 			<data>
 			/j9DHwZEkJ9Mz4LjC97zRE0j6/kbTKOqPARVBWG+7xY=
+			</data>
+		</dict>
+		<key>QAPM.bundle/athena.cer</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			y3jTPoFS828UL/ptdlRgOpaOdI8=
+			</data>
+			<key>hash2</key>
+			<data>
+			WJkj63UGsUj7oQKVowxIvQ5/4OqsSogBIiCMBozygLE=
+			</data>
+		</dict>
+		<key>QAPM.bundle/qapm.cer</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			ykJ+cY1a7uy47nRchjoUcO7jHgg=
+			</data>
+			<key>hash2</key>
+			<data>
+			sFStG1PkWBZ8rzJd7JEKIQWo70VR2vzPNthKJIFVmMo=
+			</data>
+		</dict>
+		<key>QAPM.bundle/sngapm.cer</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			WSiA75KmF5LcVvB2zHtpB8Cczw4=
+			</data>
+			<key>hash2</key>
+			<data>
+			jAXfJvFxFQnV9mdR1h6hRSOqs6D8ZIxrakpJ3IbAkCk=
 			</data>
 		</dict>
 		<key>js_sdk.js</key>

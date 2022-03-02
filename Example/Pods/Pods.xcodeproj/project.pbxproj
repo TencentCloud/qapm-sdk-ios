@@ -9,10 +9,11 @@
 /* Begin PBXAggregateTarget section */
 		3862888EA7DA30731E4EFCD05F4D5260 /* QAPM */ = {
 			isa = PBXAggregateTarget;
-			buildConfigurationList = 7E545C9554B48E03A2CFA872F372C4B3 /* Build configuration list for PBXAggregateTarget "QAPM" */;
+			buildConfigurationList = 1E4DD7671A67CCB65C3F9C57E685538D /* Build configuration list for PBXAggregateTarget "QAPM" */;
 			buildPhases = (
 			);
 			dependencies = (
+				20C7FDB92D301AA5099010A26F977010 /* PBXTargetDependency */,
 			);
 			name = QAPM;
 		};
@@ -24,55 +25,70 @@
 		39F24705A3F122D0839F2F03FF117458 /* Pods-QAPM_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 6977DE9C130AE7FD918C364F3AD3FCA9 /* Pods-QAPM_Tests-dummy.m */; };
 		87EE956AB2EDA7282F823BE672DB6CD0 /* Pods-QAPM_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = EF009D2935BD94AE6FB1D69F9D84CAF2 /* Pods-QAPM_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A91CA77674CC3F4534A62C0C381B1DC2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
+		BA16128529EDDD24667843E5B24FEA5C /* sngapm.cer in Resources */ = {isa = PBXBuildFile; fileRef = C9C245263001AB832D6C6FBA1D28BA84 /* sngapm.cer */; };
+		C0FE2481DD2424A38137E8FAE9EB13CF /* athena.cer in Resources */ = {isa = PBXBuildFile; fileRef = FFDA28AE3EC608414F39EBDBAF491972 /* athena.cer */; };
+		CE3F5E3D4F6854E91868666E4594A4B6 /* qapm.cer in Resources */ = {isa = PBXBuildFile; fileRef = 144A39A8A82E8324AA57DDF4BA1F0236 /* qapm.cer */; };
 		D33DB05DF0FB45C6AB18DA13C40F1962 /* Pods-QAPM_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = AE1E65E295F4F767BD24EED5995863D4 /* Pods-QAPM_Example-dummy.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		0CB661D9CCF68132AFA56EA72A99E882 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 3862888EA7DA30731E4EFCD05F4D5260;
-			remoteInfo = QAPM;
-		};
-		7454B7D60069800B65D684A30CC11D75 /* PBXContainerItemProxy */ = {
+		56C1D1AC512ECBDF3C31FB0AC108DC95 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = C26F9D569145CA3122225DD067743D8B;
 			remoteInfo = "Pods-QAPM_Example";
 		};
+		81F782D03B5455880F36B43E893FA162 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3862888EA7DA30731E4EFCD05F4D5260;
+			remoteInfo = QAPM;
+		};
+		C9F7400031C41C2744E0C88151BA8244 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2799E177CFE355A7835C6BA32A1200E3;
+			remoteInfo = "QAPM-QAPM_cer";
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		01EB8548CD39B18B27AC621ACB29A6C8 /* QAPM.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = QAPM.debug.xcconfig; sourceTree = "<group>"; };
+		144A39A8A82E8324AA57DDF4BA1F0236 /* qapm.cer */ = {isa = PBXFileReference; includeInIndex = 1; name = qapm.cer; path = QAPM.framework/QAPM.bundle/qapm.cer; sourceTree = "<group>"; };
 		1AB055AC72AA617E522BBC706C4B3F17 /* Pods-QAPM_Tests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-QAPM_Tests-Info.plist"; sourceTree = "<group>"; };
+		1FAA32C3EFD02E7B9639BA074A93736A /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
 		209A19B419B3D939C9DAADD4752DA39F /* Pods-QAPM_Example */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-QAPM_Example"; path = Pods_QAPM_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		239EB5A11E3E1E6375D35D4770672562 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
 		276EEEBB1E94381A8026D9A89CD9353A /* Pods-QAPM_Example-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-QAPM_Example-resources.sh"; sourceTree = "<group>"; };
+		3522EDE93FDB8A2024B7C42850C0C8F2 /* QAPM.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = QAPM.framework; sourceTree = "<group>"; };
+		3F700003D5A2892EDD8EA0935BA77BDA /* QAPM.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = QAPM.debug.xcconfig; sourceTree = "<group>"; };
 		493BEDB9B1CD5DB249ED3E9F23939A77 /* Pods-QAPM_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-QAPM_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		4C348A5767706AA1993ECC3BE13C8C2A /* Pods-QAPM_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-QAPM_Example.modulemap"; sourceTree = "<group>"; };
 		4F23F3F87A5BF36CD3B5E17F9C2CCCA0 /* Pods-QAPM_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-QAPM_Example.release.xcconfig"; sourceTree = "<group>"; };
-		58DC9AF37F7BE47695837C2CE2B17CDB /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
+		681FC1649A8F275B2AC383AAFC957A54 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
 		6977DE9C130AE7FD918C364F3AD3FCA9 /* Pods-QAPM_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-QAPM_Tests-dummy.m"; sourceTree = "<group>"; };
 		6A4B88119F3D8031CAA2276016C2905A /* Pods-QAPM_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-QAPM_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
 		6C9DE1749CF88152ADA03C6A8F010753 /* Pods-QAPM_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-QAPM_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
 		73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		781ABB7490D0C9FAB6809442FFAD54C7 /* Pods-QAPM_Example-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-QAPM_Example-Info.plist"; sourceTree = "<group>"; };
-		8DF66319FAC4FDD1B61D26F6EB65AA24 /* QAPM.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = QAPM.framework; sourceTree = "<group>"; };
+		78497F9EC279F23987D95C1D95F5526C /* QAPM-QAPM_cer */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = "QAPM-QAPM_cer"; path = QAPM_cer.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
+		78FD062A2F3E4CB248EA0CBE95006A9F /* QAPM.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = QAPM.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		8E4835636232049032C2F149D32DF951 /* Pods-QAPM_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-QAPM_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
-		9BAF341FED91D87C43A8253897C413DF /* QAPM.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = QAPM.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		9DF3E14CFD7AE333D6B4A927BB1C6C67 /* Pods-QAPM_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-QAPM_Tests-umbrella.h"; sourceTree = "<group>"; };
+		A5B48B7FC561BA5A0F160383CEE769F7 /* QAPM.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = QAPM.release.xcconfig; sourceTree = "<group>"; };
 		AE1E65E295F4F767BD24EED5995863D4 /* Pods-QAPM_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-QAPM_Example-dummy.m"; sourceTree = "<group>"; };
 		B3BB99804982ECA46832127CB9D08FC5 /* Pods-QAPM_Tests */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-QAPM_Tests"; path = Pods_QAPM_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B4CEAFDEA0BD11E48FFDA81C84560655 /* Pods-QAPM_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-QAPM_Example-acknowledgements.plist"; sourceTree = "<group>"; };
-		B997AB1DB20C2D27F662C5E674617581 /* js_sdk.js */ = {isa = PBXFileReference; includeInIndex = 1; name = js_sdk.js; path = QAPM.framework/js_sdk.js; sourceTree = "<group>"; };
+		C08D263EF407B7F9F169B31DDD24B79D /* js_sdk.js */ = {isa = PBXFileReference; includeInIndex = 1; name = js_sdk.js; path = QAPM.framework/js_sdk.js; sourceTree = "<group>"; };
+		C9C245263001AB832D6C6FBA1D28BA84 /* sngapm.cer */ = {isa = PBXFileReference; includeInIndex = 1; name = sngapm.cer; path = QAPM.framework/QAPM.bundle/sngapm.cer; sourceTree = "<group>"; };
 		CA0B33AD9AF242A0D50678AAD06B5B12 /* Pods-QAPM_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-QAPM_Tests.release.xcconfig"; sourceTree = "<group>"; };
-		D2781F72B3E6CDCA9F1862CC319291A2 /* QAPM.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = QAPM.release.xcconfig; sourceTree = "<group>"; };
 		EC1242EEC49212F95E9518DAA001096D /* Pods-QAPM_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-QAPM_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		EDFC6B9E0EB08F281163A3A2686EEBFA /* Pods-QAPM_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-QAPM_Tests.modulemap"; sourceTree = "<group>"; };
+		EED54775CEA59E6F4D8DA39B584E28AB /* ResourceBundle-QAPM_cer-QAPM-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "ResourceBundle-QAPM_cer-QAPM-Info.plist"; sourceTree = "<group>"; };
 		EF009D2935BD94AE6FB1D69F9D84CAF2 /* Pods-QAPM_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-QAPM_Example-umbrella.h"; sourceTree = "<group>"; };
+		FFDA28AE3EC608414F39EBDBAF491972 /* athena.cer */ = {isa = PBXFileReference; includeInIndex = 1; name = athena.cer; path = QAPM.framework/QAPM.bundle/athena.cer; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,19 +108,22 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		F6CEA07C87C5DB94FF625ABC55860210 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		1D8BB0A234B13228830CE8CD3A7CFAAD /* QAPM */ = {
+		02B2C528F7F332F6AE81B4543CFD035B /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				B997AB1DB20C2D27F662C5E674617581 /* js_sdk.js */,
-				98900C48FA70B4E34ABE2CAA18507D2C /* Frameworks */,
-				CAFD0B94A851734CF0410360E87F14B5 /* Pod */,
-				5637D6B7FE2EC25B0101304AAC50C3C2 /* Support Files */,
+				3522EDE93FDB8A2024B7C42850C0C8F2 /* QAPM.framework */,
 			);
-			name = QAPM;
-			path = ../..;
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		22E35DF659EE71D3D97C1376407FAF01 /* Pods-QAPM_Example */ = {
@@ -124,14 +143,38 @@
 			path = "Target Support Files/Pods-QAPM_Example";
 			sourceTree = "<group>";
 		};
-		5637D6B7FE2EC25B0101304AAC50C3C2 /* Support Files */ = {
+		356C7E41D5DB3CBDB4EBA5C8F8E7BED8 /* Development Pods */ = {
 			isa = PBXGroup;
 			children = (
-				01EB8548CD39B18B27AC621ACB29A6C8 /* QAPM.debug.xcconfig */,
-				D2781F72B3E6CDCA9F1862CC319291A2 /* QAPM.release.xcconfig */,
+				4BE31C47753A5536B5FDE5D629C034C2 /* QAPM */,
+			);
+			name = "Development Pods";
+			sourceTree = "<group>";
+		};
+		3D299DB97E3DA99B292BE927EF7D847B /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				3F700003D5A2892EDD8EA0935BA77BDA /* QAPM.debug.xcconfig */,
+				A5B48B7FC561BA5A0F160383CEE769F7 /* QAPM.release.xcconfig */,
+				EED54775CEA59E6F4D8DA39B584E28AB /* ResourceBundle-QAPM_cer-QAPM-Info.plist */,
 			);
 			name = "Support Files";
 			path = "Example/Pods/Target Support Files/QAPM";
+			sourceTree = "<group>";
+		};
+		4BE31C47753A5536B5FDE5D629C034C2 /* QAPM */ = {
+			isa = PBXGroup;
+			children = (
+				FFDA28AE3EC608414F39EBDBAF491972 /* athena.cer */,
+				C08D263EF407B7F9F169B31DDD24B79D /* js_sdk.js */,
+				144A39A8A82E8324AA57DDF4BA1F0236 /* qapm.cer */,
+				C9C245263001AB832D6C6FBA1D28BA84 /* sngapm.cer */,
+				02B2C528F7F332F6AE81B4543CFD035B /* Frameworks */,
+				BEEA3966A5C77687CB879EC5C6DE6BB3 /* Pod */,
+				3D299DB97E3DA99B292BE927EF7D847B /* Support Files */,
+			);
+			name = QAPM;
+			path = ../..;
 			sourceTree = "<group>";
 		};
 		578452D2E740E91742655AC8F1636D1F /* iOS */ = {
@@ -142,37 +185,22 @@
 			name = iOS;
 			sourceTree = "<group>";
 		};
-		9291D7C88FC7469C01BD81C5EDDA803E /* Products */ = {
+		62BA783D0096998BA26884CDE7A80ADB /* Products */ = {
 			isa = PBXGroup;
 			children = (
 				209A19B419B3D939C9DAADD4752DA39F /* Pods-QAPM_Example */,
 				B3BB99804982ECA46832127CB9D08FC5 /* Pods-QAPM_Tests */,
+				78497F9EC279F23987D95C1D95F5526C /* QAPM-QAPM_cer */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		98900C48FA70B4E34ABE2CAA18507D2C /* Frameworks */ = {
+		BEEA3966A5C77687CB879EC5C6DE6BB3 /* Pod */ = {
 			isa = PBXGroup;
 			children = (
-				8DF66319FAC4FDD1B61D26F6EB65AA24 /* QAPM.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		C17694FBFA31C5ECF21A52421F3BD703 /* Development Pods */ = {
-			isa = PBXGroup;
-			children = (
-				1D8BB0A234B13228830CE8CD3A7CFAAD /* QAPM */,
-			);
-			name = "Development Pods";
-			sourceTree = "<group>";
-		};
-		CAFD0B94A851734CF0410360E87F14B5 /* Pod */ = {
-			isa = PBXGroup;
-			children = (
-				58DC9AF37F7BE47695837C2CE2B17CDB /* LICENSE */,
-				9BAF341FED91D87C43A8253897C413DF /* QAPM.podspec */,
-				239EB5A11E3E1E6375D35D4770672562 /* README.md */,
+				681FC1649A8F275B2AC383AAFC957A54 /* LICENSE */,
+				78FD062A2F3E4CB248EA0CBE95006A9F /* QAPM.podspec */,
+				1FAA32C3EFD02E7B9639BA074A93736A /* README.md */,
 			);
 			name = Pod;
 			sourceTree = "<group>";
@@ -181,9 +209,9 @@
 			isa = PBXGroup;
 			children = (
 				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
-				C17694FBFA31C5ECF21A52421F3BD703 /* Development Pods */,
+				356C7E41D5DB3CBDB4EBA5C8F8E7BED8 /* Development Pods */,
 				D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */,
-				9291D7C88FC7469C01BD81C5EDDA803E /* Products */,
+				62BA783D0096998BA26884CDE7A80ADB /* Products */,
 				D65CDF5335B1DDF61568D24809845227 /* Targets Support Files */,
 			);
 			sourceTree = "<group>";
@@ -243,6 +271,23 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
+		2799E177CFE355A7835C6BA32A1200E3 /* QAPM-QAPM_cer */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 50FB60A11CEE614D7E0694AAF1010A1F /* Build configuration list for PBXNativeTarget "QAPM-QAPM_cer" */;
+			buildPhases = (
+				158ACFE39099EB08F38DF23903058012 /* Sources */,
+				F6CEA07C87C5DB94FF625ABC55860210 /* Frameworks */,
+				12BC371C6AB15A156F211E512B92F26B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "QAPM-QAPM_cer";
+			productName = QAPM_cer;
+			productReference = 78497F9EC279F23987D95C1D95F5526C /* QAPM-QAPM_cer */;
+			productType = "com.apple.product-type.bundle";
+		};
 		C26F9D569145CA3122225DD067743D8B /* Pods-QAPM_Example */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 066AB20730C7BFBD25A766A718EA719D /* Build configuration list for PBXNativeTarget "Pods-QAPM_Example" */;
@@ -255,7 +300,7 @@
 			buildRules = (
 			);
 			dependencies = (
-				B708087BA71FB8F07E03022CF734948E /* PBXTargetDependency */,
+				F86E91220AC8BD26C0C040ADA25BC625 /* PBXTargetDependency */,
 			);
 			name = "Pods-QAPM_Example";
 			productName = Pods_QAPM_Example;
@@ -274,7 +319,7 @@
 			buildRules = (
 			);
 			dependencies = (
-				FE192782E97E861723EF4DC6F955B9F6 /* PBXTargetDependency */,
+				C7BD9B0B2A358D1541DC86E82667B927 /* PBXTargetDependency */,
 			);
 			name = "Pods-QAPM_Tests";
 			productName = Pods_QAPM_Tests;
@@ -299,13 +344,14 @@
 				en,
 			);
 			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
-			productRefGroup = 9291D7C88FC7469C01BD81C5EDDA803E /* Products */;
+			productRefGroup = 62BA783D0096998BA26884CDE7A80ADB /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
 				C26F9D569145CA3122225DD067743D8B /* Pods-QAPM_Example */,
 				D1806C744408E8BA2272555147523A2D /* Pods-QAPM_Tests */,
 				3862888EA7DA30731E4EFCD05F4D5260 /* QAPM */,
+				2799E177CFE355A7835C6BA32A1200E3 /* QAPM-QAPM_cer */,
 			);
 		};
 /* End PBXProject section */
@@ -315,6 +361,16 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		12BC371C6AB15A156F211E512B92F26B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C0FE2481DD2424A38137E8FAE9EB13CF /* athena.cer in Resources */,
+				CE3F5E3D4F6854E91868666E4594A4B6 /* qapm.cer in Resources */,
+				BA16128529EDDD24667843E5B24FEA5C /* sngapm.cer in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -328,6 +384,13 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		158ACFE39099EB08F38DF23903058012 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		48CA6459286E3EEB52300AC0F17FB094 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -347,21 +410,40 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		B708087BA71FB8F07E03022CF734948E /* PBXTargetDependency */ = {
+		20C7FDB92D301AA5099010A26F977010 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			name = QAPM;
-			target = 3862888EA7DA30731E4EFCD05F4D5260 /* QAPM */;
-			targetProxy = 0CB661D9CCF68132AFA56EA72A99E882 /* PBXContainerItemProxy */;
+			name = "QAPM-QAPM_cer";
+			target = 2799E177CFE355A7835C6BA32A1200E3 /* QAPM-QAPM_cer */;
+			targetProxy = C9F7400031C41C2744E0C88151BA8244 /* PBXContainerItemProxy */;
 		};
-		FE192782E97E861723EF4DC6F955B9F6 /* PBXTargetDependency */ = {
+		C7BD9B0B2A358D1541DC86E82667B927 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = "Pods-QAPM_Example";
 			target = C26F9D569145CA3122225DD067743D8B /* Pods-QAPM_Example */;
-			targetProxy = 7454B7D60069800B65D684A30CC11D75 /* PBXContainerItemProxy */;
+			targetProxy = 56C1D1AC512ECBDF3C31FB0AC108DC95 /* PBXContainerItemProxy */;
+		};
+		F86E91220AC8BD26C0C040ADA25BC625 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = QAPM;
+			target = 3862888EA7DA30731E4EFCD05F4D5260 /* QAPM */;
+			targetProxy = 81F782D03B5455880F36B43E893FA162 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
+		157F9B1211FA135D1D6362BC4215CCAF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3F700003D5A2892EDD8EA0935BA77BDA /* QAPM.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
 		25AD9454612BF454A1E3DC4CD4FA8C6D /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -460,6 +542,22 @@
 			};
 			name = Debug;
 		};
+		4166032D61B6AA026B0D955FAF3A25C7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3F700003D5A2892EDD8EA0935BA77BDA /* QAPM.debug.xcconfig */;
+			buildSettings = {
+				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/QAPM";
+				IBSC_MODULE = QAPM;
+				INFOPLIST_FILE = "Target Support Files/QAPM/ResourceBundle-QAPM_cer-QAPM-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				PRODUCT_NAME = QAPM_cer;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Debug;
+		};
 		5CED0F128F40EB79971AB03BB13AAD6B /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 4F23F3F87A5BF36CD3B5E17F9C2CCCA0 /* Pods-QAPM_Example.release.xcconfig */;
@@ -493,22 +591,9 @@
 			};
 			name = Release;
 		};
-		638365E3A41C5654037C159144D442FF /* Debug */ = {
+		7443B53504DE8E1FA1D466E10867FB36 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 01EB8548CD39B18B27AC621ACB29A6C8 /* QAPM.debug.xcconfig */;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				SDKROOT = iphoneos;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Debug;
-		};
-		BD13A29437AE603A3F5853791F38817A /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = D2781F72B3E6CDCA9F1862CC319291A2 /* QAPM.release.xcconfig */;
+			baseConfigurationReference = A5B48B7FC561BA5A0F160383CEE769F7 /* QAPM.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -517,6 +602,22 @@
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		A2EC7712CB61E33D6BF0AB96B528FFAB /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A5B48B7FC561BA5A0F160383CEE769F7 /* QAPM.release.xcconfig */;
+			buildSettings = {
+				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/QAPM";
+				IBSC_MODULE = QAPM;
+				INFOPLIST_FILE = "Target Support Files/QAPM/ResourceBundle-QAPM_cer-QAPM-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				PRODUCT_NAME = QAPM_cer;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				WRAPPER_EXTENSION = bundle;
 			};
 			name = Release;
 		};
@@ -659,6 +760,15 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
+		1E4DD7671A67CCB65C3F9C57E685538D /* Build configuration list for PBXAggregateTarget "QAPM" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				157F9B1211FA135D1D6362BC4215CCAF /* Debug */,
+				7443B53504DE8E1FA1D466E10867FB36 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -668,11 +778,11 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		7E545C9554B48E03A2CFA872F372C4B3 /* Build configuration list for PBXAggregateTarget "QAPM" */ = {
+		50FB60A11CEE614D7E0694AAF1010A1F /* Build configuration list for PBXNativeTarget "QAPM-QAPM_cer" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				638365E3A41C5654037C159144D442FF /* Debug */,
-				BD13A29437AE603A3F5853791F38817A /* Release */,
+				4166032D61B6AA026B0D955FAF3A25C7 /* Debug */,
+				A2EC7712CB61E33D6BF0AB96B528FFAB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
