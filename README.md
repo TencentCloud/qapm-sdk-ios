@@ -105,14 +105,7 @@ void loggerFunc(QAPMLoggerLevel level, const char* log) {
     
     //用于查看当前SDK版本号信息
     NSLog(@"qapm sdk version : %@", [QAPM sdkVersion]);
-    
-#ifdef DEBUG
-    [QAPMConfig getInstance].sigkillConfig.mallocSampleFactor = 1;
-    [QAPMConfig getInstance].launchConfig.debugEnable = YES;
-    [QAPMConfig getInstance].launchConfig.launchSampleFactor = 1;
-    [QAPMConfig getInstance].launchConfig.launchthreshold = 100;
-#endif
-    
+        
     //自动上传符号表步骤，请根据接入文档进行相关信息的配置
     [QAPMConfig getInstance].uuidFromDsym = NO;
     NSString *uuid = [[[NSBundle mainBundle] infoDictionary] objectForKey:@"com.tencent.qapm.uuid"];
@@ -143,6 +136,8 @@ void loggerFunc(QAPMLoggerLevel level, const char* log) {
     // 设置App版本号
     [QAPMConfig getInstance].customerAppVersion = @"请正确填写业务APP版本";
     [QAPM startWithAppKey:@"请正确填写申请到的appkey"];
+    
+    [QAPMLaunchProfile setEndTimestampForScene:@"finish"];
 }
 ```
      
