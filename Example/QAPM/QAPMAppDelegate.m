@@ -116,7 +116,7 @@ void loggerFunc(QAPMLoggerLevel level, const char* log) {
     [QAPMConfig getInstance].customerAppVersion = @"1.0.1";
     [QAPM startWithAppKey:@"55a11d57-4116"];
     
-    //启动耗时自定义打点开始
+    //启动耗时自定义打点结束
     [QAPMLaunchProfile setEndTimestampForScene:@"finish"];
 }
 
