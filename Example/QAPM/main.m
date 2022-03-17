@@ -13,7 +13,6 @@ int main(int argc, char * argv[])
 {
     @autoreleasepool {
 #ifdef DEBUG
-        [QAPMConfig getInstance].sigkillConfig.mallocSampleFactor = 1;
         [QAPMConfig getInstance].launchConfig.debugEnable = YES;
         [QAPMConfig getInstance].launchConfig.launchSampleFactor = 1;
         [QAPMConfig getInstance].launchConfig.launchthreshold = 100;
