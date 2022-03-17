@@ -115,6 +115,9 @@ void loggerFunc(QAPMLoggerLevel level, const char* log) {
     // 设置App版本号
     [QAPMConfig getInstance].customerAppVersion = @"1.0.1";
     [QAPM startWithAppKey:@"55a11d57-4116"];
+    
+    //启动耗时自定义打点开始
+    [QAPMLaunchProfile setEndTimestampForScene:@"finish"];
 }
 
 - (void)setupFlex {
