@@ -130,7 +130,7 @@ void loggerFunc(QAPMLoggerLevel level, const char* log) {
 [[QAPMConfig getInstance].sigkillConfig setVMLogger:(void**)&__syscall_logger];
 #endif
 
-    
+    //非腾讯系产品host为默认值，不用额外设置
     [QAPMConfig getInstance].host = @"https://qapm.qq.com";
 
     // 设置用户标记，默认值为10000
