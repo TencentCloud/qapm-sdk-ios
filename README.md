@@ -133,10 +133,10 @@ void loggerFunc(QAPMLoggerLevel level, const char* log) {
     //非腾讯系产品host为默认值，不用额外设置
     [QAPMConfig getInstance].host = @"https://qapm.qq.com";
 
-    // 设置用户标记，默认值为10000
+    // 设置用户标记，默认值为10000,userID会作为计算各功能的用户指标率，请进行传值
     [QAPMConfig getInstance].userId = @"请正确填写用户唯一标识";
     
-    // 设置设备唯一标识，默认值为10000
+    // 设置设备唯一标识，默认值为10000,deviceID会作为计算各功能的设备指标率，请进行传值
     [QAPMConfig getInstance].deviceID = @"请正确填写设备的唯一标识";
     // 设置App版本号
     [QAPMConfig getInstance].customerAppVersion = @"请正确填写业务APP版本";
