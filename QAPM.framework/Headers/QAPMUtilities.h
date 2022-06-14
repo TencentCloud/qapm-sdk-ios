@@ -100,43 +100,6 @@ typedef NS_ENUM(NSInteger, QAPMUploadEventType) {
 };
 
 /**
- 触发事件类型
- */
-typedef NS_ENUM(NSInteger, QAPMEventType) {
-    /// 卡顿
-    QAPMEventTypeLAG                       = 0,
-    /// VC泄露
-    QAPMEventTypeVCLeak                    = 1,
-    /// Sigkill
-    QAPMEventTypeSigkill                   = 2,
-    /// Normal crash
-    QAPMEventTypeCrash                     = 3,
-    /// 大块内存分配
-    QAPMEventTypeBigChunkMemory            = 4,
-    ///启动耗时
-    QAPMEventTypeUITime                    = 5,
-    ///资源采集
-    QAPMEventTypeGatheringResource         = 6,
-    ///触顶率
-    QAPMEventTypeCelingRate                = 7,
-    ///对象泄漏检测
-    QAPMEventTypeObjectLeak                = 8,
-    ///网络错误
-    QAPMEventTypeNetworkError              = 9,
-    ///网络慢请求
-    QAPMEventTypeNetworkSlowRequest        = 10,
-    ///VC页面耗时
-    QAPMEventTypeVCTimeProfiler            = 11,
-    ///耗电监控
-    QAPMEventTypePowerConsume              = 12,
-    ///app进入前台
-    QAPMEventTypeForeground                = 13,
-    ///appa进入后台
-    QAPMEventTypeBackground                = 14,
-};
-
-
-/**
  用于输出SDK调试log的回调
  */
 typedef void(*QAPM_Log_Callback)(QAPMLoggerLevel level, const char* log);

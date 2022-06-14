@@ -6,11 +6,11 @@
 	<dict>
 		<key>Headers/QAPM.h</key>
 		<data>
-		wiu+gJZ7Tko1gfpvOKeG0KqXvg4=
+		zaXKFEOo96N6PInqzEzXjcQl1cI=
 		</data>
 		<key>Headers/QAPMConfig.h</key>
 		<data>
-		X8UJqugbpPNaRCnxTT6hntuvNhI=
+		pDQgnr4eP3PHrdxL+ueO0P0liaI=
 		</data>
 		<key>Headers/QAPMCustomLagUploadCenter.h</key>
 		<data>
@@ -18,19 +18,15 @@
 		</data>
 		<key>Headers/QAPMModelStableConfig.h</key>
 		<data>
-		L9/phMJdEri2EcNmwj54C9vp7EQ=
-		</data>
-		<key>Headers/QAPMUBSMonitor.h</key>
-		<data>
-		i+sxkL+24wy/iFq59X/VO1JUILc=
+		nR4AVaWXTFB1pbTiCWuYw08Q2U0=
 		</data>
 		<key>Headers/QAPMUtilities.h</key>
 		<data>
-		HuW7b8gl0O+XXoX558oGCXjNEWw=
+		fWy+M3K6RECXSqyCQH9bNMvDg7M=
 		</data>
 		<key>Info.plist</key>
 		<data>
-		80OudrdsmVFgv5YzS85C+DFpdD8=
+		ZancWMCeFAHsRVPe567rDK/QvYU=
 		</data>
 		<key>PrivateHeaders/QAPMHTTPConfiguation.h</key>
 		<data>
@@ -39,10 +35,6 @@
 		<key>PrivateHeaders/QAPMHTTPMonitor.h</key>
 		<data>
 		5KA2Mzoba1XDi3DGcCiEBF/uWb8=
-		</data>
-		<key>QAPM.bundle/athena.cer</key>
-		<data>
-		y3jTPoFS828UL/ptdlRgOpaOdI8=
 		</data>
 		<key>QAPM.bundle/qapm.cer</key>
 		<data>
@@ -63,22 +55,22 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			wiu+gJZ7Tko1gfpvOKeG0KqXvg4=
+			zaXKFEOo96N6PInqzEzXjcQl1cI=
 			</data>
 			<key>hash2</key>
 			<data>
-			XQ/u3YLWg4ekittiPn6dCBCaTETsoCCURG0ah1wMIQc=
+			9NUkJibr6ca78tB42Xiola/3vcQjgtRy7N6o4b5BfAo=
 			</data>
 		</dict>
 		<key>Headers/QAPMConfig.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			X8UJqugbpPNaRCnxTT6hntuvNhI=
+			pDQgnr4eP3PHrdxL+ueO0P0liaI=
 			</data>
 			<key>hash2</key>
 			<data>
-			fmrOQ+PzK/TftiYI30MEZyuj3Aa4AUDG1DDmY3XaRes=
+			MCq7MYn7mZUGMCNSSBXBbcq1j993DrGgSnOA1omWSfg=
 			</data>
 		</dict>
 		<key>Headers/QAPMCustomLagUploadCenter.h</key>
@@ -96,33 +88,22 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			L9/phMJdEri2EcNmwj54C9vp7EQ=
+			nR4AVaWXTFB1pbTiCWuYw08Q2U0=
 			</data>
 			<key>hash2</key>
 			<data>
-			wq6erADrb1Sp49QtDU2+LW4Rv3uYg8LnJYuHoAFPE9M=
-			</data>
-		</dict>
-		<key>Headers/QAPMUBSMonitor.h</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			i+sxkL+24wy/iFq59X/VO1JUILc=
-			</data>
-			<key>hash2</key>
-			<data>
-			K0fWbcy11KLZZFDUvPs3nYOIFuyJ7BjxpXXO0yjyXF0=
+			2DM0LXJD50abHkOFXt2x10jQMuznXd7GaFFlVt93F1Y=
 			</data>
 		</dict>
 		<key>Headers/QAPMUtilities.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			HuW7b8gl0O+XXoX558oGCXjNEWw=
+			fWy+M3K6RECXSqyCQH9bNMvDg7M=
 			</data>
 			<key>hash2</key>
 			<data>
-			Q84braZpCdYNz1anDn2Wrree/i0n5+Lu6w0TTzxN8qc=
+			HUpP3S6yAWiCj2lMFOPJbWiUlnxHwh1WIcAk7/TO7eM=
 			</data>
 		</dict>
 		<key>PrivateHeaders/QAPMHTTPConfiguation.h</key>
@@ -145,17 +126,6 @@
 			<key>hash2</key>
 			<data>
 			/j9DHwZEkJ9Mz4LjC97zRE0j6/kbTKOqPARVBWG+7xY=
-			</data>
-		</dict>
-		<key>QAPM.bundle/athena.cer</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			y3jTPoFS828UL/ptdlRgOpaOdI8=
-			</data>
-			<key>hash2</key>
-			<data>
-			WJkj63UGsUj7oQKVowxIvQ5/4OqsSogBIiCMBozygLE=
 			</data>
 		</dict>
 		<key>QAPM.bundle/qapm.cer</key>

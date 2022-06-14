@@ -64,7 +64,7 @@ void loggerFunc(QAPMLoggerLevel level, const char* log) {
 
 - (void)setupQapm {
     //启动耗时监控的第一个打点
-    [QAPMLaunchProfile setAppDidFinishLaunchBeginTimestamp];
+  //  [QAPMLaunchProfile setAppDidFinishLaunchBeginTimestamp];
     
     //启动耗时自定义打点开始,业务自行打点
     [QAPMLaunchProfile setBeginTimestampForScene:@"finish"];
@@ -72,11 +72,11 @@ void loggerFunc(QAPMLoggerLevel level, const char* log) {
     [QAPM registerLogCallback:loggerFunc];
 #ifdef DEBUG
     //设置开启QAPM所有监控功能
-    [[QAPMModelStableConfig getInstance] getModelAll:1];
+    [[QAPMModelStableConfig getInstance] setupModelAll:1];
     //开启全量堆内存抽样
     [QAPMConfig getInstance].sigkillConfig.mallocSampleFactor = 1;
 #else
-    [[QAPMModelStableConfig getInstance] getModelStable:2];
+    [[QAPMModelStableConfig getInstance] setupModelAll:2];
 #endif
     //用于查看当前SDK版本号信息
     NSLog(@"qapm sdk version : %@", [QAPM sdkVersion]);
@@ -144,6 +144,7 @@ void loggerFunc(QAPMLoggerLevel level, const char* log) {
 
 - (void)applicationDidBecomeActive:(UIApplication *)application
 {
+    sleep(3);
     // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
 }
 

@@ -518,12 +518,12 @@
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-QAPM_Example/Pods-QAPM_Example-resources.sh",
 				"${PODS_ROOT}/../../QAPM.framework/js_sdk.js",
-				"${PODS_CONFIGURATION_BUILD_DIR}/QAPM/QAPM_cer.bundle",
+				"${PODS_CONFIGURATION_BUILD_DIR}/QAPM/QAPM.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/js_sdk.js",
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/QAPM_cer.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/QAPM.bundle",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;

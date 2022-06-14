@@ -11,16 +11,7 @@
 #import "APMBlueViewController.h"
 #import "APMYellowViewController.h"
 #import "APMQQLeakViewController.h"
-#import <QAPM/QAPMUBSMonitor.h>
 #import <mach/mach_time.h>
-#define MethodTimeUsage(tag, statment) \
-{\
-    CFAbsoluteTime beginTime = CFAbsoluteTimeGetCurrent(); \
-    statment; \
-    CFAbsoluteTime endTime = CFAbsoluteTimeGetCurrent();                \
-    NSLog(@"Method: %@ , time usage: %f", tag, endTime - beginTime); \
-} \
-
 @interface APMMainListViewController () <UITableViewDelegate, UITableViewDataSource>
 
 @property (nonatomic, strong)UITableView *tableView;
@@ -72,7 +63,7 @@
 
 - (void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
-    [QAPMLaunchProfile setFirtstViewDidApppearTimestamp];
+  
 }
 
 #pragma mark - TableView datasource and delegate

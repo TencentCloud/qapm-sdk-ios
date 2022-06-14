@@ -8,7 +8,6 @@
 
 #import "APMBlueViewController.h"
 #import <QAPM/QAPM.h>
-#import <QAPM/QAPMUBSMonitor.h>
  
 @interface APMBlueViewController () <UITableViewDelegate, UITableViewDataSource>
 
@@ -22,8 +21,6 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
-    [[QAPMUBSMonitor manager]addBucket:@"内存4"];
     
     // Do any additional setup after loading the view.
     self.tableView = [[UITableView alloc] initWithFrame:self.view.frame style:UITableViewStylePlain];

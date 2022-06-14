@@ -44,13 +44,6 @@ NS_ASSUME_NONNULL_BEGIN
  */
 @property (nonatomic, assign) BOOL systemStackTraceEnable;
 
-/**
- 打开所有场景的掉帧堆栈（除滑动外其它场景上报时的关键字为"others"),默认开启
- 该接口开启后会以CADisplayLink的刷新间隔（16.6ms）不断抓取主线程堆栈，可根据需要选择是否打开
- 在退后台的时候由于线程优先级降低，会使检测时间产生极大误差，强烈建议退后台的时候调用[QAPMBlueProfiler updateMonitorOtherStageEnable:NO]关闭监控，在进前台时可以恢复监控！
- */
-@property (nonatomic, assign) BOOL monitorOtherStageEnable;
-
 @end
 
 
@@ -75,7 +68,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 
 /**
- 设置开启堆内存堆栈监控，将记录堆对象分配堆栈。
+ 设置开启堆内存堆栈监控，将记录堆对象分配堆栈,默认开启。
  */
 @property (nonatomic, assign) BOOL mallocMemoryDetectorEnable;
 
@@ -91,9 +84,9 @@ NS_ASSUME_NONNULL_BEGIN
 
 /**
  设置堆内存监控抽样因子
- 如factor=10，则按照1/10抽样,factor=100,则按照1/100抽样。默认50。
+ 请将此值设置范围在0~1之间，默认值为0.02。
  */
-@property (nonatomic, assign) uint32_t mallocSampleFactor;
+@property (nonatomic, assign) float mallocSampleFactor;
 
 /**
 设置不进行抽样的内存阀值（bytes）
@@ -187,7 +180,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, copy) NSString *customCrashUploadFilePath;
 
 /**
- 设置app自定义版本号,建议设置业务APP的版本号
+ 设置app自定义版本号,建议设置业务APP的版本号，不设置则取值业务APP的CFBundleShortVersionString版本号
  */
 @property (nonatomic, copy) NSString *customerAppVersion;
 
@@ -217,17 +210,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, copy) NSString *deviceID;
 
 /**
- 如果是在腾讯内部蓝盾流水线使用蓝盾插件自动上传符号表、或者本地使用shell自动上传符号表脚本，请设置为NO,
- 
- 本地和蓝盾打包方式设置如下，[QAPMConfig getInstance].dysmUuid的值为第一个shell脚本传参而来
- [QAPMConfig getInstance].sigkillConfig.uuidFromDsym = NO;
- NSString *uuid = [[[NSBundle mainBundle] infoDictionary] objectForKey:@"com.tencent.qapm.uuid"];
- if(!uuid){
-     uuid = @"uuid设置错误，请检查路径";
- }
-
- NSLog(@"uuid::::%@",uuid);
- [QAPMConfig getInstance].dysmUuid = uuid;
+ 如果是在腾讯内部蓝盾流水线使用蓝盾插件自动上传符号表、或者本地使用shell自动上传符号表脚本，请设置为NO,上传符号表方式请参照接入文档。
  */
 @property (nonatomic, assign) BOOL uuidFromDsym;
 

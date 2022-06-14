@@ -2,7 +2,7 @@
 //  QAPM.h
 //  QAPM
 //
-//  SDK Version 5.1.6 Inner_Version
+//  SDK Version 5.1.61 Inner_Version
 //
 //  Created by Cass on 2018/5/18.
 //  Copyright © 2018年 cass. All rights reserved.
@@ -67,17 +67,19 @@ NS_ASSUME_NONNULL_BEGIN
 /**
  开启启动耗时监控的调用
  */
-+ (void)setupLaunchMonitor;
+//+ (void)setupLaunchMonitor;
++ (void)didEnterMain;
+
+
+///**
+// 【必须调用API】请在AppDidFinishLaunch开始调用时设置。
+// */
+//+ (void)setAppDidFinishLaunchBeginTimestamp;
 
 /**
- 【必须调用API】请在AppDidFinishLaunch开始调用时设置。
- */
-+ (void)setAppDidFinishLaunchBeginTimestamp;
-
-/**
- 【必须调用API】请在第一个页面ViewDidApppear开始调用时设置。
- */
-+ (void)setFirtstViewDidApppearTimestamp;
+// 【必须调用API】请在第一个页面ViewDidApppear开始调用时设置。
+// */
+//+ (void)setFirtstViewDidApppearTimestamp;
 
 /**
  设置自定义打点区间开始，该区间需要在启动时间区间内。begin与end的scene需要一致。
@@ -116,13 +118,6 @@ NS_ASSUME_NONNULL_BEGIN
  * @param stage 用来标识当前页面(一般为当前VC类名）
  */
 + (void)stopTrackingWithStage:(NSString *)stage;
-
-/**
- 更新所有场景的掉帧堆栈开关（除滑动外其它场景上报时的关键字为"others"),默认开启。
- 更新[QAPMConfig getInstance].blueConfig.monitorOtherStageEnable
- 在退后台的时候由于线程优先级降低，会使检测时间产生极大误差，强烈建议退后台的时候调用[QAPMBlueProfile updateMonitorOtherStageEnable:NO]关闭监控，在进前台时可以恢复监控！
- */
-+ (void)updateMonitorOtherStageEnable:(BOOL)enable;
 
 /**
  滑动场景区分，如果不需要则设置为0
