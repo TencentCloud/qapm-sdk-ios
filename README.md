@@ -93,20 +93,17 @@ void loggerFunc(QAPMLoggerLevel level, const char* log) {
 
 - (void)setupQapm {
 
-   //启动耗时监控的第一个打点
-    [QAPMLaunchProfile setAppDidFinishLaunchBeginTimestamp];
-    
     //启动耗时自定义打点开始,业务自行打点
     [QAPMLaunchProfile setBeginTimestampForScene:@"finish"];
     
     [QAPM registerLogCallback:loggerFunc];
 #ifdef DEBUG
     //设置开启QAPM所有监控功能
-    [[QAPMModelStableConfig getInstance] getModelAll:1];
+    [[QAPMModelStableConfig getInstance] setupModelAll:1];
     //开启全量堆内存抽样
     [QAPMConfig getInstance].sigkillConfig.mallocSampleFactor = 1;
 #else
-    [[QAPMModelStableConfig getInstance] getModelStable:2];
+    [[QAPMModelStableConfig getInstance] setupModelAll:2];
 #endif
     
     //用于查看当前SDK版本号信息
