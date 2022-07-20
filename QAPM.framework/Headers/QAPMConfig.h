@@ -322,6 +322,9 @@ NS_ASSUME_NONNULL_BEGIN
  */
 @property (nonatomic, strong) QAPMPowerConsumeMonitorConfig  *powerConsumeConfig;
 
+
+
+
 @end
 
 NS_ASSUME_NONNULL_END

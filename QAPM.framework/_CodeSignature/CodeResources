@@ -6,11 +6,11 @@
 	<dict>
 		<key>Headers/QAPM.h</key>
 		<data>
-		zaXKFEOo96N6PInqzEzXjcQl1cI=
+		YB25dUmh4/Ax959HSrDtYJkVZQk=
 		</data>
 		<key>Headers/QAPMConfig.h</key>
 		<data>
-		pDQgnr4eP3PHrdxL+ueO0P0liaI=
+		9JIq0RbgclN9Vi4Q5C1Rd9wKqs8=
 		</data>
 		<key>Headers/QAPMCustomLagUploadCenter.h</key>
 		<data>
@@ -26,7 +26,7 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		ZancWMCeFAHsRVPe567rDK/QvYU=
+		x1CkIquMcRguzqt7sBpr2sP9xmg=
 		</data>
 		<key>PrivateHeaders/QAPMHTTPConfiguation.h</key>
 		<data>
@@ -55,22 +55,22 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			zaXKFEOo96N6PInqzEzXjcQl1cI=
+			YB25dUmh4/Ax959HSrDtYJkVZQk=
 			</data>
 			<key>hash2</key>
 			<data>
-			9NUkJibr6ca78tB42Xiola/3vcQjgtRy7N6o4b5BfAo=
+			dhSTseYxOcRICk/ifYndkg/10kIJzV/MUqQlC2w7IMU=
 			</data>
 		</dict>
 		<key>Headers/QAPMConfig.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			pDQgnr4eP3PHrdxL+ueO0P0liaI=
+			9JIq0RbgclN9Vi4Q5C1Rd9wKqs8=
 			</data>
 			<key>hash2</key>
 			<data>
-			MCq7MYn7mZUGMCNSSBXBbcq1j993DrGgSnOA1omWSfg=
+			BpNHx4zp9/wsLWAWL9StS5Y2pLBW4s7eO3Uby6Zqt/s=
 			</data>
 		</dict>
 		<key>Headers/QAPMCustomLagUploadCenter.h</key>
