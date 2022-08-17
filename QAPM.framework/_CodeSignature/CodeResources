@@ -6,47 +6,31 @@
 	<dict>
 		<key>Headers/QAPM.h</key>
 		<data>
-		YB25dUmh4/Ax959HSrDtYJkVZQk=
+		c1qmzjeO1DnbMGOZiDVWzKul2Gw=
 		</data>
 		<key>Headers/QAPMConfig.h</key>
 		<data>
-		9JIq0RbgclN9Vi4Q5C1Rd9wKqs8=
+		fP4gfLdFM9X4weu47A6mHaSVWz8=
 		</data>
 		<key>Headers/QAPMCustomLagUploadCenter.h</key>
 		<data>
-		p98CKaUlQUfuY+M30GwgPY3Dr/o=
+		GPe5wfRJY1Xzxp2xm6E6Uvl+ZfU=
 		</data>
 		<key>Headers/QAPMModelStableConfig.h</key>
 		<data>
-		nR4AVaWXTFB1pbTiCWuYw08Q2U0=
+		9V4CITZGaH48L2xRrVvxwniOxl0=
 		</data>
 		<key>Headers/QAPMUtilities.h</key>
 		<data>
-		fWy+M3K6RECXSqyCQH9bNMvDg7M=
+		hq/3nismh/WetL8Y1EyEvfTSd4s=
 		</data>
 		<key>Info.plist</key>
 		<data>
-		FRtBSkLejpdf8pOPytWsHK6LYaU=
-		</data>
-		<key>PrivateHeaders/QAPMHTTPConfiguation.h</key>
-		<data>
-		7Z1omBUwNzU4jA0cRJyEx6QBcew=
-		</data>
-		<key>PrivateHeaders/QAPMHTTPMonitor.h</key>
-		<data>
-		5KA2Mzoba1XDi3DGcCiEBF/uWb8=
-		</data>
-		<key>QAPM.bundle/qapm.cer</key>
-		<data>
-		ykJ+cY1a7uy47nRchjoUcO7jHgg=
-		</data>
-		<key>QAPM.bundle/sngapm.cer</key>
-		<data>
-		WSiA75KmF5LcVvB2zHtpB8Cczw4=
+		3KU40JCakfk+ZrXkeTjWcksZmuE=
 		</data>
 		<key>js_sdk.js</key>
 		<data>
-		VHPMnY89x50FKzucyRPibsiELc4=
+		+3ZnCR+lf8o6pPngtGKdmasAFnc=
 		</data>
 	</dict>
 	<key>files2</key>
@@ -55,110 +39,66 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			YB25dUmh4/Ax959HSrDtYJkVZQk=
+			c1qmzjeO1DnbMGOZiDVWzKul2Gw=
 			</data>
 			<key>hash2</key>
 			<data>
-			dhSTseYxOcRICk/ifYndkg/10kIJzV/MUqQlC2w7IMU=
+			oqbUWLkRITWsbipZ7E5ToXfs30Qkg2k1Pohd80QNzjs=
 			</data>
 		</dict>
 		<key>Headers/QAPMConfig.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			9JIq0RbgclN9Vi4Q5C1Rd9wKqs8=
+			fP4gfLdFM9X4weu47A6mHaSVWz8=
 			</data>
 			<key>hash2</key>
 			<data>
-			BpNHx4zp9/wsLWAWL9StS5Y2pLBW4s7eO3Uby6Zqt/s=
+			iH4m0dzyqvPn+6cmHPR/9T3gt1cHc5upjMcJ2AV8W2M=
 			</data>
 		</dict>
 		<key>Headers/QAPMCustomLagUploadCenter.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			p98CKaUlQUfuY+M30GwgPY3Dr/o=
+			GPe5wfRJY1Xzxp2xm6E6Uvl+ZfU=
 			</data>
 			<key>hash2</key>
 			<data>
-			K6bpVJHDT2Jf7HdT5Ji9PUPTkc/mgwSuTAoy4QO4k3s=
+			F4vll6QjQhiHU0qLRRbUzmUrNVcks1pa69N1nejJVAQ=
 			</data>
 		</dict>
 		<key>Headers/QAPMModelStableConfig.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			nR4AVaWXTFB1pbTiCWuYw08Q2U0=
+			9V4CITZGaH48L2xRrVvxwniOxl0=
 			</data>
 			<key>hash2</key>
 			<data>
-			2DM0LXJD50abHkOFXt2x10jQMuznXd7GaFFlVt93F1Y=
+			rkpXOJLUuGnB+8aAMW4MUsiQnaca1UEHT24WgDTj2mI=
 			</data>
 		</dict>
 		<key>Headers/QAPMUtilities.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			fWy+M3K6RECXSqyCQH9bNMvDg7M=
+			hq/3nismh/WetL8Y1EyEvfTSd4s=
 			</data>
 			<key>hash2</key>
 			<data>
-			HUpP3S6yAWiCj2lMFOPJbWiUlnxHwh1WIcAk7/TO7eM=
-			</data>
-		</dict>
-		<key>PrivateHeaders/QAPMHTTPConfiguation.h</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			7Z1omBUwNzU4jA0cRJyEx6QBcew=
-			</data>
-			<key>hash2</key>
-			<data>
-			TZTmJH1SHYC94Pvfx5aLZT101sZoUyQWKIybTMWLjZQ=
-			</data>
-		</dict>
-		<key>PrivateHeaders/QAPMHTTPMonitor.h</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			5KA2Mzoba1XDi3DGcCiEBF/uWb8=
-			</data>
-			<key>hash2</key>
-			<data>
-			/j9DHwZEkJ9Mz4LjC97zRE0j6/kbTKOqPARVBWG+7xY=
-			</data>
-		</dict>
-		<key>QAPM.bundle/qapm.cer</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			ykJ+cY1a7uy47nRchjoUcO7jHgg=
-			</data>
-			<key>hash2</key>
-			<data>
-			sFStG1PkWBZ8rzJd7JEKIQWo70VR2vzPNthKJIFVmMo=
-			</data>
-		</dict>
-		<key>QAPM.bundle/sngapm.cer</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			WSiA75KmF5LcVvB2zHtpB8Cczw4=
-			</data>
-			<key>hash2</key>
-			<data>
-			jAXfJvFxFQnV9mdR1h6hRSOqs6D8ZIxrakpJ3IbAkCk=
+			u2N+vaqslnWi0Ov/czw1vtFxFg6cwVbdqyZBtG4MKoA=
 			</data>
 		</dict>
 		<key>js_sdk.js</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			VHPMnY89x50FKzucyRPibsiELc4=
+			+3ZnCR+lf8o6pPngtGKdmasAFnc=
 			</data>
 			<key>hash2</key>
 			<data>
-			xF7zKR7Vl8lCT5RFAV5tZu3ADqPf27mi+VaZAfeBOlE=
+			8kpCH4K4Mk33nHSKokoLCLGNVmxyL7Bcqsder/9nEn4=
 			</data>
 		</dict>
 	</dict>

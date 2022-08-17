@@ -83,15 +83,15 @@
 }
 
 - (void)startStackLogging {
-    [QAPMQQLeakProfile startStackLogging];
+//    [QAPMQQLeakProfile startStackLogging];
 }
     
 - (void)stopStackLogging {
-    [QAPMQQLeakProfile stopStackLogging];
+//    [QAPMQQLeakProfile stopStackLogging];
 }
     
 - (void)checkLeak {
-    [QAPMQQLeakProfile executeLeakCheck];
+//    [QAPMQQLeakProfile executeLeakCheck];
 }
 
 - (void)makeALeakObject

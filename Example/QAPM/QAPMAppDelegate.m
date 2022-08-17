@@ -63,8 +63,6 @@ void loggerFunc(QAPMLoggerLevel level, const char* log) {
 }
 
 - (void)setupQapm {
-    //启动耗时监控的第一个打点
-  //  [QAPMLaunchProfile setAppDidFinishLaunchBeginTimestamp];
     
     //启动耗时自定义打点开始,业务自行打点
     [QAPMLaunchProfile setBeginTimestampForScene:@"finish"];
@@ -73,34 +71,19 @@ void loggerFunc(QAPMLoggerLevel level, const char* log) {
 #ifdef DEBUG
     //设置开启QAPM所有监控功能
     [[QAPMModelStableConfig getInstance] setupModelAll:1];
-    //开启全量堆内存抽样
-    [QAPMConfig getInstance].sigkillConfig.mallocSampleFactor = 1;
+    
+    
 #else
     [[QAPMModelStableConfig getInstance] setupModelAll:2];
 #endif
     //用于查看当前SDK版本号信息
     NSLog(@"qapm sdk version : %@", [QAPM sdkVersion]);
         
-    //自动上传符号表步骤，请根据接入文档进行相关信息的配置
-    [QAPMConfig getInstance].uuidFromDsym = NO;
-    NSString *uuid = [[[NSBundle mainBundle] infoDictionary] objectForKey:@"com.tencent.qapm.uuid"];
-    if(!uuid){
-        uuid = @"请检查run script里面上传符号表的shell路径是否正确";
-    }
-    
-    NSLog(@"uuid::::%@",uuid);
-    [QAPMConfig getInstance].dysmUuid = uuid;
-    
-    
-    //手动上传符号表设置，请二选一操作
-   // [QAPMConfig getInstance].uuidFromDsym = YES;
-    
 #ifdef USE_VM_LOGGER
 /// ！！！Sigkill功能私有API请不要在发布APPSotre时使用。开启这个功能可以监控到VM内存的分配的堆栈。
 [[QAPMConfig getInstance].sigkillConfig setVMLogger:(void**)&__syscall_logger];
 #endif
 
-    
     [QAPMConfig getInstance].host = @"https://qapm.qq.com";
 
     // 设置用户标记
@@ -110,8 +93,8 @@ void loggerFunc(QAPMLoggerLevel level, const char* log) {
     [QAPMConfig getInstance].deviceID = @"qapmdevideId";
     // 设置App版本号
     [QAPMConfig getInstance].customerAppVersion = @"1.0.1";
-    [QAPM startWithAppKey:@"55a11d57-4116"];
-    
+    [QAPM startWithAppKey:@"请填写申请的appkey"];
+    //
     //启动耗时自定义打点结束，业务自行打点
     [QAPMLaunchProfile setEndTimestampForScene:@"finish"];
 }

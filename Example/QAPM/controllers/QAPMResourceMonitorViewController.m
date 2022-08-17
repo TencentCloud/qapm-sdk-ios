@@ -78,11 +78,11 @@
 
 
 - (void)setBeginTag {
-    [QAPMResourceMonitorProfile setBeginTag:@"playVideo"];
+//    [QAPMResourceMonitorProfile setBeginTag:@"playVideo"];
 }
 
 - (void)setEndTag {
-    [QAPMResourceMonitorProfile setStopTag:@"playVideo"];
+//    [QAPMResourceMonitorProfile setStopTag:@"playVideo"];
 }
 
 @end

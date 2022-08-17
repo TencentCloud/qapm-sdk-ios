@@ -12,6 +12,14 @@
 #import "APMYellowViewController.h"
 #import "APMQQLeakViewController.h"
 #import <mach/mach_time.h>
+#define MethodTimeUsage(tag, statment) \
+{\
+    CFAbsoluteTime beginTime = CFAbsoluteTimeGetCurrent(); \
+    statment; \
+    CFAbsoluteTime endTime = CFAbsoluteTimeGetCurrent();                \
+    NSLog(@"Method: %@ , time usage: %f", tag, endTime - beginTime); \
+} \
+
 @interface APMMainListViewController () <UITableViewDelegate, UITableViewDataSource>
 
 @property (nonatomic, strong)UITableView *tableView;
@@ -31,6 +39,8 @@
     // Do any additional setup after loading the view.
     self.view.backgroundColor = [UIColor whiteColor];
     
+    //测试启动个例的上报、默认启动时间超过4s才会上报慢启动
+    sleep(5);
     self.title = @"测试Demo";
     
     _titleArray = @[@"QAPMMonitorTypeYellow(VC泄露监控)", @"QAPMMonitorTypeBlue(卡顿与掉帧率)", @"QAPMMonitorTypeSigkill(FOOM与卡死Crash)", @"QAPMMonitorTypeQQLeak(内存泄露监控)", @"QAPMMonitorTypeBigChunkMemoryMonitor(大内存分配监控)",@"QAPMMonitorTypeResourceMonitor(资源监控)",@"QAPMMonitorTypeCrash(Crash监控)",@"WKWebView监控", @"HTTP监控"];
@@ -63,7 +73,6 @@
 
 - (void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
-  
 }
 
 #pragma mark - TableView datasource and delegate
