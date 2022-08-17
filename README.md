@@ -56,14 +56,6 @@ You can try adding it manually in `/Users/wxy/.cocoapods/repos` or via `pod repo
 #import <QAPM/QAPM.h>
 如果是Swift工程，请在对应bridging-header.h中导入
 初始化QAPM 在工程AppDelegate.m的application:didFinishLaunchingWithOptions:方法中初始化：
-#if defined(DEBUG)
-#define USE_VM_LOGGER
-#ifdef USE_VM_LOGGER
-/// 私有API请不要在发布APPSotre时使用。
-typedef void (malloc_logger_t)(uint32_t type, uintptr_t arg1, uintptr_t arg2, uintptr_t arg3, uintptr_t result, uint32_t num_hot_frames_to_skip);
-extern malloc_logger_t* __syscall_logger;
-#endif
-#endif
 
 void loggerFunc(QAPMLoggerLevel level, const char* log) {
 
@@ -92,9 +84,6 @@ void loggerFunc(QAPMLoggerLevel level, const char* log) {
 }
 
 - (void)setupQapm {
-
-   //启动耗时监控的第一个打点
-    [QAPMLaunchProfile setAppDidFinishLaunchBeginTimestamp];
     
     //启动耗时自定义打点开始,业务自行打点
     [QAPMLaunchProfile setBeginTimestampForScene:@"finish"];
@@ -103,8 +92,6 @@ void loggerFunc(QAPMLoggerLevel level, const char* log) {
 #ifdef DEBUG
     //设置开启QAPM所有监控功能
     [[QAPMModelStableConfig getInstance] getModelAll:1];
-    //开启全量堆内存抽样
-    [QAPMConfig getInstance].sigkillConfig.mallocSampleFactor = 1;
 #else
     [[QAPMModelStableConfig getInstance] getModelStable:2];
 #endif
@@ -112,25 +99,6 @@ void loggerFunc(QAPMLoggerLevel level, const char* log) {
     //用于查看当前SDK版本号信息
     NSLog(@"qapm sdk version : %@", [QAPM sdkVersion]);
         
-    //自动上传符号表步骤，请根据接入文档进行相关信息的配置
-    [QAPMConfig getInstance].uuidFromDsym = NO;
-    NSString *uuid = [[[NSBundle mainBundle] infoDictionary] objectForKey:@"com.tencent.qapm.uuid"];
-    if(!uuid){
-        uuid = @"请检查run script里面上传符号表的shell路径是否正确";
-    }
-    
-    NSLog(@"uuid::::%@",uuid);
-    [QAPMConfig getInstance].dysmUuid = uuid;
-    
-    
-    //手动上传符号表设置，请二选一操作
-   // [QAPMConfig getInstance].uuidFromDsym = YES;
-    
-#ifdef USE_VM_LOGGER
-/// ！！！Sigkill功能私有API请不要在发布APPSotre时使用。开启这个功能可以监控到VM内存的分配的堆栈。
-[[QAPMConfig getInstance].sigkillConfig setVMLogger:(void**)&__syscall_logger];
-#endif
-
     //非腾讯系产品host为默认值，不用额外设置
     [QAPMConfig getInstance].host = @"https://qapm.qq.com";
 
