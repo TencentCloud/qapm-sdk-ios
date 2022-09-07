@@ -19,6 +19,7 @@ SHELL_FOLDER=$(cd "$(dirname "$0")";pwd)
 P_QAPM_APPKEY=${QAPM_APP_KEY%-*}
 P_QAPM_PID=${QAPM_APP_KEY#*-}
 
+#读取业务符号表的uuid
 QAPM_DSYM_UUID=$(dwarfdump --uuid "${SHELL_FOLDER}/${QAPM_DSYM_NAME}.app.dSYM")
 
 if [ ! "$QAPM_DSYM_UUID" ]; then
@@ -31,10 +32,10 @@ fi
 
 QAPM_DSYMARM64_UUID=${QAPM_DSYM_UUID}
 QAPM_DSYM_ARM64_UUID=${QAPM_DSYMARM64_UUID##*UUID}
-DSYM_ARM64_UUID=$(echo ${QAPM_DSYM_ARM64_UUID:1:38} | tr '[A-Z]' '[a-z]')
+DSYM_ARM64_UUID=$(echo ${QAPM_DSYM_ARM64_UUID:1:38} | tr '[a-z]' '[A-Z]')
 echo "DSYM_ARM64_UUID:${DSYM_ARM64_UUID}"
 
-QAPM_ARM32_UUID=$(echo ${QAPM_DSYM_UUID:5:38} | tr '[A-Z]' '[a-z]')
+QAPM_ARM32_UUID=$(echo ${QAPM_DSYM_UUID:5:38} | tr '[a-z]' '[A-Z]')
 echo "DSYM_ARM32_UUID:${QAPM_ARM32_UUID}"
 
 SYMBOL_OUTPUT_PATH="${SHELL_FOLDER}/QAPMUPLOAD.zip"
