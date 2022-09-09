@@ -85,7 +85,7 @@ function dSYMUpload() {
     P_BSYMBOL_ZIP_FILE_NAME=${P_BSYMBOL_ZIP_FILE_NAME//&/_}
     P_BSYMBOL_ZIP_FILE_NAME="${P_BSYMBOL_ZIP_FILE_NAME// /_}"
     
-    DSYM_UPLOAD_URL="https://${QAPM_DSYM_UPLOAD_DOMAIN}/api/v2/translator/v1/symbolMap/file?app_id=${P_PID}&build_id=${DSYM_ARM64_UUID}&platform=ios&re_upload=true"
+    DSYM_UPLOAD_URL="https://${QAPM_DSYM_UPLOAD_DOMAIN}/api/v2/translator/v1/symbolmap/file?app_id=${P_PID}&build_id=${DSYM_ARM64_UUID}&platform=ios&re_upload=true"
     
     echo "dSYM upload url: ${DSYM_UPLOAD_URL}"
 
