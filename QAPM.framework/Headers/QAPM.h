@@ -2,7 +2,7 @@
 //  QAPM.h
 //  QAPM
 //
-//  SDK Version 5.2.2 Inner_Version
+//  SDK Version 5.2.3 Inner_Version
 //
 //  Created by Cass on 2018/5/18.
 //  Copyright © 2018年 cass. All rights reserved.
@@ -101,6 +101,32 @@ NS_ASSUME_NONNULL_BEGIN
  * @param stage 用来标识当前页面(一般为当前VC类名）
  */
 + (void)stopTrackingWithStage:(NSString *)stage;
+
+@end
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+#pragma mark -
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+@interface QAPMQQLeakProfile : NSObject
+
+
+/**
+ 开始记录内存分配堆栈，需要开启后才能进行检测。
+ */
++ (void)startStackLogging;
+    
+
+/**
+ 停止记录内存分配堆栈
+ */
++ (void)stopStackLogging;
+    
+
+/**
+ 执行一次泄露检测，建议在主线程调用，该操作会挂起所有子线程进行泄露检测（该操作较耗时，平均耗时在1s以上，请限制调用频率）
+ */
++ (void)executeLeakCheck;
 
 @end
 

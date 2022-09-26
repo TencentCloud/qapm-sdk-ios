@@ -61,9 +61,14 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, copy) NSString *appconfigHost;
 
 /**
- 设置符号表uuid，默认读取的是业务app符号表的uuid，无需额外设置
+ 设置符号表uuid，默认读取的是业务app符号表的uuid，腾讯云内网产品如果用到自动上传符号表脚本，请根据蓝盾插件进行正确赋值,否则影响自动上传符号表功能。
  */
 @property (nonatomic, copy) NSString *dysmUuid;
+
+/**
+ 如果是在腾讯内部蓝盾流水线使用蓝盾插件自动上传符号表、或者本地使用shell自动上传符号表脚本，请设置为NO,
+ */
+@property (nonatomic, assign) BOOL uuidFromDsym __attribute__((deprecated("已弃用，由SDK自行判断")));
 
 /**
  内部调用，用户在web页面申请到的Appkey
