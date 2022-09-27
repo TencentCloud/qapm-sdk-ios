@@ -91,9 +91,9 @@ void loggerFunc(QAPMLoggerLevel level, const char* log) {
     [QAPM registerLogCallback:loggerFunc];
 #ifdef DEBUG
     //设置开启QAPM所有监控功能
-    [[QAPMModelStableConfig getInstance] getModelAll:1];
+    [[QAPMModelStableConfig getInstance] setupModelAll:1];
 #else
-    [[QAPMModelStableConfig getInstance] getModelStable:2];
+    [[QAPMModelStableConfig getInstance] setupModelAll:2];
 #endif
     
     //用于查看当前SDK版本号信息
