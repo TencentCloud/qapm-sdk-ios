@@ -1,11 +1,3 @@
-//
-//  QAPMSigkillViewController.m
-//  ApmDemo
-//
-//  Created by Cass on 2018/12/14.
-//  Copyright © 2018 testcgd. All rights reserved.
-//
-
 #import "QAPMSigkillViewController.h"
 #import "YYWeakProxy.h"
 #include <sys/socket.h>
@@ -14,6 +6,20 @@
 #include <net/if_dl.h>
 #import <mach/mach.h>
 #import "UIButton+Utils.h"
+
+@interface TestContact : NSObject
+
+@property (nonatomic, copy) NSString *nickName;
+@property (nonatomic, copy) NSString *sex;
+@property (nonatomic, copy) NSString *country;
+@property (nonatomic, copy) NSString *state;
+@property (nonatomic, copy) NSString *city;
+@property (nonatomic, copy) NSString *signature;
+
+@end
+
+@implementation TestContact
+@end
 
 @interface QAPMSigkillViewController ()
 
@@ -30,6 +36,8 @@
 
 @property (nonatomic, strong) UILabel *descLabel;
 
+@property (nonatomic, strong) NSLock *lock;
+
 @end
 
 @implementation QAPMSigkillViewController
@@ -38,6 +46,10 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
+    [[NSNotificationCenter defaultCenter] addObserver: self
+                                             selector: @selector(applicationWillResignActive)
+                                                 name: UIApplicationWillResignActiveNotification
+                                               object: nil];
     [self setupViews];
 }
 
@@ -113,17 +125,15 @@
 }
 
 - (void)increaseMallocMemory {
-    int i = 0;
-        //测试最到数量 61371000
-        while (i < 3000) {
-            if (arc4random() % 2 == 0) {
-                NSMutableArray *array = @[@"123",@"jhlj",@"kjahsdkahsdjkahsd",@"098",@"klal;a",@"1234567890awertyuiosdfghjkvbnmsdfghjkl;wertyuiop"].mutableCopy;
-                [self.arr addObject:array];
-            } else {
-                [self.arr addObject:[NSObject new]];
-            }
-            ++i;
+    
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+        NSMutableArray *array = [NSMutableArray array];
+        while (1) {
+            TestContact *contact = [[TestContact alloc] init];
+            [array addObject:contact];
         }
+    });
+    
 }
 
 - (void)increaseVMMallocMemory {
@@ -137,8 +147,24 @@
 }
 
 - (void)runDeadLockCode {
-    while (YES);
+    [self b_lock];
 }
+
+-(void)b_lock
+{
+  self.lock = [[NSLock alloc]init];
+ [self.lock lock];
+ [self a_wait];
+ [self.lock unlock];
+}
+
+
+- (void)a_wait
+{
+ [self.lock lock];
+ [self.lock unlock];
+}
+
 
 - (void)updateMemLabel
 {
@@ -187,6 +213,37 @@
         memoryUsageInByte = (int64_t) vmInfo.resident_size;
     }
     return memoryUsageInByte;
+}
+
+-(void)applicationWillResignActive //退后台响应函数
+{
+    NSArray * nameArray = @[@"Roy", @"Mike", @"Jordan"];
+    NSString * name = nameArray[3]; // 崩溃
+    NSLog(@"name=%@",name);
+   
+}
+
++ (CGFloat)cpuUsage {
+    kern_return_t kr;
+    mach_msg_type_number_t count;
+    static host_cpu_load_info_data_t previous_info = {0, 0, 0, 0};
+    host_cpu_load_info_data_t info;
+    
+    count = HOST_CPU_LOAD_INFO_COUNT;
+    
+    kr = host_statistics(mach_host_self(), HOST_CPU_LOAD_INFO, (host_info_t)&info, &count);
+    if (kr != KERN_SUCCESS) {
+        return -1;
+    }
+    
+    natural_t user   = info.cpu_ticks[CPU_STATE_USER] - previous_info.cpu_ticks[CPU_STATE_USER];
+    natural_t nice   = info.cpu_ticks[CPU_STATE_NICE] - previous_info.cpu_ticks[CPU_STATE_NICE];
+    natural_t system = info.cpu_ticks[CPU_STATE_SYSTEM] - previous_info.cpu_ticks[CPU_STATE_SYSTEM];
+    natural_t idle   = info.cpu_ticks[CPU_STATE_IDLE] - previous_info.cpu_ticks[CPU_STATE_IDLE];
+    natural_t total  = user + nice + system + idle;
+    previous_info    = info;
+    
+    return (user + nice + system) * 100.0 / total;
 }
 
 @end

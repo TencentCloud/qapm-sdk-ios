@@ -10,7 +10,7 @@
 #import <WebKit/WebKit.h>
 #import <Foundation/Foundation.h>
 #import <JavaScriptCore/JavaScriptCore.h>
-#import <QAPM/QAPM.h>
+#import <QAPM/QAPMWebViewProfile.h>
 #import "UIButton+Utils.h"
 
 @interface QAPMWKWebViewViewController () <WKUIDelegate, WKNavigationDelegate, WKScriptMessageHandler>

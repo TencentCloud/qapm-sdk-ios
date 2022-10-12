@@ -8,6 +8,8 @@
 
 #import "QAPMAppDelegate.h"
 #import <QAPM/QAPM.h>
+#import <QAPM/QAPMLaunchProfile.h>
+#import <QAPM/QAPMFoomProfile.h>
 #import "APMMainListViewController.h"
 @implementation QAPMAppDelegate
 
@@ -70,18 +72,18 @@ void loggerFunc(QAPMLoggerLevel level, const char* log) {
     [QAPM registerLogCallback:loggerFunc];
 #ifdef DEBUG
     //设置开启QAPM所有监控功能
-    [[QAPMModelStableConfig getInstance] setupModelAll:1];
+    [[QAPMModelStableConfig getInstance] setupModelAll:0.5];
     
     
 #else
-    [[QAPMModelStableConfig getInstance] setupModelAll:2];
+    [[QAPMModelStableConfig getInstance] setupModelAll:1];
 #endif
     //用于查看当前SDK版本号信息
     NSLog(@"qapm sdk version : %@", [QAPM sdkVersion]);
         
 #ifdef USE_VM_LOGGER
 /// ！！！Sigkill功能私有API请不要在发布APPSotre时使用。开启这个功能可以监控到VM内存的分配的堆栈。
-[[QAPMConfig getInstance].sigkillConfig setVMLogger:(void**)&__syscall_logger];
+[[QAPMFoomProfile getInstance] setVMLogger:(void**)&__syscall_logger];
 #endif
 
     [QAPMConfig getInstance].host = @"https://qapm.qq.com";

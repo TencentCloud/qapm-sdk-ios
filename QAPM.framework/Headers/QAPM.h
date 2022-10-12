@@ -2,7 +2,7 @@
 //  QAPM.h
 //  QAPM
 //
-//  SDK Version 5.2.3 Inner_Version
+//  SDK Version 5.2.4 Inner_Version
 //
 //  Created by Cass on 2018/5/18.
 //  Copyright © 2018年 cass. All rights reserved.
@@ -50,103 +50,19 @@ NS_ASSUME_NONNULL_BEGIN
 
 + (NSDictionary<NSString *, NSString *> *)eventUpSendEventWithTyped:(QAPMUploadEventCallback)callBack;
 
-
-@end
-
-
-////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-#pragma mark -
-////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-@interface QAPMLaunchProfile : NSObject
-
 /**
- 开启启动耗时监控的调用
- */
-+ (void)didEnterMain;
-
-/**
- 设置自定义打点区间开始，该区间需要在启动时间区间内。begin与end的scene需要一致。
- 当设置了 setFirtstViewDidApppearTimestamp 后，后面设置的自定义打点区间将不会被统计。
+ 监控功能开启状态回调。提供用于Athena的使用
  
- @param scene 场景名
+ @param callback state 功能状态, type 功能类相关。
  */
-+ (void)setBeginTimestampForScene:(NSString *)scene;
++ (void)monitorStartCallback:(QAPMMonitorStartCallback)callback __attribute__((deprecated("已弃用该接口")));
 
 /**
- 设置自定义打点区间结束，该区间需要在启动时间区间内。begin与end的scene需要一致。
- 当设置了 setFirtstViewDidApppearTimestamp 后，后面设置的自定义打点区间将不会被统计。
+ 监控功能开启状态回调。
  
- @param scene 场景名
+ @param type state 功能状态, type 功能类相关。
  */
-+ (void)setEndTimestampForScene:(NSString *)scene;
-
-
-@end
-
-////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-#pragma mark -
-////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-@interface QAPMBlueProfile : NSObject
-
-/**
- 开始记录掉帧，建议滑动开始时调用
- 
- * @param stage 用来标识当前页面(一般为当前VC类名）
- */
-+ (void)beginTrackingWithStage:(NSString *)stage;
-
-/**
- 结束记录掉帧，滑动结束时调用
- 
- * @param stage 用来标识当前页面(一般为当前VC类名）
- */
-+ (void)stopTrackingWithStage:(NSString *)stage;
-
-@end
-
-////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-#pragma mark -
-////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-
-@interface QAPMQQLeakProfile : NSObject
-
-
-/**
- 开始记录内存分配堆栈，需要开启后才能进行检测。
- */
-+ (void)startStackLogging;
-    
-
-/**
- 停止记录内存分配堆栈
- */
-+ (void)stopStackLogging;
-    
-
-/**
- 执行一次泄露检测，建议在主线程调用，该操作会挂起所有子线程进行泄露检测（该操作较耗时，平均耗时在1s以上，请限制调用频率）
- */
-+ (void)executeLeakCheck;
-
-@end
-
-////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-#pragma mark -
-////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-
-@interface QAPMWebViewProfile : NSObject
-
-/**
- @param breadCrumbBuckets  自定义上报webview移动分析部分的分桶
- @return 返回注入的基本信息，包含QAPM的初始化信息
-*/
-+ (NSString *)qapmBaseInfo:(NSString *) breadCrumbBuckets;
-
-
-/**
- @return 注入启动js监控的信息，请在resetConfig方法调用完之后调用
-*/
-+ (NSString *)qapmJsStart;
++ (BOOL)monitorEnableWithType:(QAPMMonitorType)type;
 
 @end
 

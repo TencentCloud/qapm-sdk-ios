@@ -8,7 +8,7 @@
 
 @import UIKit;
 #import "QAPMAppDelegate.h"
-#import <QAPM/QAPM.h>
+#import <QAPM/QAPMLaunchProfile.h>
 int main(int argc, char * argv[])
 {
     @autoreleasepool {

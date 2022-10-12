@@ -11,7 +11,7 @@
 #import <arpa/inet.h>
 #import <netdb.h>
 #import "UIButton+Utils.h"
-#import <QAPM/QAPM.h>
+#import <QAPM/QAPMResourceProfile.h>
 
 @interface QAPMResourceMonitorViewController ()<CLLocationManagerDelegate>
 
@@ -78,11 +78,11 @@
 
 
 - (void)setBeginTag {
-//    [QAPMResourceMonitorProfile setBeginTag:@"playVideo"];
+    [QAPMResourceProfile setBeginTag:@"playVideo"];
 }
 
 - (void)setEndTag {
-//    [QAPMResourceMonitorProfile setStopTag:@"playVideo"];
+    [QAPMResourceProfile setStopTag:@"playVideo"];
 }
 
 @end

@@ -7,7 +7,7 @@
 //
 
 #import "APMBlueViewController.h"
-#import <QAPM/QAPM.h>
+#import <QAPM/QAPMBlueProfile.h>
 
  
 @interface APMBlueViewController () <UITableViewDelegate, UITableViewDataSource>

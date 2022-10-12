@@ -8,7 +8,7 @@
 
 #import "APMQQLeakViewController.h"
 #import "UIButton+Utils.h"
-#import <QAPM/QAPM.h>
+#import <QAPM/QAPMQQLeakProfile.h>
 
 @interface APMQQLeakViewController ()
 
@@ -83,21 +83,23 @@
 }
 
 - (void)startStackLogging {
-//    [QAPMQQLeakProfile startStackLogging];
+    [QAPMQQLeakProfile startStackLogging];
 }
     
 - (void)stopStackLogging {
-//    [QAPMQQLeakProfile stopStackLogging];
+    [QAPMQQLeakProfile stopStackLogging];
 }
     
 - (void)checkLeak {
-//    [QAPMQQLeakProfile executeLeakCheck];
+    [QAPMQQLeakProfile executeLeakCheck];
 }
 
 - (void)makeALeakObject
 {
-    NSObject *testObject = [[NSObject alloc] init];
-    [testObject class];
+
+    char *p = (char *)malloc(5*1024);
+    printf("p:\n%s",p);
+    printf("p1:\n%p",&p);
 }
 
 @end

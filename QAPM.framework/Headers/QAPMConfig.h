@@ -11,20 +11,6 @@
 
 NS_ASSUME_NONNULL_BEGIN
  
-#pragma mark - Sigkill(检测FOOM功能)配置
-@interface QAPMSigkillConfig : NSObject
-/**
- 设置开启VM堆栈监控，将记录堆对象分配堆栈。设置私有API __syscall_logger会带来app store审核不通过的风险，切记在提交关闭该监控，否则可能会审核不通过。
- 该功能会影响Instruments的Allocation工具无法使用。
- 设置方法：
- typedef void (malloc_logger_t)(uint32_t type, uintptr_t arg1, uintptr_t arg2, uintptr_t arg3, uintptr_t result, uint32_t num_hot_frames_to_skip);
- extern malloc_logger_t* __syscall_logger;
- [[QAPMConfig getInstance].sigkillConfig setVMLogger:(void**)&__syscall_logger];
- */
-- (void)setVMLogger:(void *_Nonnull *_Nonnull)logger;
-
-@end
-
 #pragma mark - 全局配置
 @interface QAPMConfig : NSObject
 
@@ -88,10 +74,9 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, copy) NSString *customCrashUploadFilePath;
 
 /**
- 设置sigkill功能
+ 设置开启的功能
  */
-@property (nonatomic, strong) QAPMSigkillConfig *sigkillConfig;
-
+@property (nonatomic, assign) QAPMMonitorType enableMonitorTypeOptions;
 
 @end
 

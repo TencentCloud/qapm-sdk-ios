@@ -280,10 +280,8 @@ int g_crasher_denominator = 0;
 - (void)beyondary {
     
     NSArray * nameArray = @[@"Roy", @"Mike", @"Jordan"];
-
-        NSString * name = nameArray[3]; // 崩溃
-
-        NSLog(@"name=%@",name);
+    NSString * name = nameArray[3]; // 崩溃
+    NSLog(@"name=%@",name);
 }
 
 @end
