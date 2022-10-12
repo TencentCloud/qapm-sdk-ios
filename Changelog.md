@@ -1,9 +1,20 @@
 # QAPM
 
+## 5.2.3
+
+### feature
+-  接入变更、涉及到需要打点的功能(QAPMLaunchProfile、QAPMFoomProfile、QAPMQQLeakProfile、QAPMWebViewProfile等)需要在头文件加入#import <QAPM/xxxx.h>
+-  crash功能加入附件日志供业务分析。
+
+## 5.2.3
+
+### bugfix
+-  修复若干问题、优化性能。
+
 ## 5.2.2
 
 ### bugfix
--  修复若干问题、优化性能
+-  修复若干问题、优化性能。
 
 ## 5.2.1
 

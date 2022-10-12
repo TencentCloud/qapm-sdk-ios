@@ -97,9 +97,10 @@
 - (void)makeALeakObject
 {
 
-    char *p = (char *)malloc(5*1024);
-    printf("p:\n%s",p);
-    printf("p1:\n%p",&p);
+    // 默认5Kb以上阈值的内存泄漏才会进行检测上报
+    int size = 5 * 1024 * 1024;
+    char *p = (char *)malloc(size);
+    memset(p, 1, size);
 }
 
 @end
