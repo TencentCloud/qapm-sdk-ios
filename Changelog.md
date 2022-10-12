@@ -1,6 +1,6 @@
 # QAPM
 
-## 5.2.3
+## 5.2.4
 
 ### feature
 -  接入变更、涉及到需要打点的功能(QAPMLaunchProfile、QAPMFoomProfile、QAPMQQLeakProfile、QAPMWebViewProfile等)需要在头文件加入#import <QAPM/xxxx.h>
