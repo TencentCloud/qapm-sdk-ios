@@ -54,6 +54,7 @@ You can try adding it manually in `/Users/wxy/.cocoapods/repos` or via `pod repo
 
  ```
 #import <QAPM/QAPM.h>
+#import <QAPM/QAPMLaunchProfile.h>
 如果是Swift工程，请在对应bridging-header.h中导入
 初始化QAPM 在工程AppDelegate.m的application:didFinishLaunchingWithOptions:方法中初始化：
 
