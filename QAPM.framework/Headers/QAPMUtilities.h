@@ -25,18 +25,18 @@ typedef NS_ENUM(NSInteger, QAPMLoggerLevel) {
  开启功能类型
  */
 
-typedef enum {
+typedef NS_OPTIONS(unsigned long long, QAPMMonitorType) {
     
-    QAPMMonitorTypeNone                     = 1UL << 0,
+    QAPMMonitorTypeNone                     = 1ULL << 0,
     
     /// 掉帧率
-    QAPMMonitorTypeFramedrop                = 1UL << 2,
+    QAPMMonitorTypeFramedrop                = 1ULL << 2,
     
     ///Blue(检测卡顿功能)
-    QAPMMonitorTypeBlue                     = 1UL << 3,
+    QAPMMonitorTypeBlue                     = 1ULL << 3,
     
     /// 大块内存分配监控功能
-    QAPMMonitorTypeBigChunkMemoryMonitor    = 1UL << 4,
+    QAPMMonitorTypeBigChunkMemoryMonitor    = 1ULL << 4,
 
     /**
      QQLeak(检测内存对象泄露功能)
@@ -45,61 +45,61 @@ typedef enum {
      执行一次泄露检测，建议在主线程调用，该操作会挂起所有子线程进行泄露检测（该操作较耗时，平均耗时在1s以上，请限制调用频率）。
      建议研发流程内使用。
      */
-    QAPMMonitorTypeQQLeak                   = 1UL << 5,
+    QAPMMonitorTypeQQLeak                   = 1ULL << 5,
     
     /// Yellow(检测VC泄露功能)
-    QAPMMonitorTypeYellow                   = 1UL << 6,
+    QAPMMonitorTypeYellow                   = 1ULL << 6,
     
     /// 内存最大使用值监控(触顶率)
-    QAPMMonitorTypeMaxMemoryStatistic       = 1UL << 7,
+    QAPMMonitorTypeMaxMemoryStatistic       = 1ULL << 7,
     
     
     /// 资源使用情况监控功能（每隔1s采集一次资源）
-    QAPMMonitorTypeResourceMonitor          = 1UL << 9,
+    QAPMMonitorTypeResourceMonitor          = 1ULL << 9,
     
     /// normalCrash监控功能
-    QAPMMonitorTypeCrash                    = 1UL << 10,
+    QAPMMonitorTypeCrash                    = 1ULL << 10,
     
     /// foom监控功能
-    QAPMMonitorTypeFoom                     = 1UL << 11,
+    QAPMMonitorTypeFoom                     = 1ULL << 11,
     
     /// 网络监控
-    QAPMMonitorTypeHTTPMonitor              = 1UL << 13,
+    QAPMMonitorTypeHTTPMonitor              = 1ULL << 13,
             
     /// 用户行为监控功能
-    QAPMMonitorTypeIUPMonitor               = 1UL << 15,
+    QAPMMonitorTypeIUPMonitor               = 1ULL << 15,
     
     //耗电监控功能
-    QAPMMonitorTypePowerConsume             = 1UL << 16,
+    QAPMMonitorTypePowerConsume             = 1ULL << 16,
     
     /// deadlock监控功能
-    QAPMMonitorTypeDeadlock                 = 1UL << 19,
+    QAPMMonitorTypeDeadlock                 = 1ULL << 19,
     
     ///自定义卡顿
-    QAPMMonitorTypeCustomStuck              = 1UL << 20,
+    QAPMMonitorTypeCustomStuck              = 1ULL << 20,
     
     /// 启动个例监控功能
-    QAPMMonitorTypeLaunch                   = 1UL << 22,
+    QAPMMonitorTypeLaunch                   = 1ULL << 22,
     
     ///crash指标数据
-    QAPMMonitorTypeCrashIndicators          = 1UL << 31,
+    QAPMMonitorTypeCrashIndicators          = 1ULL << 31,
     
     ///webview的网络
-    QAPMMonitorTypeWebViewNetWork           = 1UL << 32,
+    QAPMMonitorTypeWebViewNetWork           = 1ULL << 32,
     
     /// WebView的启动
-    QAPMMonitorTypeWebMonitor               = 1UL << 34,
+    QAPMMonitorTypeWebMonitor               = 1ULL << 34,
 
     /// webview的JSError
-    QAPMMonitorTypeJSError                  = 1UL << 35,
+    QAPMMonitorTypeJSError                  = 1ULL << 35,
 
     ///webview的用户抽样率
-    QAPMMonitorTypeWebViewSampleration      = 1UL << 36,
+    QAPMMonitorTypeWebViewSampleration      = 1ULL << 36,
 
     ///webview的性能事件
-    QAPMMonitorTypeWebViewIUPMonitor        = 1UL << 37,
+    QAPMMonitorTypeWebViewIUPMonitor        = 1ULL << 37,
     
-} QAPMMonitorType;
+};
 
 /**
  上报事件类型
