@@ -128,9 +128,11 @@ typedef void(*QAPMMonitorStartCallback)(NSMutableDictionary *dictionary) __attri
 
 
 /**
- 用于输出卡顿、foom、deadlock 上报事件的回调
+ @param eventType 需要输出的功能类型
+ @param stackInfo 需要输出的功能类型的详细堆栈信息
+ @return 用于输出卡顿、foom、deadlock 、normalCrash上报事件的回调
  */
-typedef NSDictionary *(*QAPMUploadEventCallback)(QAPMUploadEventType eventType, id stackInfo);
+typedef NSDictionary<NSString *, NSString *> *(*QAPMUploadEventCallback)(QAPMUploadEventType eventType, NSDictionary *stackInfo);
 
 extern QAPMUploadEventCallback uploadEventCallback;
 

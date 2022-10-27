@@ -13,6 +13,11 @@ NS_ASSUME_NONNULL_BEGIN
 @interface QAPMLaunchProfile : NSObject
 
 /**
+ 单例使用
+ */
++ (instancetype)getInstance;
+
+/**
  设置堆内存监控抽样因子
  如factor=10，则按照1/10抽样,factor=100,则按照1/100抽样。默认1。
  */

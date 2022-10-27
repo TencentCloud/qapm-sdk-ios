@@ -45,6 +45,7 @@ NS_ASSUME_NONNULL_BEGIN
 + (NSString *)sdkVersion;
 
 /**
+@param callBack  返回对应类型的堆栈信息
 @return 代表的依次是blame_team和blame_reason，根据QAPMUploadEventType的功能类型来自定义返回值
 */
 
