@@ -2,7 +2,7 @@
 //  QAPM.h
 //  QAPM
 //
-//  SDK Version 5.2.5 Inner_Version
+//  SDK Version 5.2.6 Inner_Version
 //
 //  Created by Cass on 2018/5/18.
 //  Copyright © 2018年 cass. All rights reserved.
@@ -52,11 +52,9 @@ NS_ASSUME_NONNULL_BEGIN
 + (NSDictionary<NSString *, NSString *> *)eventUpSendEventWithTyped:(QAPMUploadEventCallback)callBack;
 
 /**
- 监控功能开启状态回调。提供用于Athena的使用
- 
- @param callback state 功能状态, type 功能类相关。
+ @param callback 上报成功后返回信息、主要包含后台返回的唯一标识符和各功能的唯一标识、供用户统计使用。
  */
-+ (void)monitorStartCallback:(QAPMMonitorStartCallback)callback __attribute__((deprecated("已弃用该接口")));
++ (void)monitorStartCallback:(QAPMMonitorStartCallback)callback;
 
 /**
  监控功能开启状态回调。

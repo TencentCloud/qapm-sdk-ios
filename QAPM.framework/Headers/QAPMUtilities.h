@@ -124,7 +124,7 @@ typedef void(*QAPM_Log_Callback)(QAPMLoggerLevel level, const char* log);
 /**
  功能开启时的回调，用于所有输出上报事件标识的回调
  */
-typedef void(*QAPMMonitorStartCallback)(NSMutableDictionary *dictionary) __attribute__((deprecated("已弃用该接口")));
+typedef void(*QAPMMonitorStartCallback)(NSMutableDictionary *dictionary);
 
 
 /**
@@ -136,6 +136,6 @@ typedef NSDictionary<NSString *, NSString *> *(*QAPMUploadEventCallback)(QAPMUpl
 
 extern QAPMUploadEventCallback uploadEventCallback;
 
-extern QAPMMonitorStartCallback monitorStartCallback __attribute__((deprecated("已弃用该接口")));
+extern QAPMMonitorStartCallback monitorStartCallback;
 
 #endif /* QAPMUtilities_h */
