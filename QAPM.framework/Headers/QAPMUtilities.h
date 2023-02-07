@@ -10,18 +10,6 @@
 #define QAPMUtilities_h
 
 /**
- 日志级别
- */
-typedef NS_ENUM(NSInteger, QAPMLoggerLevel) {
-    ///外发版本log
-    QAPMLogLevel_Event,
-    ///灰度和内部版本log
-    QAPMLogLevel_Info,
-    ///内部版本log
-    QAPMLogLevel_Debug,
-};
-
-/**
  开启功能类型
  */
 
@@ -117,15 +105,9 @@ typedef NS_ENUM(NSInteger, QAPMUploadEventType) {
 };
 
 /**
- 用于输出SDK调试log的回调
- */
-typedef void(*QAPM_Log_Callback)(QAPMLoggerLevel level, const char* log);
-
-/**
  功能开启时的回调，用于所有输出上报事件标识的回调
  */
 typedef void(*QAPMMonitorStartCallback)(NSMutableDictionary *dictionary);
-
 
 /**
  @param eventType 需要输出的功能类型
