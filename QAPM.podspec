@@ -8,13 +8,13 @@
 
 Pod::Spec.new do |s|
   s.name         = "QAPM"
-  s.version      = "5.2.8"
+  s.version      = "5.2.81"
   s.summary      = "腾讯性能监控组件(iOS)"
   s.description  = <<-DESC
                       QAPM 是一款监控线上APP的性能组件
                       DESC
   s.homepage     = "https://cloud.tencent.com/product/qapm/"
-  s.source       = { :git => "https://github.com/TencentCloud/qapm-sdk-ios.git",:tag => "#{s.version}" }
+  s.source       = { :git => "",:tag => "#{s.version}" }
   s.license      = { :type => "MIT", :file => "LICENSE" }
   s.author       = "qapm_ios"
   s.ios.deployment_target = "8.0"
@@ -30,7 +30,6 @@ Pod::Spec.new do |s|
     'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64',
     'VALID_ARCHS' => 'arm64 x86_64 arm64e i386 armv7' 
   }
-  s.frameworks   = "CoreLocation"
   s.libraries    = "c", "c++"
   s.vendored_frameworks  = "QAPM.framework"
   s.user_target_xcconfig = { 
