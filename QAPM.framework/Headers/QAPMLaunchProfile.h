@@ -21,34 +21,34 @@ NS_ASSUME_NONNULL_BEGIN
  设置堆内存监控抽样因子
  如factor=10，则按照1/10抽样,factor=100,则按照1/100抽样。默认1。
  */
-@property (nonatomic, assign) uint32_t launchSampleFactor __attribute__((deprecated("已弃用，改由QAPM后台配置下发")));
+@property (nonatomic, assign) uint32_t launchSampleFactor __attribute__((deprecated("It is deprecated and distributed by QAPM background configuration instead")));
 
 /**
  设置启动耗时默认阈值， threshold 默认4000ms。
  */
-@property (nonatomic, assign) NSTimeInterval launchthreshold __attribute__((deprecated("已弃用，改由QAPM后台配置下发")));
+@property (nonatomic, assign) NSTimeInterval launchthreshold __attribute__((deprecated("It is deprecated and distributed by QAPM background configuration instead")));
 /**
  设置Debug模式，Debug模式下连接Xcode也会进行上报启动耗时，默认为NO.
  由于Debug下Xcode可能会额外加载一些动态库，导致启动耗时不准确，建议不调试进行上报数据。
  */
-@property (nonatomic, assign) BOOL debugEnable __attribute__((deprecated("已弃用，改由SDK自行判断")));
+@property (nonatomic, assign) BOOL debugEnable __attribute__((deprecated("Deprecated and at the discretion of the SDK")));
 
 /**
  开启启动耗时监控的调用
  */
-+ (void)setupLaunchMonitor DEPRECATED_MSG_ATTRIBUTE("请用 didEnterMain 方法替换");
++ (void)setupLaunchMonitor DEPRECATED_MSG_ATTRIBUTE("Replace it with the didEnterMain method");
 
 + (void)didEnterMain;
 
 /**
  【必须调用API】请在AppDidFinishLaunch开始调用时设置。
 */
-+ (void)setAppDidFinishLaunchBeginTimestamp __attribute__((deprecated("已弃用，applicationDidFinishLaunching函数开始时间戳已经由SDK自行统计")));
++ (void)setAppDidFinishLaunchBeginTimestamp __attribute__((deprecated("Deprecated, the applicationDidFinishLaunching function start timestamp has been counted by the SDK itself")));
 
 /**
  【必须调用API】请在第一个页面ViewDidApppear开始调用时设置。
 */
-+ (void)setFirtstViewDidApppearTimestamp __attribute__((deprecated("已弃用，SDK 自行判断，启动监控结束点以app第一帧UI上屏时间点为结束点")));
++ (void)setFirtstViewDidApppearTimestamp __attribute__((deprecated("It is deprecated, and the SDK judges at its own discretion, and the end point of starting monitoring is the end point of the screen time of the first frame of the UI of the app")));
 
 /**
  设置自定义打点区间开始，该区间需要在启动时间区间内。begin与end的scene需要一致。
@@ -65,6 +65,12 @@ NS_ASSUME_NONNULL_BEGIN
  @param scene 场景名
  */
 + (void)setEndTimestampForScene:(NSString *)scene;
+
+
+/**
+ 设置自定义启动结束点， 可在业务认为启动结束的位置调用
+ */
++ (void)customLaunchEnd;
 
 @end
 

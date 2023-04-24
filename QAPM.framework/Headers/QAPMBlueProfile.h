@@ -20,12 +20,12 @@ NS_ASSUME_NONNULL_BEGIN
 /**
  设置卡顿检测阈值(单位：s)，默认是0.2s
  */
-@property (nonatomic, assign) NSTimeInterval stuckThreshold __attribute__((deprecated("已弃用，改由QAPM后台配置下发")));
+@property (nonatomic, assign) NSTimeInterval stuckThreshold __attribute__((deprecated("It is deprecated and distributed by QAPM background configuration instead")));
 
 /**
  设置blue系统方法堆栈记录开关，默认开启
  */
-@property (nonatomic, assign) BOOL systemStackTraceEnable __attribute__((deprecated("已弃用该接口")));
+@property (nonatomic, assign) BOOL systemStackTraceEnable __attribute__((deprecated("The interface is deprecated")));
 
 /**
  开始记录掉帧，建议滑动开始时调用
@@ -47,7 +47,7 @@ NS_ASSUME_NONNULL_BEGIN
  
  * @param type 设置为0时只有“Normal_Scroll"的数据，当设置为其他值时，掉帧数据里面会多一个类型为"UserDefineScollType_x"的数据
  */
-+ (void)setScrollType:(int32_t)type __attribute__((deprecated("该接口已弃用")));
++ (void)setScrollType:(int32_t)type __attribute__((deprecated("This interface is deprecated")));
 
 @end
 

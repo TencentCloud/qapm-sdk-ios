@@ -54,7 +54,7 @@ NS_ASSUME_NONNULL_BEGIN
 /**
  如果是在腾讯内部蓝盾流水线使用蓝盾插件自动上传符号表、或者本地使用shell自动上传符号表脚本，请设置为NO,
  */
-@property (nonatomic, assign) BOOL uuidFromDsym __attribute__((deprecated("已弃用，由SDK自行判断")));
+@property (nonatomic, assign) BOOL uuidFromDsym __attribute__((deprecated("Deprecated and at the discretion of the SDK")));
 
 /**
  内部调用，用户在web页面申请到的Appkey
@@ -71,7 +71,7 @@ NS_ASSUME_NONNULL_BEGIN
 /**
 自定义上传crash业务日志接口,该业务接口为文件路径
 */
-@property (nonatomic, copy) NSString *customCrashUploadFilePath;
+@property (nonatomic, copy) NSString *customCrashUploadFilePath __attribute__((deprecated("Deprecated, use the setCrashEventCallback interface in the QAPM.h file instead")));
 
 /**
  设置开启的功能

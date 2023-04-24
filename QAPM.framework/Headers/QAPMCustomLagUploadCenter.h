@@ -23,7 +23,7 @@
  @param customStack 需要上报的堆栈信息
  @return 返回值为0表示上报失败，返回1表示成功。
  */
-- (int)customLooperMeta:(NSString *)stage customStack:(NSArray *)customStack DEPRECATED_MSG_ATTRIBUTE("建议使用customLooper方法替换调用");
+- (int)customLooperMeta:(NSString *)stage customStack:(NSArray *)customStack DEPRECATED_MSG_ATTRIBUTE("It is recommended to replace the call with the customLooper method");
 
 /**
  @param stage 自定义场景名，默认场景为当前VC类名。

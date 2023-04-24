@@ -110,6 +110,11 @@ typedef NS_ENUM(NSInteger, QAPMUploadEventType) {
 typedef void(*QAPMMonitorStartCallback)(NSMutableDictionary *dictionary);
 
 /**
+ crash发生时的回调，目前只支持普通崩溃的回调
+ */
+typedef NSArray<NSString *> * (*QAPMUploadCrashEventCallback)(QAPMUploadEventType eventType);
+
+/**
  @param eventType 需要输出的功能类型
  @param stackInfo 需要输出的功能类型的详细堆栈信息
  @return 用于输出卡顿、foom、deadlock 、normalCrash上报事件的回调
@@ -119,5 +124,7 @@ typedef NSDictionary<NSString *, NSString *> *(*QAPMUploadEventCallback)(QAPMUpl
 extern QAPMUploadEventCallback uploadEventCallback;
 
 extern QAPMMonitorStartCallback monitorStartCallback;
+
+extern QAPMUploadCrashEventCallback uploadCrashEventCallback;
 
 #endif /* QAPMUtilities_h */

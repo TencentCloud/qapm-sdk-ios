@@ -2,7 +2,7 @@
 //  QAPM.h
 //  QAPM
 //
-//  SDK Version 5.2.81 Inner_Version
+//  SDK Version 5.2.9 Inner_Version
 //
 //  Created by Cass on 2018/5/18.
 //  Copyright © 2018年 cass. All rights reserved.
@@ -46,16 +46,21 @@ NS_ASSUME_NONNULL_BEGIN
 + (NSString *)sdkVersion;
 
 /**
-@param callBack  返回对应类型的堆栈信息
-@return 代表的依次是blame_team和blame_reason，根据QAPMUploadEventType的功能类型来自定义返回值
+@param callBack 表示的是发生卡顿、foom、deadlock、普通崩溃其中一种后上报QAPM后台，返回业务设置自定义字段，输出堆栈信息。
 */
-
-+ (NSDictionary<NSString *, NSString *> *)eventUpSendEventWithTyped:(QAPMUploadEventCallback)callBack;
++ (void)eventUpSendEventWithTyped:(QAPMUploadEventCallback)callBack;
 
 /**
  @param callback 上报成功后返回信息、主要包含后台返回的唯一标识符和各功能的唯一标识、供用户统计使用。
  */
 + (void)monitorStartCallback:(QAPMMonitorStartCallback)callback;
+
+/**
+ 发生crash的现场回调
+ 
+ @param callback 发生crash时的回调， 其返回值为自定义文件路径， 该文件会在app下一次启动时与崩溃信息一起上报到后台， qapm sdk仅上传该文件，不会删除。
+*/
++ (void)setCrashEventCallback:(QAPMUploadCrashEventCallback)callback;
 
 /**
  监控功能开启状态回调。

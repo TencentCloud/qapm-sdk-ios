@@ -20,7 +20,16 @@ NS_ASSUME_NONNULL_BEGIN
  @param seq VC操作序列
  @param stack 内存方法的堆栈信息
  */
-- (void)handleVCLeak:(UIViewController *)vc oprSeq:(NSString *)seq stackInfo:(NSString *)stack;
+- (void)handleVCLeak:(UIViewController *)vc oprSeq:(NSString *)seq stackInfo:(NSString *)stack __attribute__((deprecated("This method is deprecated")));;
+
+/**
+ VC发生泄漏时的回调接口
+
+ @param vc VC类名
+ @param seq VC操作序列
+ @param stack 内存方法的堆栈信息
+ */
+- (void)handleViewControllerLeak:(UIViewController *)vc oprSeq:(NSArray *)seq stackInfo:(NSString *)stack;
 
 /**
  UIView发生泄漏时的回调接口
@@ -45,7 +54,7 @@ NS_ASSUME_NONNULL_BEGIN
 /**
 设置检测VC泄露阈值(单位：s)
  */
-@property (nonatomic, assign) NSTimeInterval leakInterval __attribute__((deprecated("已弃用，改由QAPM后台配置下发")));
+@property (nonatomic, assign) NSTimeInterval leakInterval __attribute__((deprecated("It is deprecated and distributed by QAPM background configuration instead")));
 
 /**
  设置开启UIView泄漏监控，将记录UIView泄漏对象。
@@ -82,7 +91,6 @@ NS_ASSUME_NONNULL_BEGIN
  @param delegate delegate
  */
 + (void)setYellowProfileDelegate:(id<QAPMYellowProfileDelegate>)delegate;
-
 
 @end
 

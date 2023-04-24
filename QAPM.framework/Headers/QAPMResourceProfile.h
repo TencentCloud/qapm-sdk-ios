@@ -17,14 +17,14 @@ NS_ASSUME_NONNULL_BEGIN
 
  @param tag tag名称
  */
-+ (void)setBeginTag:(NSString * __nonnull)tag;
++ (void)setBeginTag:(NSString * __nonnull)tag __attribute__((deprecated("The method has been deprecated, QAPMMonitorTypeResourceMonitor function reconstruction")));
 
 /**
  设置资源使用监控结束标记
 
  @param tag tag名称
  */
-+ (void)setStopTag:(NSString * __nonnull)tag;
++ (void)setStopTag:(NSString * __nonnull)tag __attribute__((deprecated("The method has been deprecated, QAPMMonitorTypeResourceMonitor function reconstruction")));
 
 @end
 

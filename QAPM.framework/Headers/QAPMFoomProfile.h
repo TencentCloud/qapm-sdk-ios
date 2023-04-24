@@ -20,29 +20,29 @@ NS_ASSUME_NONNULL_BEGIN
 /**
  设置开启堆内存堆栈监控，将记录堆对象分配堆栈,默认开启。
  */
-@property (nonatomic, assign) BOOL mallocMemoryDetectorEnable __attribute__((deprecated("已弃用，改由QAPM后台配置下发")));
+@property (nonatomic, assign) BOOL mallocMemoryDetectorEnable __attribute__((deprecated("It is deprecated and distributed by QAPM background configuration instead")));
 
 /**
  设置堆内存监控分配阈值 threshholdInBytes(bytes)，默认30M。
  */
-@property (nonatomic, assign) size_t mallocMemoryThreshholdInByte __attribute__((deprecated("已弃用，改由QAPM后台配置下发")));
+@property (nonatomic, assign) size_t mallocMemoryThreshholdInByte __attribute__((deprecated("It is deprecated and distributed by QAPM background configuration instead")));
 
 /**
  设置VM内存监控分配阈值 threshholdInBytes(bytes)，默认30M。
  */
-@property (nonatomic, assign) size_t vmMemoryThreshholdInByte __attribute__((deprecated("已弃用，改由QAPM后台配置下发")));
+@property (nonatomic, assign) size_t vmMemoryThreshholdInByte __attribute__((deprecated("It is deprecated and distributed by QAPM background configuration instead")));
 
 /**
  设置堆内存监控抽样因子
  请将此值设置范围在0~1之间，默认值为0.02。
  */
-@property (nonatomic, assign) float mallocSampleFactor __attribute__((deprecated("已弃用，改由QAPM后台配置下发")));
+@property (nonatomic, assign) float mallocSampleFactor __attribute__((deprecated("It is deprecated and distributed by QAPM background configuration instead")));
 
 /**
 设置不进行抽样的内存阀值（bytes）
 如sampleThreshhold=1024*1024，则超过1Mb的内存分配不进行抽样,默认30*1024。
  */
-@property (nonatomic, assign) uint32_t mallocNoSampleThreshold __attribute__((deprecated("已弃用，改由QAPM后台配置下发")));
+@property (nonatomic, assign) uint32_t mallocNoSampleThreshold __attribute__((deprecated("It is deprecated and distributed by QAPM background configuration instead")));
 
 /**
  设置开启VM堆栈监控，将记录堆对象分配堆栈。设置私有API __syscall_logger会带来app store审核不通过的风险，切记在提交关闭该监控，否则可能会审核不通过。
