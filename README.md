@@ -36,7 +36,7 @@ You can try adding it manually in `/Users/wxy/.cocoapods/repos` or via `pod repo
      pod install 
     ```
 * **手动集成**
-  1. 在demo工程QAPM_iOS_SDK_Demo/Pods/QAPM/路径下的framework复制到业务工程；
+  1. 将demo工程的根目录下的framework复制到业务工程；
   2. 拖拽QAPM.framework文件到Xcode工程内(请勾选Copy items if needed选项)；
   3. 在TARGETS->Build Phases-Link Binary Libraries加依赖库 libc++.tbd、 libz.tbd、CoreLocation
   4. 将framework里面的QAPM.bundle、js_sdk.js拖入到业务工程
