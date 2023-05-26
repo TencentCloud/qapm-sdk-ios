@@ -2,7 +2,7 @@
 //  QAPM.h
 //  QAPM
 //
-//  SDK Version 5.2.91 Inner_Version
+//  SDK Version 5.2.92 Inner_Version
 //
 //  Created by Cass on 2018/5/18.
 //  Copyright © 2018年 cass. All rights reserved.
