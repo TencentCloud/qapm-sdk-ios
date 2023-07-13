@@ -45,11 +45,11 @@ NS_ASSUME_NONNULL_BEGIN
  @return 用户行为event uuid
 */
 - (NSString *)generateUserEvent:(NSString *)category
-                    label:(NSString *)label
-                   action:(NSString *)action
-                    value:(NSNumber *)value
-                     tags:(NSDictionary<NSString *, NSString *> *)tags
-                   values:(NSDictionary<NSString *, NSNumber *> *)values;
+                          label:(NSString *)label
+                         action:(NSString *)action
+                          value:(NSNumber *)value
+                           tags:(NSDictionary<NSString *, NSString *> *)tags
+                         values:(NSDictionary<NSString *, NSNumber *> *)values;
 
 
 /**

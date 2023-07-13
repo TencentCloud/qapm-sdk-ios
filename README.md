@@ -86,9 +86,6 @@ void loggerFunc(QAPMLoggerLevel level, const char* log) {
 
 - (void)setupQapm {
     
-    //启动耗时自定义打点开始,业务自行打点
-    [QAPMLaunchProfile setBeginTimestampForScene:@"finish"];
-    
     [QAPM registerLogCallback:loggerFunc];
 #ifdef DEBUG
     //设置开启QAPM所有监控功能
@@ -112,8 +109,6 @@ void loggerFunc(QAPMLoggerLevel level, const char* log) {
     [QAPMConfig getInstance].customerAppVersion = @"请正确填写业务APP版本";
     [QAPM startWithAppKey:@"请正确填写申请到的appkey"];
     
-    //启动耗时自定义打点结束，业务自行打点
-    [QAPMLaunchProfile setEndTimestampForScene:@"finish"];
 }
 ```
      
