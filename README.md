@@ -2,14 +2,14 @@
 
 * 当前性能监控工具监控范围包括:卡顿、启动耗时、掉帧率、内存泄漏、VC泄漏、大块内存分配、普通崩溃、foom、内存触顶率、webview、网络监控、发热、资源使用情况等，其中用户行为轨迹监控功能会近期上线；
 
-* 具体内测申请流程请访问腾讯云官网[https://cloud.tencent.com/product/qapm/](https://cloud.tencent.com/product/qapm/)，找小助手咨询；
+* 具体内测申请流程请访问腾讯云官网[https://cloud.tencent.com/product/qapm/](https://cloud.tencent.com/product/qapm)，找小助手咨询；
 
 ## 接入文档
 
 #### iOS SDK接入
 * SDK接入需要使用APPKEY，您可通过如下方式获取：
 * 腾讯系产品：请在企业微信联系专项体验小助手获取；
-* 非腾讯系产品：请在内测申请通过后根据相应指引进行获取[https://cloud.tencent.com/product/qapm/](https://cloud.tencent.com/product/qapm/)；
+* 非腾讯系产品：请在内测申请通过后根据相应指引进行获取[https://cloud.tencent.com/product/qapm/](https://cloud.tencent.com/product/qapm)；
 
 #### SDK集成方式
 
