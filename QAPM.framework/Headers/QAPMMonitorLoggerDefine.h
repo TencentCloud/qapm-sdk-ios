@@ -34,4 +34,4 @@ typedef void (*QAPM_Log_Callback)(QAPMLoggerLevel level, const char* log);
 }  // extern "C"
 #endif
 
-#endif /* RMonitorLoggerDefine_h */
+#endif /* QAPMonitorLoggerDefine_h */

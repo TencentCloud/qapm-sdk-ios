@@ -87,6 +87,8 @@ typedef NS_OPTIONS(unsigned long long, QAPMMonitorType) {
     ///webview的性能事件
     QAPMMonitorTypeWebViewIUPMonitor        = 1ULL << 37,
     
+    ///内存图功能
+    QAPMMonitorTypeMemoryGraphMonitor       = 1ULL << 38,
 };
 
 /**

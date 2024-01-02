@@ -78,6 +78,11 @@ NS_ASSUME_NONNULL_BEGIN
  */
 @property (nonatomic, assign) QAPMMonitorType enableMonitorTypeOptions;
 
+/**
+ 该设置用于告知监控是否可以进行可选个人信息的采集，默认可以采集。设置为false则不采集。该设置需要最先配置，一旦设置则全局生效。
+ 该设置置为false，部分信息将不再获取，可能会影响到前端的搜索、展示等，请知悉！
+ */
+@property (nonatomic, assign) BOOL collectOptionalFields;
 @end
 
 NS_ASSUME_NONNULL_END
