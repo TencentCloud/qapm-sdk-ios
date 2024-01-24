@@ -1,8 +1,6 @@
 # qapm-sdk-ios
 
-* 当前性能监控工具监控范围包括:卡顿、启动耗时、掉帧率、内存泄漏、VC泄漏、大块内存分配、普通崩溃、foom、内存触顶率、webview、网络监控、发热、资源使用情况等，其中用户行为轨迹监控功能会近期上线；
-
-* 具体内测申请流程请访问腾讯云官网[https://cloud.tencent.com/product/qapm/](https://cloud.tencent.com/product/qapm)，找小助手咨询；
+* 当前性能监控工具监控范围包括:卡顿、启动耗时、掉帧率、内存泄漏、VC泄漏、大块内存分配、普通崩溃、foom、内存触顶率、webview、网络监控等
 
 ## 接入文档
 
@@ -106,8 +104,9 @@ void loggerFunc(QAPMLoggerLevel level, const char* log) {
 }
 ```
      
-#### 更多高级功能配置请参考demo工程，以及shell脚本及相关文档文件夹中的文档；
+#### 更多高级功能配置请参考demo工程，上传符号表请参照相关文档文件夹中的shell脚本；
 [demo工程](https://github.com/TencentCloud/qapm-sdk-ios.git)；
+[详细接入文档](https://cloud.tencent.com/document/product/683/35098)；
 
 ## License
 
