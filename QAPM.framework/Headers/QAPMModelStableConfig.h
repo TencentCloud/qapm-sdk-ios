@@ -41,6 +41,17 @@ NS_ASSUME_NONNULL_BEGIN
  */
 - (void)setupModelAll:(float)sampleFactor __attribute__((deprecated("Deprecated, use the setupModelAll interface in the QAPMModelStableConfig.h file instead")));
 - (void)setupModelAll;
+
+/**
+ @param wrappedPropertyDicts 设置AS字段，根据业务设置的字段，QAPM后台会进行开启功能的抽样率配置、该操作属于特殊设置、无特殊要求的用户不用设置，调用前请先和QAPM研发联系
+ 调用方式如下、需要调整哪个功能的特殊抽样就写哪个功能的，可在SDK初始化的地方进行如下操作：
+ NSDictionary *wrappedPropertyDicts = @{
+     [NSNumber numberWithUnsignedLongLong:QAPMMonitorTypeBlue]: @{@"as": @"AS42203"},
+     [NSNumber numberWithUnsignedLongLong:QAPMMonitorTypeFramedrop]: @{@"as": @"AS42203"},
+ };
+[[QAPMModelStableConfig getInstance] setExtraConfigWithWrappedPropertyDicts:wrappedPropertyDicts];
+ */
+- (void)setExtraConfigWithWrappedPropertyDicts:(NSDictionary<NSNumber *, NSDictionary<NSString *, NSString *> *> *)wrappedPropertyDicts;
 @end
 
 NS_ASSUME_NONNULL_END

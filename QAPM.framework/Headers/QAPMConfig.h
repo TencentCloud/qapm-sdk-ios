@@ -83,6 +83,7 @@ NS_ASSUME_NONNULL_BEGIN
  该设置置为false，部分信息将不再获取，可能会影响到前端的搜索、展示等，请知悉！
  */
 @property (nonatomic, assign) BOOL collectOptionalFields;
+
 @end
 
 NS_ASSUME_NONNULL_END
