@@ -14,7 +14,7 @@ Pod::Spec.new do |s|
                       QAPM 是一款监控线上APP的性能组件
                       DESC
   s.homepage     = "https://cloud.tencent.com/product/qapm/"
-  s.source       = { :git => "",:tag => "#{s.version}" }
+  s.source       = { :git => "https://github.com/TencentCloud/qapm-sdk-ios.git",:tag => "#{s.version}" }
   s.license      = { :type => "MIT", :file => "LICENSE" }
   s.author       = "qapm_ios"
   s.ios.deployment_target = "8.0"
