@@ -18,10 +18,7 @@ QAPM_DSYM_NAME="QAPM"
 SHELL_FOLDER=$(cd "$(dirname "$0")";pwd)
 P_QAPM_APPKEY=${QAPM_APP_KEY%-*}
 P_QAPM_PID=${QAPM_APP_KEY#*-}
-
-#读取业务符号表的uuid
 QAPM_DSYM_UUID=$(dwarfdump --uuid "${SHELL_FOLDER}/${QAPM_DSYM_NAME}.app.dSYM")
-
 if [ ! "$QAPM_DSYM_UUID" ]; then
     echo "符号表文件不存在，或者已经损坏，请检查符号表文件"
     exit 0
@@ -32,7 +29,7 @@ fi
 
 QAPM_DSYMARM64_UUID=${QAPM_DSYM_UUID}
 QAPM_DSYM_ARM64_UUID=${QAPM_DSYMARM64_UUID##*UUID}
-DSYM_ARM64_UUID=$(echo ${QAPM_DSYM_ARM64_UUID:1:38} | tr '[a-z]' '[A-Z]')
+DSYM_ARM64_UUID=$(echo ${QAPM_DSYM_ARM64_UUID:0:37} | tr '[a-z]' '[A-Z]')
 echo "DSYM_ARM64_UUID:${DSYM_ARM64_UUID}"
 
 QAPM_ARM32_UUID=$(echo ${QAPM_DSYM_UUID:5:38} | tr '[a-z]' '[A-Z]')
@@ -45,19 +42,20 @@ echo "SYMBOL_OUTPUT_PATH: ${SYMBOL_OUTPUT_PATH}"
 # 获取token
 function getToken() {
 
-TOKEN_STATUS=$(/usr/bin/curl "https://${QAPM_DSYM_UPLOAD_DOMAIN}/web/${P_QAPM_PID}/api/getToken?app_key=$QAPM_APP_KEY&username=OA::cjzhan")
-
-echo "tokenurl is ${TOKEN_STATUS}"
+TOKEN_STATUS=$(/usr/bin/curl "https://${QAPM_DSYM_UPLOAD_DOMAIN}/api/v2/public/getToken?app_key=$QAPM_APP_KEY&username=OA::kevineluo")
 
 echo "QAPM server get token response: ${TOKEN_STATUS}"
-if [ ! "${TOKEN_STATUS}" ]; then
-    echo "Error: Failed to get the token."
-elif [[ "${TOKEN_STATUS}" == *"{\"status\": \"ok\""* ]]; then
-    echo "Success to get token"
-    P_QAPM_TOKEN=`expr "$TOKEN_STATUS" : '.*\"\(.*\)\"'`
-    echo "The token is : $P_QAPM_TOKEN"
+
+json=$(echo "$TOKEN_STATUS" | jq .)
+
+# 使用 jq 解析 JSON 并检查 status 字段
+if [ "$(echo "$json" | jq -r '.status')" == "ok" ]; then
+    # 如果 status 是 "ok"，则提取 data 字段的值
+        P_QAPM_TOKEN=$(echo "$json" | jq -r '.data')
+    echo "Token data value: $P_QAPM_TOKEN"
 else
-    echo "Error: Failed to get token"
+    # 如果 status 不是 "ok"，则输出错误信息
+    echo "Error: The status is not 'ok'."
 fi
 
 }
@@ -121,14 +119,6 @@ function dSYMUpload() {
     ARM32_UPLOAD_RESULT="FAILTURE"
     echo "QAPM_ARM32 server response: ${STATUS_ARM32}"
     
-    #if [ ! "${STATUS_ARM32}" ]; then
-    #    echo "Error: Failed to upload the arm32_zip archive file."
-    #elif [[ "${STATUS_ARM32}" == *"{\"status\": \"ok\""* ]]; then
-    #    echo "ARM32_Success to upload the dSYM for the app"
-    #    ARM32_UPLOAD_RESULT="SUCCESS"
-    #else
-    #    echo "Error: Failed to upload the arm32_zip archive file to QAPM."
-    #fi
 
     echo "--------------------------------"
     echo "${STATUS_ARM32} - ARM32_dSYM upload complete."
