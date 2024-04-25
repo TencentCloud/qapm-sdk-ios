@@ -37,7 +37,7 @@ You can try adding it manually in `/Users/wxy/.cocoapods/repos` or via `pod repo
   1. 将demo工程的根目录下的framework复制到业务工程；
   2. 拖拽QAPM.framework文件到Xcode工程内(请勾选Copy items if needed选项)；
   3. 在TARGETS->Build Phases-Link Binary Libraries加依赖库 libc++.tbd、 libz.tbd
-  4. 将framework里面的js_sdk.js拖入到业务工程
+  4. 5.3.5之前的版本将framework里面的js_sdk.js拖入到业务工程，5.3.5及以后的版本需将framework里面的QAPMResourceFile.bundle文件拖入到业务工程
   5. 在工程的 Other Linker Flags 中添加 -ObjC 参数；
   6. 将工程的bitcode参数设置为NO；
 
