@@ -7,6 +7,7 @@
 - 修复已知bug
 ### feature
 -  增加PrivacyInfo隐私合规清单文件。
+-  增加localDNS获取功能。
 
 ##
 ### 5.3.4
