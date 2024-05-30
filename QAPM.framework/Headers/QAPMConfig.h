@@ -84,6 +84,13 @@ NS_ASSUME_NONNULL_BEGIN
  */
 @property (nonatomic, assign) BOOL collectOptionalFields;
 
+/**
+ 该字段用于设置全链路监控，默认值为NO,如果设置为YES有以下几点需要注意
+ 1、业务网络请求的requestHeader会增加sw8、traceparent相关协议下的value值，如果业务自行组建了全链路监控则可以设置为NO
+ 2、客户服务端可能有防跨越、防注入保护功能、header信息增加后可能会导致服务端无法返回正确信息的风险，需要服务端放开Nginx 配置开启、可参照https://cloud.tencent.com/document/product/248/87108链接下的步骤3
+ */
+@property (nonatomic, assign) BOOL isOpenTrace;
+
 @end
 
 NS_ASSUME_NONNULL_END
