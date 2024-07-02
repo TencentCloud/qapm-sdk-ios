@@ -91,6 +91,29 @@ NS_ASSUME_NONNULL_BEGIN
  */
 @property (nonatomic, assign) BOOL isOpenTrace;
 
+
+/**
+ 全链路监控，只有在上述isOpenTrace开关为YES的情况下以下参数设置才会生效
+ 以下四种方式在使用的时候建议只使用注入或者忽略其中的一种设置
+ 设置不需要注入(忽略)请求头的请求url，
+ */
+@property (nonatomic, copy)NSArray<NSString *> *injectTraceIgnoreUrls;
+
+/**
+ 设置不需要注入(忽略)请求头的请求RegExp
+ */
+@property (nonatomic, copy)NSArray<NSString *> *injectTraceIgnoreUrlsByRegex;
+
+/**
+ 设置需要注入请求头的请求url
+ */
+@property (nonatomic, copy)NSArray<NSString *> *injectTraceUrls;
+
+/**
+ 设置需要注入请求头的请求RegExp
+ */
+@property (nonatomic, copy)NSArray<NSString *> *injectTraceUrlsByRegex;
+
 @end
 
 NS_ASSUME_NONNULL_END
