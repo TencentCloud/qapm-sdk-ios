@@ -34,6 +34,9 @@ NS_ASSUME_NONNULL_BEGIN
  */
 
 - (void)start;
+
+- (void)stop;
+
 /**
  用户自定义用户行为操作调用,外部用户接口，调用该接口时请完成QAPM的一系列初始化操作，设置完QAPM的appKey后调用。
  @param category  类别

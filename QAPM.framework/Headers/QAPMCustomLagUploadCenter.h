@@ -18,6 +18,8 @@
 
 - (void)start;
 
+- (void)stop;
+
 /**
  @param stage 自定义场景名，默认场景为当前VC类名。
  @param customStack 需要上报的堆栈信息

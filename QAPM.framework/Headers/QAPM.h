@@ -2,7 +2,7 @@
 //  QAPM.h
 //  QAPM
 //
-//  SDK Version 5.3.8 Inner_Version
+//  SDK Version 5.3.9 Inner_Version
 //
 //  Created by Cass on 2018/5/18.
 //  Copyright © 2018年 cass. All rights reserved.
@@ -25,6 +25,11 @@ NS_ASSUME_NONNULL_BEGIN
  * @param appKey 注册QAPM分配的唯一标识
  */
 + (void)startWithAppKey:(NSString * __nonnull)appKey;
+
+/**
+ 关闭SDK所有功能
+ */
++ (void)stop;
 
 /**
  注册SDK内部日志回调，用于输出SDK内部日志
