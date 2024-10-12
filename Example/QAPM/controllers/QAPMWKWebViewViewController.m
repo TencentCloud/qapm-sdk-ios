@@ -74,8 +74,6 @@
 
 - (void)entranceJserror {
 
-    //加入vConsole插件，方便客户端查看webview的上报日志
- 
     WKWebViewConfiguration *config = [[WKWebViewConfiguration alloc] init];
     config.userContentController = [[WKUserContentController alloc]init];
     NSString *path = [[NSBundle mainBundle]pathForResource:@"vConsole.js" ofType:nil];
@@ -86,9 +84,11 @@
     wkWebView = [[WKWebView alloc] initWithFrame:self.view.bounds configuration:config];
     wkWebView.UIDelegate = self;
     wkWebView.navigationDelegate  = self;
-    NSString *urlString = @"http://qapm-1253358381.cos.ap-guangzhou.myqcloud.com/new_monitor.html";
-    NSURL *url = [NSURL URLWithString:urlString];
-    [wkWebView loadRequest:[NSURLRequest requestWithURL:url]];
+     
+    NSString *htmlPath = [[NSBundle mainBundle] pathForResource:@"test" ofType:@"html"];
+    NSURL *htmlURL = [NSURL fileURLWithPath:htmlPath];
+    
+    [wkWebView loadRequest:[NSURLRequest requestWithURL:htmlURL]];
 
     [self.view addSubview:wkWebView];
 }

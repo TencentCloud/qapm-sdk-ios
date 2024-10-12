@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" content="8" />
+<!--  <meta charset="utf-8" http-equiv="refresh" content="8" />-->
+  <title>@sentry/browser SDK examples</title>
+  <script charset="utf-8" src="http://code.jquery.com/jquery-1.11.3.min.js" ></script>
+   <!-- <script charset="utf-8" src="http://code.jquery.com/jquery-1.11.3.min.js" crossorigin="anonymous"></script> -->
+<!--  <script charset="utf-8" src="./qapm.js"></script>-->
+  <!-- <script charset="utf-8" src="./js_sdk.js"></script> -->
+  <script charset="utf-8">
+<!--    window.QAPM.resetConfig();-->
+<!--    window.QAPM.qapmJsStart();-->
+    function test2 () {
+      throw new Error('other error');
+    }
+    function test () {
+      test()
+    }
+    // Testing code, irrelevant vvvvv
+    document.addEventListener('DOMContentLoaded', () => {
+      document.querySelector('#EvalError').addEventListener('click', () => {
+        makeAFailure();
+        throw new EvalError('Hello', 'someFile.js', 10);
+      });
+
+      document.querySelector('#RangeError').addEventListener('click', () => {
+          
+          var msg = {
+              "category": "CLICK_BUY_BUTTON",
+              "values": {
+                  "v1": 748,
+                  "v2": 1
+              },
+              "tags": {
+                  "d1": "FUJI mini7+",
+                  "d2": "package:1",
+                  "d3": "color:whiteFuji novice recommends the king of cost-effective instant camera mini7+ one-time imaging cheap film machine for male and female studentsFuji novice recommends the king of cost-effective instant camera mini7+ one-time imaging cheap film machine for male and female studentsFuji novice recommends the king of cost-effective instant camera mini7+ one-time imaging cheap film machine for male and female studentsFuji novice recommends the king of cost-effective instant camera mini7+ one-time imaging cheap film machine for male and female studentsFuji novice recommends the king of cost-effective instant camera mini7+ one-time imaging cheap film machine for male and female studentsFuji novice recommends the king of cost-effective instant camera mini7+ one-time imaging cheap film machine for male and female studentsFuji novice recommends the king of cost-effective instant camera mini7+ one-time imaging cheap film machine for male and female studentsFuji novice recommends the king of cost-effective instant camera mini7+ one-time imaging cheap film machine for male and female students",
+                  "info1": "Fuji novice recommends the king of cost-effective instant camera mini7+ one-time imaging cheap film machine for male and female studentsFuji novice recommends the king of cost-effective instant camera mini7+ one-time imaging cheap film machine for male and female studentsFuji novice recommends the king of cost-effective instant camera mini7+ one-time imaging cheap film machine for male and female studentsFuji novice recommends the king of cost-effective instant camera mini7+ one-time imaging cheap film machine for male and female studentsFuji novice recommends the king of cost-effective instant camera mini7+ one-time imaging cheap film machine for male and female studentsFuji novice recommends the king of cost-effective instant camera mini7+ one-time imaging cheap film machine for male and female studentsFuji novice recommends the king of cost-effective instant camera mini7+ one-time imaging cheap film machine for male and female studentsFuji novice recommends the king of cost-effective instant camera mini7+ one-time imaging cheap film machine for male and female studentsFuji novice recommends the king of cost-effective instant camera mini7+ one-time imaging cheap film machine for male and female studentsFuji novice recommends the king of cost-effective instant camera mini7+ one-time imaging cheap film machine for male and female studentsFuji novice recommends the king of cost-effective instant camera mini7+ one-time imaging cheap film machine for male and female studentsFuji novice recommends the king of cost-effective instant camera mini7+ one-time imaging cheap film machine for male and female studentsFuji novice recommends the king of cost-effective instant camera mini7+ one-time imaging cheap film machine for male and female studentsFuji novice recommends the king of cost-effective instant camera mini7+ one-time imaging cheap film machine for male and female studentsFuji novice recommends the king of cost-effective instant camera mini7+ one-time imaging cheap film machine for male and female studentsFuji novice recommends the king of cost-effective instant camera mini7+ one-time imaging cheap film machine for male and female studentsFuji novice recommends the king of cost-effective instant camera mini7+ one-time imaging cheap film machine for male and female students",
+                  "info2": "Package type: Package 1 [Official standard + 20 pieces of photo paper + new product gift package + 10-piece accessory gift package] Color classification: White"
+              }
+          }
+          window.QAPM.customEvent(msg.category, msg.tags, msg.values);
+          
+        console.log("error  ----------");
+        arr = [];
+        arr.length = -1;
+        
+      });
+
+      document.querySelector('#ReferenceError').addEventListener('click', () => {
+        eval(ThisReferenceError())
+      });
+
+      document.querySelector('#SyntaxError').addEventListener('click', () => {
+        throw new SyntaxError('SyntaxError')
+      });
+
+      document.querySelector('#TypeError').addEventListener('click', () => {
+        null.f()
+      });
+
+      document.querySelector('#URIError').addEventListener('click', () => {
+        decodeURIComponent('%')
+      });
+
+      document.querySelector('#duplicate-exception').addEventListener('click', () => {
+        Sentry.captureException(new Error('duplicated exception'));
+      });
+
+      document.querySelector('#duplicate-message').addEventListener('click', () => {
+        Sentry.captureMessage('duplicate captureMessage');
+      });
+
+      document.querySelector('#integration-example').addEventListener('click', () => {
+        Sentry.captureMessage('Happy Message');
+      });
+
+      document.querySelector('#exception-hint').addEventListener('click', () => {
+        class CustomError extends Error {
+          constructor(...args) {
+            super(...args);
+            this.name = 'CustomError';
+          }
+          someMethodAttachedToOurCustomError() {
+            return new Promise(resolve => {
+              resolve('some data, who knows what exactly');
+            });
+          }
+        }
+
+        throw new CustomError('Hey there');
+      });
+
+      document.querySelector('#breadcrumb-hint').addEventListener('click', () => {});
+      
+
+    });
+  </script>
+  <style>
+    button {
+      display: block;
+      margin: 0.5em 0;
+      font-size: 1em;
+      cursor: pointer;
+      padding: 0.5em;
+    }
+
+    button:hover {
+      background: #ddd;
+    }
+  </style>
+</head>
+<body>
+<button id="EvalError">EvalError</button>
+<button id="RangeError">RangeError</button>
+<button id="ReferenceError">ReferenceError</button>
+<button id="SyntaxError">SyntaxError</button>
+<button id="TypeError">TypeError</button>
+<button id="URIError">URIError</button>
+<button data-label="User Defined Label" id="breadcrumb-hint">breadcrumb hints example</button>
+</body>
+</html>
