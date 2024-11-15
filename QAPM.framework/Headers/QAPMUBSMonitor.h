@@ -22,12 +22,17 @@ NS_ASSUME_NONNULL_BEGIN
 /**
  自定义传入业务APP的打开渠道,不设置则默认情况下为App Store
  */
-@property (nonatomic, copy) NSString *channel_open;
+@property (nonatomic, copy) NSString *channelOpen;
 
 /**
  自定义传入业务APP的安装渠道，不设置则通过mobileprovision进行区分
  */
-@property (nonatomic, copy) NSString *channel_install;
+@property (nonatomic, copy) NSString *channelInstall;
+
+/**
+ 用户设置是否上报原生的viewText和viewDesc信息
+ */
+@property (nonatomic, assign)BOOL isOpenOriginText;
 
 /**
  SDK内部调用
