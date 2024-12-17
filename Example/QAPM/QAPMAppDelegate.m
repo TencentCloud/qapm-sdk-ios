@@ -66,18 +66,10 @@ void loggerFunc(QAPMLoggerLevel level, const char* log) {
 
 - (void)setupQapm {
     
-    //启动耗时自定义打点开始,业务自行打点
-    [QAPMLaunchProfile setBeginTimestampForScene:@"finish"];
-    
     [QAPM registerLogCallback:loggerFunc];
-#ifdef DEBUG
     //设置开启QAPM所有监控功能
-    [[QAPMModelStableConfig getInstance] setupModelAll:0.5];
+    [[QAPMModelStableConfig getInstance] setupModelAll];
     
-    
-#else
-    [[QAPMModelStableConfig getInstance] setupModelAll:1];
-#endif
     //用于查看当前SDK版本号信息
     NSLog(@"qapm sdk version : %@", [QAPM sdkVersion]);
         
@@ -86,19 +78,17 @@ void loggerFunc(QAPMLoggerLevel level, const char* log) {
 [[QAPMFoomProfile getInstance] setVMLogger:(void**)&__syscall_logger];
 #endif
 
-    [QAPMConfig getInstance].host = @"https://qapm.qq.com";
+    [QAPMConfig getInstance].host = @"请正确填写上报域名";
 
+    //为了保证您在验证demo的时候能够看到所有数据上报，在申请完appkey后请前往前端页面的应用管理-》白名单管理栏进行白名单配置,https://console.cloud.tencent.com/monitor/app/config-page
     // 设置用户标记
-    [QAPMConfig getInstance].userId = @"qapmtest";
-    
+    [QAPMConfig getInstance].userId = @"请保证用户ID的唯一性";
     // 设置设备唯一标识
-    [QAPMConfig getInstance].deviceID = @"qapmdevideId";
+    [QAPMConfig getInstance].deviceID = @"请保证设备ID的唯一性";
     // 设置App版本号
-    [QAPMConfig getInstance].customerAppVersion = @"1.0.1";
+    
+    [QAPMConfig getInstance].customerAppVersion = @"请正确填写版本号";
     [QAPM startWithAppKey:@"请填写申请的appkey"];
-    //
-    //启动耗时自定义打点结束，业务自行打点
-    [QAPMLaunchProfile setEndTimestampForScene:@"finish"];
 }
 
 - (void)setupFlex {
