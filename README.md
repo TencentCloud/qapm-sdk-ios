@@ -106,7 +106,7 @@ void loggerFunc(QAPMLoggerLevel level, const char* log) {
      
 #### 更多高级功能配置请参考demo工程，上传符号表请参照相关文档文件夹中的shell脚本；
 [demo工程](https://github.com/TencentCloud/qapm-sdk-ios.git)；
-[详细接入文档](https://cloud.tencent.com/document/product/683/35098)；
+[详细接入文档](https://cloud.tencent.com/document/product/248/87209)；
 
 ## License
 
