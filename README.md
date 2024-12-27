@@ -50,12 +50,7 @@ You can try adding it manually in `/Users/wxy/.cocoapods/repos` or via `pod repo
 
 * 在工程的AppDelegate.m文件导入头文件，并加入以下配置
 
- ```
-#import <QAPM/QAPM.h>
-#import <QAPM/QAPMLaunchProfile.h>
-如果是Swift工程，请在对应bridging-header.h中导入
-初始化QAPM 在工程AppDelegate.m的application:didFinishLaunchingWithOptions:方法中初始化：
-
+```
 void loggerFunc(QAPMLoggerLevel level, const char* log) {
 
 #ifdef RELEASE
@@ -78,29 +73,42 @@ void loggerFunc(QAPMLoggerLevel level, const char* log) {
 }
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    //请在同意相应的隐私合规政策后进行QAPM的初始化
-    [self setupQapm];
-}
+//为响应工信部 “26号文” 要求，提供该设置用于告知SDK是否可以进行可选个人信息的采集，该设置需要最先配置，一旦设置则全局生效。默认设置为YES，代表可以采集；设置为NO则不采集，可能会影响到前端的搜索、展示等。
+//可选个人信息包括但不限于以下信息：设备制造商、系统、运营商等等，详见 《QAPM SDK 合规使用指南》
+[QAPMConfig getInstance].collectOptionalFields = YES;
 
-- (void)setupQapm {
-    
-    [QAPM registerLogCallback:loggerFunc];
-    [[QAPMModelStableConfig getInstance] setupModelAll];
-    //用于查看当前SDK版本号信息
-    NSLog(@"qapm sdk version : %@", [QAPM sdkVersion]);
-        
-    //非腾讯系产品host为默认值，不用额外设置
-    [QAPMConfig getInstance].host = @"https://qapm.qq.com";
+// 该设置默认为NO，若需要开启全链路监控功能请设置为YES，QAPM的SDK网络监控数据中的个例数据和腾讯云可观测平台的应用性能监控的全链路数据将会打通，另外业务方需要注意：
+// 业务网络请求的requestHeader会增加sw8、traceparent相关协议下的value值，如果业务自行组建了全链路监控则可以设置为NO
+[QAPMConfig getInstance].isOpenTrace = NO;
 
-    // 设置用户标记，默认值为10000,userID会作为计算各功能的用户指标率，请进行传值
-    [QAPMConfig getInstance].userId = @"请正确填写用户唯一标识";
+/// 设置QAPM 日志输出
+NSLog(@"qapm sdk version : %@", [QAPM sdkVersion]);    
+[QAPM registerLogCallback:loggerFunc];
+
+
+//目前上报的域名分为了三个不同的地址，分别是国内站、新加坡站、法兰克福站，根据实际需求选择一个环境上报即可
+//国内站：https://app.rumt-zh.com
+//新加坡站：https://app.rumt-sg.com
+//法兰克福站：https://eu-frankfurt.rumapp.tencentcs.com
+[QAPMConfig getInstance].host = @"https://app.rumt-zh.com";
     
-    // 设置设备唯一标识，默认值为10000,deviceID会作为计算各功能的设备指标率，请进行传值
-    [QAPMConfig getInstance].deviceID = @"请正确填写设备的唯一标识";
-    // 设置App版本号
-    [QAPMConfig getInstance].customerAppVersion = @"请正确填写业务APP版本";
-    [QAPM startWithAppKey:@"请正确填写申请到的appkey"];
-    
+[QAPMConfig getInstance].customerAppVersion = @"设置app自定义版本号";
+
+//根据实际情况设置userid 和deviceID，为了快速验证数据上报，请在研发流程内通过设置用户或者设备白名单进行验证，添加其中一项白名单即可，白名单设置规则请参照下面的注意项进行添加，
+
+#ifdef DEBUG
+[QAPMConfig getInstance].userId = @"请填写用户白名单的值";
+[QAPMConfig getInstance].deviceID = @"请填写设备白名单的值";
+#else
+//设备唯一标识deviceID，例如IDFV配合Keychain使用
+[QAPMConfig getInstance].userId = @"自定义userId";
+[QAPMConfig getInstance].deviceID = @"自定义deviceId";
+#endif
+
+/// 启动QAPM
+QAPM startWithAppKey:@"产品唯一的appKey"];
+return YES;
+
 }
 ```
      
