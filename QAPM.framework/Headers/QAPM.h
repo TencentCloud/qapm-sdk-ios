@@ -2,7 +2,7 @@
 //  QAPM.h
 //  QAPM
 //
-//  SDK Version 5.4.4 Inner_Version
+//  SDK Version 5.4.5 Inner_Version
 //
 //  Created by Cass on 2018/5/18.
 //  Copyright © 2018年 cass. All rights reserved.
@@ -14,6 +14,7 @@
 #import "QAPMModelStableConfig.h"
 #import "QAPMUtilities.h"
 #include "QAPMMonitorLoggerDefine.h"
+
 
 NS_ASSUME_NONNULL_BEGIN
 

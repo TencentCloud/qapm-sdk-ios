@@ -89,6 +89,18 @@ typedef NS_OPTIONS(unsigned long long, QAPMMonitorType) {
     
     ///内存图功能
     QAPMMonitorTypeMemoryGraphMonitor       = 1ULL << 38,
+    
+    // 拨测
+    //QAPMMonitorTypeDialTest                 = 1UL << 40,
+    
+    // RN异常
+    QAPMMonitorTypeRNException              = 1UL << 41,
+    
+    // RN异常
+    QAPMMonitorTypeFlutterException         = 1UL << 42,
+    
+    // RN异常
+    QAPMMonitorTypeCocosException           = 1UL << 43,
 };
 
 /**

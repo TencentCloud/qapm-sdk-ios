@@ -114,6 +114,21 @@ NS_ASSUME_NONNULL_BEGIN
  */
 @property (nonatomic, copy)NSArray<NSString *> *injectTraceUrlsByRegex;
 
+/**
+ * 设置网络请求的响应header黑名单，在黑名单中的header key将不会采集上报
+ */
+- (void)addHttpBlackHeader:(NSArray<NSString *> *)blackHeader;
+
+/**
+ * 设置域名白名单，如果设置了，则只有白名单中的域名请求才监控
+ */
+-(void)addHttpWhiteDomain:(NSArray<NSString *> *)whiteDomain;
+
+/**
+ * 设置域名黑名单，如果设置了，在黑名单中的域名将不会监控
+ */
+-(void)addHttpBlackDomain:(NSArray<NSString *> *)blackDomain;
+
 @end
 
 NS_ASSUME_NONNULL_END
