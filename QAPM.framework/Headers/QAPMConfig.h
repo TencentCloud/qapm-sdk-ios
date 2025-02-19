@@ -129,6 +129,11 @@ NS_ASSUME_NONNULL_BEGIN
  */
 -(void)addHttpBlackDomain:(NSArray<NSString *> *)blackDomain;
 
+/**
+ * 设置当前大模型名称
+ */
+-(void)setCurrentLLM:(NSString*)llmName;
+
 @end
 
 NS_ASSUME_NONNULL_END

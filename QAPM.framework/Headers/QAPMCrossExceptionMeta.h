@@ -2,7 +2,7 @@
 //  QAPMCrossExceptionMeta.h
 //  QAPM
 //
-//  Created by 黄慰潼 on 2024/12/18.
+//  Created on 2024/12/18.
 //  Copyright © 2024 Tencent. All rights reserved.
 //
 
