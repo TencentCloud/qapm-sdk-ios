@@ -2,7 +2,7 @@
 //  QAPM.h
 //  QAPM
 //
-//  SDK Version 5.4.6 Inner_Version
+//  SDK Version 5.4.7 Inner_Version
 //
 //  Created by Cass on 2018/5/18.
 //  Copyright © 2018年 cass. All rights reserved.
@@ -74,6 +74,9 @@ NS_ASSUME_NONNULL_BEGIN
  @param type state 功能状态, type 功能类相关。
  */
 + (BOOL)monitorEnableWithType:(QAPMMonitorType)type;
+
+
++ (void)setDebugModeForTextMapping:(BOOL)open;
 
 @end
 
