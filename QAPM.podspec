@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name         = "QAPM"
-  s.version      = "5.4.7"
+  s.version      = "5.4.8"
   s.summary      = "腾讯性能监控组件(iOS)"
   s.description  = <<-DESC
                       QAPM 是一款监控线上APP的性能组件
