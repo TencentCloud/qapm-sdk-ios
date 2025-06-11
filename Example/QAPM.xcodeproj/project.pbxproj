@@ -24,6 +24,24 @@
 		6223AD33466990CE107D868E /* Pods_QAPM_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 003FA856199C631813605776 /* Pods_QAPM_Tests.framework */; };
 		71719F9F1E33DC2100824A3D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 71719F9D1E33DC2100824A3D /* LaunchScreen.storyboard */; };
 		868F21A52CBA65610000852B /* test.html in Resources */ = {isa = PBXBuildFile; fileRef = 868F21A42CBA65610000852B /* test.html */; };
+		869D00A42DF97AF200F7F5C4 /* RemoteServiceClientQAPMInterceptorFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 869D00A22DF97AF200F7F5C4 /* RemoteServiceClientQAPMInterceptorFactory.swift */; };
+		869D00A52DF97AF200F7F5C4 /* orderSystem.proto in Sources */ = {isa = PBXBuildFile; fileRef = 869D008B2DF97AF200F7F5C4 /* orderSystem.proto */; };
+		869D00A62DF97AF200F7F5C4 /* QAPMInterceptorFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 869D009F2DF97AF200F7F5C4 /* QAPMInterceptorFactory.swift */; };
+		869D00A72DF97AF200F7F5C4 /* hello.proto in Sources */ = {isa = PBXBuildFile; fileRef = 869D008D2DF97AF200F7F5C4 /* hello.proto */; };
+		869D00A82DF97AF200F7F5C4 /* QAPMMonitorClientInterceptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 869D00A02DF97AF200F7F5C4 /* QAPMMonitorClientInterceptor.swift */; };
+		869D00A92DF97AF200F7F5C4 /* hello.grpc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 869D00932DF97AF200F7F5C4 /* hello.grpc.swift */; };
+		869D00AA2DF97AF200F7F5C4 /* OrderServiceClientQAPMInterceptorFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 869D009E2DF97AF200F7F5C4 /* OrderServiceClientQAPMInterceptorFactory.swift */; };
+		869D00AB2DF97AF200F7F5C4 /* hello.pb.swift in Sources */ = {isa = PBXBuildFile; fileRef = 869D00942DF97AF200F7F5C4 /* hello.pb.swift */; };
+		869D00AC2DF97AF200F7F5C4 /* orderSystem.pb.swift in Sources */ = {isa = PBXBuildFile; fileRef = 869D00902DF97AF200F7F5C4 /* orderSystem.pb.swift */; };
+		869D00AD2DF97AF200F7F5C4 /* Client.swift in Sources */ = {isa = PBXBuildFile; fileRef = 869D00982DF97AF200F7F5C4 /* Client.swift */; };
+		869D00AE2DF97AF200F7F5C4 /* OrderServer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 869D00992DF97AF200F7F5C4 /* OrderServer.swift */; };
+		869D00AF2DF97AF200F7F5C4 /* Server.swift in Sources */ = {isa = PBXBuildFile; fileRef = 869D009B2DF97AF200F7F5C4 /* Server.swift */; };
+		869D00B02DF97AF200F7F5C4 /* orderSystem.grpc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 869D008F2DF97AF200F7F5C4 /* orderSystem.grpc.swift */; };
+		869D00B12DF97AF200F7F5C4 /* OrderServiceClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 869D009A2DF97AF200F7F5C4 /* OrderServiceClient.swift */; };
+		869D00B22DF97AF200F7F5C4 /* .generated in Resources */ = {isa = PBXBuildFile; fileRef = 869D00922DF97AF200F7F5C4 /* .generated */; };
+		869D00B32DF97AF200F7F5C4 /* generateProto.sh in Resources */ = {isa = PBXBuildFile; fileRef = 869D009D2DF97AF200F7F5C4 /* generateProto.sh */; };
+		869D00B42DF97AF200F7F5C4 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 869D00A12DF97AF200F7F5C4 /* README.md */; };
+		869D00BA2DF97D7300F7F5C4 /* GRPCViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 869D00B92DF97D7300F7F5C4 /* GRPCViewController.swift */; };
 		873B8AEB1B1F5CCA007FD442 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 873B8AEA1B1F5CCA007FD442 /* Main.storyboard */; };
 		944D8B15278C5C0C00210EF4 /* APMYellowNextViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 944D8AF4278C5C0C00210EF4 /* APMYellowNextViewController.m */; };
 		944D8B16278C5C0C00210EF4 /* QAPMWKWebViewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 944D8AF6278C5C0C00210EF4 /* QAPMWKWebViewViewController.m */; };
@@ -81,6 +99,25 @@
 		606FC2411953D9B200FFA9A0 /* Tests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Tests-Prefix.pch"; sourceTree = "<group>"; };
 		71719F9E1E33DC2100824A3D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		868F21A42CBA65610000852B /* test.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = test.html; sourceTree = "<group>"; };
+		869D008B2DF97AF200F7F5C4 /* orderSystem.proto */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.protobuf; path = orderSystem.proto; sourceTree = "<group>"; };
+		869D008D2DF97AF200F7F5C4 /* hello.proto */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.protobuf; path = hello.proto; sourceTree = "<group>"; };
+		869D008F2DF97AF200F7F5C4 /* orderSystem.grpc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = orderSystem.grpc.swift; sourceTree = "<group>"; };
+		869D00902DF97AF200F7F5C4 /* orderSystem.pb.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = orderSystem.pb.swift; sourceTree = "<group>"; };
+		869D00922DF97AF200F7F5C4 /* .generated */ = {isa = PBXFileReference; lastKnownFileType = text; path = .generated; sourceTree = "<group>"; };
+		869D00932DF97AF200F7F5C4 /* hello.grpc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = hello.grpc.swift; sourceTree = "<group>"; };
+		869D00942DF97AF200F7F5C4 /* hello.pb.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = hello.pb.swift; sourceTree = "<group>"; };
+		869D00982DF97AF200F7F5C4 /* Client.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Client.swift; sourceTree = "<group>"; };
+		869D00992DF97AF200F7F5C4 /* OrderServer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderServer.swift; sourceTree = "<group>"; };
+		869D009A2DF97AF200F7F5C4 /* OrderServiceClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderServiceClient.swift; sourceTree = "<group>"; };
+		869D009B2DF97AF200F7F5C4 /* Server.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Server.swift; sourceTree = "<group>"; };
+		869D009D2DF97AF200F7F5C4 /* generateProto.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = generateProto.sh; sourceTree = "<group>"; };
+		869D009E2DF97AF200F7F5C4 /* OrderServiceClientQAPMInterceptorFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderServiceClientQAPMInterceptorFactory.swift; sourceTree = "<group>"; };
+		869D009F2DF97AF200F7F5C4 /* QAPMInterceptorFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QAPMInterceptorFactory.swift; sourceTree = "<group>"; };
+		869D00A02DF97AF200F7F5C4 /* QAPMMonitorClientInterceptor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QAPMMonitorClientInterceptor.swift; sourceTree = "<group>"; };
+		869D00A12DF97AF200F7F5C4 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		869D00A22DF97AF200F7F5C4 /* RemoteServiceClientQAPMInterceptorFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteServiceClientQAPMInterceptorFactory.swift; sourceTree = "<group>"; };
+		869D00B82DF97C0200F7F5C4 /* QAPM-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "QAPM-Bridging-Header.h"; sourceTree = "<group>"; };
+		869D00B92DF97D7300F7F5C4 /* GRPCViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GRPCViewController.swift; sourceTree = "<group>"; };
 		873B8AEA1B1F5CCA007FD442 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Main.storyboard; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		944D8AEF278C5C0C00210EF4 /* APMMainListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APMMainListViewController.h; sourceTree = "<group>"; };
 		944D8AF0278C5C0C00210EF4 /* APMYellowViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APMYellowViewController.h; sourceTree = "<group>"; };
@@ -184,6 +221,7 @@
 		6003F593195388D20070C39A /* QAPM */ = {
 			isa = PBXGroup;
 			children = (
+				869D00A32DF97AF200F7F5C4 /* QAPMGRPC */,
 				944D8AEE278C5C0C00210EF4 /* controllers */,
 				944D8B0A278C5C0C00210EF4 /* resource */,
 				944D8B0C278C5C0C00210EF4 /* Utils */,
@@ -192,6 +230,7 @@
 				873B8AEA1B1F5CCA007FD442 /* Main.storyboard */,
 				6003F5A5195388D20070C39A /* QAPMViewController.h */,
 				6003F5A6195388D20070C39A /* QAPMViewController.m */,
+				869D00B82DF97C0200F7F5C4 /* QAPM-Bridging-Header.h */,
 				71719F9D1E33DC2100824A3D /* LaunchScreen.storyboard */,
 				6003F5A8195388D20070C39A /* Images.xcassets */,
 				6003F594195388D20070C39A /* Supporting Files */,
@@ -239,9 +278,74 @@
 			name = "Podspec Metadata";
 			sourceTree = "<group>";
 		};
+		869D008C2DF97AF200F7F5C4 /* order */ = {
+			isa = PBXGroup;
+			children = (
+				869D008B2DF97AF200F7F5C4 /* orderSystem.proto */,
+			);
+			path = order;
+			sourceTree = "<group>";
+		};
+		869D008E2DF97AF200F7F5C4 /* Protos */ = {
+			isa = PBXGroup;
+			children = (
+				869D008C2DF97AF200F7F5C4 /* order */,
+				869D008D2DF97AF200F7F5C4 /* hello.proto */,
+			);
+			path = Protos;
+			sourceTree = "<group>";
+		};
+		869D00912DF97AF200F7F5C4 /* order */ = {
+			isa = PBXGroup;
+			children = (
+				869D008F2DF97AF200F7F5C4 /* orderSystem.grpc.swift */,
+				869D00902DF97AF200F7F5C4 /* orderSystem.pb.swift */,
+			);
+			path = order;
+			sourceTree = "<group>";
+		};
+		869D00952DF97AF200F7F5C4 /* Generated */ = {
+			isa = PBXGroup;
+			children = (
+				869D00912DF97AF200F7F5C4 /* order */,
+				869D00922DF97AF200F7F5C4 /* .generated */,
+				869D00932DF97AF200F7F5C4 /* hello.grpc.swift */,
+				869D00942DF97AF200F7F5C4 /* hello.pb.swift */,
+			);
+			path = Generated;
+			sourceTree = "<group>";
+		};
+		869D009C2DF97AF200F7F5C4 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				869D00952DF97AF200F7F5C4 /* Generated */,
+				869D00982DF97AF200F7F5C4 /* Client.swift */,
+				869D00992DF97AF200F7F5C4 /* OrderServer.swift */,
+				869D009A2DF97AF200F7F5C4 /* OrderServiceClient.swift */,
+				869D009B2DF97AF200F7F5C4 /* Server.swift */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		869D00A32DF97AF200F7F5C4 /* QAPMGRPC */ = {
+			isa = PBXGroup;
+			children = (
+				869D008E2DF97AF200F7F5C4 /* Protos */,
+				869D009C2DF97AF200F7F5C4 /* Sources */,
+				869D009D2DF97AF200F7F5C4 /* generateProto.sh */,
+				869D009E2DF97AF200F7F5C4 /* OrderServiceClientQAPMInterceptorFactory.swift */,
+				869D009F2DF97AF200F7F5C4 /* QAPMInterceptorFactory.swift */,
+				869D00A02DF97AF200F7F5C4 /* QAPMMonitorClientInterceptor.swift */,
+				869D00A12DF97AF200F7F5C4 /* README.md */,
+				869D00A22DF97AF200F7F5C4 /* RemoteServiceClientQAPMInterceptorFactory.swift */,
+			);
+			path = QAPMGRPC;
+			sourceTree = "<group>";
+		};
 		944D8AEE278C5C0C00210EF4 /* controllers */ = {
 			isa = PBXGroup;
 			children = (
+				869D00B92DF97D7300F7F5C4 /* GRPCViewController.swift */,
 				944D8AEF278C5C0C00210EF4 /* APMMainListViewController.h */,
 				944D8AF0278C5C0C00210EF4 /* APMYellowViewController.h */,
 				944D8AF1278C5C0C00210EF4 /* QAPMSigkillViewController.h */,
@@ -421,6 +525,9 @@
 				868F21A52CBA65610000852B /* test.html in Resources */,
 				71719F9F1E33DC2100824A3D /* LaunchScreen.storyboard in Resources */,
 				6003F5A9195388D20070C39A /* Images.xcassets in Resources */,
+				869D00B22DF97AF200F7F5C4 /* .generated in Resources */,
+				869D00B32DF97AF200F7F5C4 /* generateProto.sh in Resources */,
+				869D00B42DF97AF200F7F5C4 /* README.md in Resources */,
 				6003F598195388D20070C39A /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -546,6 +653,20 @@
 				944D8B1F278C5C0C00210EF4 /* QAPMResourceMonitorViewController.m in Sources */,
 				944D8B18278C5C0C00210EF4 /* APMBlueViewController.m in Sources */,
 				944D8B1A278C5C0C00210EF4 /* APMMainListViewController.m in Sources */,
+				869D00A42DF97AF200F7F5C4 /* RemoteServiceClientQAPMInterceptorFactory.swift in Sources */,
+				869D00A52DF97AF200F7F5C4 /* orderSystem.proto in Sources */,
+				869D00A62DF97AF200F7F5C4 /* QAPMInterceptorFactory.swift in Sources */,
+				869D00A72DF97AF200F7F5C4 /* hello.proto in Sources */,
+				869D00A82DF97AF200F7F5C4 /* QAPMMonitorClientInterceptor.swift in Sources */,
+				869D00A92DF97AF200F7F5C4 /* hello.grpc.swift in Sources */,
+				869D00AA2DF97AF200F7F5C4 /* OrderServiceClientQAPMInterceptorFactory.swift in Sources */,
+				869D00AB2DF97AF200F7F5C4 /* hello.pb.swift in Sources */,
+				869D00AC2DF97AF200F7F5C4 /* orderSystem.pb.swift in Sources */,
+				869D00AD2DF97AF200F7F5C4 /* Client.swift in Sources */,
+				869D00AE2DF97AF200F7F5C4 /* OrderServer.swift in Sources */,
+				869D00AF2DF97AF200F7F5C4 /* Server.swift in Sources */,
+				869D00B02DF97AF200F7F5C4 /* orderSystem.grpc.swift in Sources */,
+				869D00B12DF97AF200F7F5C4 /* OrderServiceClient.swift in Sources */,
 				6003F5A7195388D20070C39A /* QAPMViewController.m in Sources */,
 				944D8B16278C5C0C00210EF4 /* QAPMWKWebViewViewController.m in Sources */,
 				944D8B1E278C5C0C00210EF4 /* APMQQLeakViewController.m in Sources */,
@@ -553,6 +674,7 @@
 				944D8B19278C5C0C00210EF4 /* APMYellowViewController.m in Sources */,
 				944D8B1B278C5C0C00210EF4 /* QAPMHTTPViewController.m in Sources */,
 				944D8B25278C5C0C00210EF4 /* NSObject+QAPMPerformSelector.m in Sources */,
+				869D00BA2DF97D7300F7F5C4 /* GRPCViewController.swift in Sources */,
 				944D8B23278C5C0C00210EF4 /* YYWeakProxy.m in Sources */,
 				6003F59A195388D20070C39A /* main.m in Sources */,
 				944D8B24278C5C0C00210EF4 /* UIButton+Utils.m in Sources */,
@@ -693,11 +815,13 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "QAPM/QAPM-Prefix.pch";
 				INFOPLIST_FILE = "QAPM/QAPM-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.6;
 				MODULE_NAME = ExampleApp;
 				PRODUCT_BUNDLE_IDENTIFIER = com.tencent.qapmsdk;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = com.tencent.qapmsdkdemo_Development_SignProvision;
 				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = com.tencent.qapmsdk_Development_SignProvision;
+				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/QAPM/QAPM-Bridging-Header.h";
 				SWIFT_VERSION = 4.0;
 				WRAPPER_EXTENSION = app;
 			};
@@ -716,11 +840,13 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "QAPM/QAPM-Prefix.pch";
 				INFOPLIST_FILE = "QAPM/QAPM-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.6;
 				MODULE_NAME = ExampleApp;
 				PRODUCT_BUNDLE_IDENTIFIER = com.tencent.qapmsdk;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = com.tencent.qapmsdkdemo_Development_SignProvision;
 				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = com.tencent.qapmsdk_Development_SignProvision;
+				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/QAPM/QAPM-Bridging-Header.h";
 				SWIFT_VERSION = 4.0;
 				WRAPPER_EXTENSION = app;
 			};

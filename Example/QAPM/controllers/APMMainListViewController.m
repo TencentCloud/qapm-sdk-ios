@@ -43,8 +43,8 @@
     sleep(5);
     self.title = @"测试Demo";
     
-    _titleArray = @[@"QAPMMonitorTypeYellow(VC泄露监控)", @"QAPMMonitorTypeBlue(卡顿与掉帧率)", @"QAPMMonitorTypeSigkill(FOOM与卡死Crash)", @"QAPMMonitorTypeQQLeak(内存泄露监控)", @"QAPMMonitorTypeBigChunkMemoryMonitor(大内存分配监控)",@"QAPMMonitorTypeResourceMonitor(资源监控)",@"QAPMMonitorTypeCrash(Crash监控)",@"WKWebView监控", @"HTTP监控"];
-    _vcArray = @[@"APMYellowViewController", @"APMBlueViewController", @"QAPMSigkillViewController", @"APMQQLeakViewController", @"QAPMBigChunkMemoryViewController",@"QAPMResourceMonitorViewController",@"QAPMCrashViewController",@"QAPMWKWebViewViewController", @"QAPMHTTPViewController"];
+    _titleArray = @[@"QAPMMonitorTypeYellow(VC泄露监控)", @"QAPMMonitorTypeBlue(卡顿与掉帧率)", @"QAPMMonitorTypeSigkill(FOOM与卡死Crash)", @"QAPMMonitorTypeQQLeak(内存泄露监控)", @"QAPMMonitorTypeBigChunkMemoryMonitor(大内存分配监控)",@"QAPMMonitorTypeResourceMonitor(资源监控)",@"QAPMMonitorTypeCrash(Crash监控)",@"WKWebView监控", @"HTTP监控",@"GRPC监控"];
+    _vcArray = @[@"APMYellowViewController", @"APMBlueViewController", @"QAPMSigkillViewController", @"APMQQLeakViewController", @"QAPMBigChunkMemoryViewController",@"QAPMResourceMonitorViewController",@"QAPMCrashViewController",@"QAPMWKWebViewViewController", @"QAPMHTTPViewController",@"GRPCViewController"];
     self.tableView = [[UITableView alloc] initWithFrame:self.view.frame style:UITableViewStylePlain];
     self.tableView.delegate = self;
     self.tableView.dataSource = self;

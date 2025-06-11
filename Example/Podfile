@@ -1,13 +1,23 @@
 use_frameworks!
-
-platform :ios, '9.0'
+platform :ios, '13.0'
 
 target 'QAPM_Example' do
   pod 'QAPM', :path => '../'
-
+  pod 'gRPC-Swift'
   target 'QAPM_Tests' do
     inherit! :search_paths
 
     
+  end
+end
+
+post_install do |installer|
+  installer.generated_projects.each do |project|
+    project.targets.each do |target|
+      target.build_configurations.each do |config|
+        config.build_settings['IPHONEOS_DEPLOYMENT_TARGET'] = '11.0'
+        config.build_settings['CODE_SIGNING_ALLOWED'] = 'NO'
+      end
+    end
   end
 end

@@ -2,7 +2,7 @@
 //  QAPM.h
 //  QAPM
 //
-//  SDK Version 5.4.8 Inner_Version
+//  SDK Version 5.4.9 Inner_Version
 //
 //  Created by Cass on 2018/5/18.
 //  Copyright © 2018年 cass. All rights reserved.
@@ -13,8 +13,10 @@
 #import "QAPMConfig.h"
 #import "QAPMModelStableConfig.h"
 #import "QAPMUtilities.h"
+#import "QAPMNetworkTransaction.h"
 #include "QAPMMonitorLoggerDefine.h"
-
+#import "QAPMSSERequestContext.h"
+#import "QAPMGrpcProfile.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -77,6 +79,16 @@ NS_ASSUME_NONNULL_BEGIN
 
 
 + (void)setDebugModeForTextMapping:(BOOL)open;
+
+/**
+  设置SSE 消息接收回调
+ */
++ (void)setSSEMessageCallback:(QAPMOnSSEMessageCallback)callback;
+
+/**
+  设置SSE请求完成回调
+ */
++ (void)setSSERequestCompletionCallback:(QAPMOnSSECompletionCallback)callback;
 
 @end
 

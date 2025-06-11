@@ -1,0 +1,92 @@
+syntax = "proto3";
+package ordersystem;
+
+// ========== 核心数据结构 ==========
+message Product {
+  string id = 1;
+  string name = 2;
+  double price = 3;
+  int32 stock = 4;
+}
+
+message OrderItem {
+  string productId = 1;
+  int32 quantity = 2;
+  double price = 3;
+}
+
+message Order {
+  string orderId = 1;
+  string userId = 2;
+  repeated OrderItem items = 3;
+  OrderStatus status = 4;
+  double totalAmount = 5;
+  string paymentId = 6;
+  int64 createdAt = 7;
+}
+
+enum OrderStatus {
+  CREATED = 0;
+  PAYMENT_PENDING = 1;
+  PAID = 2;
+  SHIPPED = 3;
+  CANCELLED = 4;
+}
+
+// ========== 服务接口 ==========
+service OrderService {
+  // 订单操作
+  rpc CreateOrder(CreateOrderRequest) returns (OrderResponse);
+  rpc GetOrder(GetOrderRequest) returns (OrderResponse);
+  rpc CancelOrder(CancelOrderRequest) returns (OrderResponse);
+  
+  // 支付集成
+  rpc ProcessPayment(PaymentRequest) returns (PaymentResponse);
+  
+  // 库存管理
+  rpc UpdateStock(StockUpdateRequest) returns (StockUpdateResponse);
+}
+
+// ========== 请求/响应结构 ==========
+message CreateOrderRequest {
+  string userId = 1;
+  repeated OrderItem items = 2;
+}
+
+message GetOrderRequest {
+  string orderId = 1;
+}
+
+message CancelOrderRequest {
+  string orderId = 1;
+  string reason = 2;
+}
+
+message PaymentRequest {
+  string orderId = 1;
+  string cardToken = 2;
+  double amount = 3;
+}
+
+message StockUpdateRequest {
+  string productId = 1;
+  int32 delta = 2; // 正数增加库存，负数减少
+}
+
+// ========== 响应结构 ==========
+message OrderResponse {
+  bool success = 1;
+  Order order = 2;
+  string errorMessage = 3;
+}
+
+message PaymentResponse {
+  bool success = 1;
+  string paymentId = 2;
+  string errorCode = 3;
+}
+
+message StockUpdateResponse {
+  bool success = 1;
+  int32 newStock = 2;
+}

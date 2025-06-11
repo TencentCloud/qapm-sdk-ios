@@ -1,0 +1,34 @@
+// greeter.proto
+syntax = "proto3";
+
+option swift_prefix = "";
+option go_package = "Grpc_Go/gen/go/hello;hello";
+option java_multiple_files = true;
+option java_package = "com.example.test_app";
+
+service HelloService {
+  // 1. 一元式（Unary，保留原始方法）
+  rpc SayHello (HelloRequest) returns (HelloResponse);
+
+  // 2. 服务端流式（Server-streaming）
+  rpc SayHelloServerStream (HelloRequest) returns (stream HelloResponse);
+
+  // 3. 客户端流式（Client-streaming）
+  rpc SayHelloClientStream (stream HelloRequest) returns (HelloResponse);
+
+  // 4. 双向流式（Bidirectional-streaming）
+  rpc SayHelloBidiStream (stream HelloRequest) returns (stream HelloResponse);
+}
+
+service Greeter {
+  rpc SayHello (HelloRequest) returns (HelloResponse);
+}
+
+message HelloRequest {
+  string name = 1;
+}
+
+message HelloResponse {
+  string message = 1;
+  string data = 2;
+}
