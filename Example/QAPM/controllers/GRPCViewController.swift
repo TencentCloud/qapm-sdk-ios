@@ -30,7 +30,6 @@ class GRPCViewController: UIViewController {
         ("启动hello客户端", .systemOrange, #selector(helloClientTapped)),
         ("启动order服务端", .systemPurple, #selector(orderServerTapped)),
         ("启动order客户端", .systemRed, #selector(orderClientTapped)),
-        ("启动远程通信", .systemBrown, #selector(remoteClientTapped)),
     ]
 
     override func viewDidLoad() {
@@ -167,18 +166,7 @@ class GRPCViewController: UIViewController {
            }
        }
     }
-   
-    @objc private func remoteClientTapped() {
-        
-        DispatchQueue.global(qos: .background).async { [self] in
-           do {
-               try remoteClient()
-           } catch {
-               print("远程客户端启动失败: \(error)")
-           }
-       }
-    }
-    
+       
     func helloServer() throws {
         let eventLoopGroup = MultiThreadedEventLoopGroup(numberOfThreads: System.coreCount)
         defer { try! eventLoopGroup.syncShutdownGracefully() }
@@ -285,27 +273,7 @@ class GRPCViewController: UIViewController {
             }
         }
     }
-    
-    //需打开内网ioa的远程服务，以及设置-》远程办公-》支持内网的ip访问
-    func remoteClient() throws {
-        do {
-            let client = RemoteServiceClient(
-                host: "9.134.238.167",
-                port: 8081
-            )
-            // 测试所有调用模式
-            client.sayHello(name: "Unary Test")
-            client.sayHelloServerStream(name: "ServerStream Test")
-            client.sayHelloClientStream(names: ["ClientStream1", "ClientStream2"])
-            client.sayHelloBidiStream(names: ["Bidi1", "Bidi2", "Bidi3"])
-
-            try client.shutdown()
-            
-        } catch {
-            print("[同步] 错误: \(error)")
-        }
-    }
-    
+        
     private func createDemoOrder(client: OrderServiceClient) async throws -> Ordersystem_Order {
         let items = [
             Ordersystem_OrderItem.with {
