@@ -123,7 +123,7 @@ qapm-sdk-ios is available under the MIT license. See the LICENSE file for more i
 ## 开源软件版权声明
 
 This [QAPM] project is built on and with the aid of the following open source projects. Credits are given to these projects.
-The below open source projects in this distribution may have been modified by THL A29 Limited, all such modifications are under Copyright (C) 2022 THL A29 Limited.
+The below open source projects in this distribution may have been modified by Tencent, all such modifications are under Copyright (C) 2022 Tencent.
 
 ### 1. KSCrash  
 
@@ -140,7 +140,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 
 ### 2. OOMDetector
 
-Copyright (C) 2017 THL A29 Limited, a Tencent company.  All rights reserved.
+Copyright (C) 2017 Tencent, a Tencent company.  All rights reserved.
 If you have downloaded a copy of the OOMDetector binary from Tencent, please note that the OOMDetector binary is licensed under the MIT License.
 If you have downloaded a copy of the OOMDetector source code from Tencent, please note that OOMDetector source code is licensed under the MIT License, except for the third-party components listed below which are subject to different license terms.  Your integration of OOMDetector into your own projects may require compliance with the MIT License, as well as the other licenses applicable to the third-party components included within OOMDetector.
 A copy of the MIT License is included in this file.
